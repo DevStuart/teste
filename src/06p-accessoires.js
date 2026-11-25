@@ -30,7 +30,7 @@ const ATT = {
   acog: { slot: 'optic', name: 'ACOG 4x', lvl: 12, fam: ['rifle', 'smg'], mods: { ads: 1.16, zoom: 1.55, adsAcc: 0.85, mob: 0.98 },
     desc: _t('Lunette de combat 4x. De la portée et de la précision, au prix d\u0027un champ réduit et d\u0027une mise en joue plus lente.') },
   // bouche
-  sil: { slot: 'muzzle', name: _t('Silencieux'), lvl: 4, fam: ['rifle', 'smg', 'sniper', 'shotgun', 'pistol'], mods: { rng: 0.86, dmg: 0.97, vrec: 0.95, flash: 0.1, mob: 0.98, silent: true },
+  sil: { slot: 'muzzle', name: _t('Silencieux'), lvl: 4, fam: ['rifle', 'smg', 'sniper', 'shotgun', 'pistol'], mods: { rng: 0.88, dmg: 0.95, vrec: 0.92, hrec: 0.98, flash: 0.05, mob: 0.97, silent: true },
     desc: _t('Tir étouffé, sans flash ni traçante. Portée et dégâts un peu réduits.') },
   comp: { slot: 'muzzle', name: _t('Compensateur'), lvl: 6, fam: ['rifle', 'smg', 'sniper', 'pistol'], mods: { vrec: 0.8, hrec: 1.08, ads: 1.04, flash: 0.9 },
     desc: _t('Évents orientés vers le haut. Le canon monte beaucoup moins, mais dérive un peu plus sur les côtés.') },
@@ -127,6 +127,14 @@ const _clamp01 = (v) => Math.max(0.04, Math.min(1, v));
 function deriveDef(base, att, camo, key) {
   const m = { dmg: 1, rng: 1, rpm: 1, magx: 1, tubeAdd: 0, reload: 1, ads: 1, zoom: 1, hip: 1, adsAcc: 1, vrec: 1, hrec: 1, kick: 1, mob: 1, flash: 1, shake: 1 }, flags = {};
   for (const id of att) for (const k in ATT[id].mods) { const v = ATT[id].mods[k]; if (typeof v === 'boolean') flags[k] = v; else if (k === 'tubeAdd') m.tubeAdd += v; else m[k] *= v; }
+  if (flags.mono) {
+    m.dmg *= 0.94;
+    m.rng *= 0.85;
+    m.vrec *= 0.85;
+    m.hrec *= 0.95;
+    m.kick *= 0.88;
+    m.flash = 0;
+  }
   const d = Object.assign({}, base);
   d.base = base; d.key = key; d.att = att; d.camo = camo;
   d.dmg = base.dmg.map((v) => v * m.dmg); d.range = base.range.map((v) => v * m.rng); d.rpm = base.rpm * m.rpm;
@@ -141,8 +149,8 @@ function deriveDef(base, att, camo, key) {
     delete d.pellets; d.dmg = [86 * m.dmg, 46 * m.dmg]; d.range = [16 * m.rng, 52 * m.rng]; d.spread = [0.03 * m.hip, 0.004 * m.adsAcc]; d.head = 1.5; d.legs = 0.85;
   }
   if (flags.silent) { d.silent = true; d.loud = false; d.sound = base.sound + '_s'; }
-  if (flags.laser) d.laser = true;
-  if (flags.bipod) d.bipod = true;
+  if (flags.laser) { d.laser = true; d.spread = [base.spread[0] * 0.98, base.spread[1] * 1]; d.recoil = { v: base.recoil.v * 0.98, h: base.recoil.h * 1.02, kick: base.recoil.kick * 1, rot: base.recoil.rot * 1 }; }
+  if (flags.bipod) { d.bipod = true; d.recoil = { v: base.recoil.v * 0.7, h: base.recoil.h * 0.7, kick: base.recoil.kick * 0.7, rot: base.recoil.rot * 0.7 }; d.spread = [base.spread[0] * 0.6, base.spread[1] * 0.6]; d.move = base.move * 0.5; }
   // barres du menu : celles de l'arme nue, corrigées par les facteurs
   const S = base.stats, ex = (k, w) => (1 - m[k]) * w;
   d.stats = {

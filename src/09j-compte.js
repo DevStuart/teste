@@ -1,13 +1,13 @@
 /* ==========================================================================
    COMPTES ET PROGRESSION
-   Le serveur (api/, fonctions Vercel + base Postgres) tient les comptes : nom d'utilisateur unique (l'identifiant public, fixe),
-   nom d'affichage modifiable, mot de passe et code de secours (hachés), niveau et statistiques. Aucune adresse e-mail ni autre donnée
+   Le serveur (api/ + MySQL) tient les comptes : nom d'utilisateur unique et définitif (l'identifiant public),
+   mot de passe et code de secours (hachés), niveau, patente et statistiques. Aucune adresse e-mail ni autre donnée
    qui identifie la personne : le code de secours, montré une seule fois, est le seul moyen de retrouver un mot de passe oublié.
    Ce fichier est la partie du jeu :
    - connexion (nom d'utilisateur), création de compte (ouvert aussitôt), mot de passe oublié (nom, code de secours, nouveau mot de passe) ;
    - écran du code de secours (acctShowCode) : à l'inscription, à la première connexion d'un compte qui n'en avait pas, après une
      récupération et quand le joueur en demande un nouveau ; il passe avant tout le reste jusqu'à ce que le joueur dise l'avoir noté ;
-   - écran Profil : niveau, statistiques, dernières parties, nom d'affichage, mot de passe, code de secours, export des données (RGPD),
+   - écran Profil : niveau, patente, statistiques, dernières parties, mot de passe, code de secours, export des données,
      suppression du compte ; textes légaux dans 09k-legal.js ;
    - compte obligatoire pour le multijoueur (le Solo reste ouvert à tous) ; sans serveur de comptes (page ouverte depuis un
      fichier, serveur injoignable), rien n'est exigé ;
@@ -16,12 +16,12 @@
    ========================================================================== */
 const ACCT = {
   state: 'init', // init, ready (serveur joignable) ou off (comptes indisponibles : rien n'est exigé)
-  user: null, level: null, stats: null, recent: [],
+  user: null, level: null, patent: null, stats: null, recent: [],
   view: 'login', err: '', note: '', busy: false, match: null, salon: '', ready: null, draft: {},
   code: '', codeNote: '', codeThen: null, // code de secours à montrer (voir acctShowCode), annonce au-dessus, suite une fois noté
 };
 
-/* Mémoire de l'appareil : le dernier compte connecté (nom, nom d'affichage, niveau, photo). Elle fait reconnaître le joueur aussitôt, avant la réponse du
+/* Mémoire de l'appareil : le dernier compte connecté (pseudo, niveau, photo). Elle fait reconnaître le joueur aussitôt, avant la réponse du
    serveur ou si celui-ci tousse, et lui laisse son nom à la connexion ; on = false après une déconnexion voulue ou une session expirée. La session elle-même
    est un cookie du serveur, prolongé à chaque visite (api/_lib/handlers.js, renewSession). */
 const ACCT_KEY = 'dc_acct';
@@ -42,11 +42,11 @@ async function acctApi(name, body, ms = 12000) {
   } catch (e) { return { ok: false, status: 0, data: null }; } finally { clearTimeout(to); }
 }
 function acctApply(d) {
-  ACCT.user = d.user || null; ACCT.level = d.level || null; ACCT.stats = d.stats || null; ACCT.recent = d.recent || [];
-  if (ACCT.user) acctHintSet({ u: ACCT.user.username, n: ACCT.user.displayName, l: ACCT.level ? ACCT.level.level : 1, a: ACCT.user.avatar || 0, on: true });
+  ACCT.user = d.user ? { ...d.user, displayName: d.user.username } : null; ACCT.level = d.level || null; ACCT.patent = d.patent || null; ACCT.stats = d.stats || null; ACCT.recent = d.recent || [];
+  if (ACCT.user) acctHintSet({ u: ACCT.user.username, n: ACCT.user.username, l: ACCT.level ? ACCT.level.level : 1, a: ACCT.user.avatar || 0, on: true });
   if (ACCT.user && ARS.synced !== ACCT.user.username) { ARS.synced = ACCT.user.username; arsSync(); } // progression des armes du compte, une fois par connexion
 }
-function acctForget() { ACCT.user = null; ACCT.level = null; ACCT.stats = null; ACCT.recent = []; ACCT.view = 'login'; }
+function acctForget() { ACCT.user = null; ACCT.level = null; ACCT.patent = null; ACCT.stats = null; ACCT.recent = []; ACCT.view = 'login'; }
 async function acctLoad() {
   let r = await acctApi('me');
   // serveur qui se réveille, réseau qui tousse : on réessaie avant de déclarer les comptes indisponibles
@@ -58,11 +58,17 @@ async function acctLoad() {
       if (h.on) { acctHintSet({ ...h, on: false }); if (!ACCT.note) ACCT.note = _t('Votre session a expiré. Reconnectez-vous.'); }
       if (!ACCT.draft.u) ACCT.draft = { ...ACCT.draft, u: h.u };
     }
+  } else if (r.status === 401) {
+    ACCT.state = 'ready'; acctApply({});
+    if (h) {
+      if (h.on) { acctHintSet({ ...h, on: false }); if (!ACCT.note) ACCT.note = _t('Votre session a expiré. Reconnectez-vous.'); }
+      if (!ACCT.draft.u) ACCT.draft = { ...ACCT.draft, u: h.u };
+    }
   } else if (ACCT.state !== 'ready') { ACCT.state = 'off'; ACCT.user = null; } // (déjà connecté et serveur injoignable un instant : on garde ce que l'on sait)
   acctChanged();
-  return r.ok;
+  return r.ok || r.status === 401;
 }
-/* Le nom d'affichage sert de pseudo en ligne ; le menu principal et l'écran qui est ouvert suivent */
+/* Le nom public vient toujours du nom d'utilisateur définitif du compte. */
 function acctChanged() {
   acctChip(); socChanged();
   classFix(); if (UI.screen === 'classes') classesHeader(); PICKERS.forEach(renderPicker); // le niveau du compte débloque des classes personnalisées
@@ -71,7 +77,7 @@ function acctChanged() {
   skinAcct(); // une tenue unique ne se porte qu'avec son compte (09u-tenues.js)
 }
 
-/* Puce du menu principal, en haut à droite : « Se connecter » sans compte, sinon l'avatar, le nom d'affichage et le niveau (clic : Profil) */
+/* Puce du menu principal, en haut à droite : « Se connecter » sans compte, sinon l'avatar, le pseudo et le niveau (clic : Profil) */
 const AC_SILHOUETTE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12.2a4.6 4.6 0 1 0 0-9.2 4.6 4.6 0 0 0 0 9.2Zm0 2.3c-4.2 0-8 2.2-8 5.4 0 .6.4 1.1 1 1.1h14c.6 0 1-.5 1-1.1 0-3.2-3.8-5.4-8-5.4Z"/></svg>';
 /* Avatar : la photo de profil du joueur (voir 09p-avatar.js), sinon une teinte tirée de son nom d'utilisateur et son initiale */
 function acctAvatar(user, level) {
@@ -79,7 +85,7 @@ function acctAvatar(user, level) {
   if (user.avatar) return `<img src="/api/avatar?${user.other ? `u=${encodeURIComponent(user.username)}&` : ''}v=${user.avatar}" alt="" draggable="false" loading="lazy">${level ? `<i>${level}</i>` : ''}`;
   let h = 0; for (const c of String(user.username)) h = (h * 31 + c.charCodeAt(0)) >>> 0;
   const hue = h % 360;
-  return `<span style="background:linear-gradient(145deg,hsl(${hue} 52% 62%),hsl(${(hue + 40) % 360} 46% 40%))">${esc(String(user.displayName || '').trim().charAt(0).toUpperCase() || '?')}</span>${level ? `<i>${level}</i>` : ''}`;
+  return `<span style="background:linear-gradient(145deg,hsl(${hue} 52% 62%),hsl(${(hue + 40) % 360} 46% 40%))">${esc(String(user.username || '').trim().charAt(0).toUpperCase() || '?')}</span>${level ? `<i>${level}</i>` : ''}`;
 }
 /* Photo illisible (réseau coupé, session expirée) : on retombe sur l'initiale */
 function acctAvatarFallback(box, u, level) {
@@ -89,14 +95,14 @@ function acctAvatarFallback(box, u, level) {
 function acctChip() {
   const chip = $('acctChip'); if (!chip) return;
   // pas encore de réponse du serveur (ou serveur injoignable) : le joueur déjà connecté sur cet appareil est reconnu d'après la mémoire de l'appareil
-  const h = !ACCT.user && ACCT.state !== 'ready' ? acctHint() : null, known = h && h.on ? { username: h.u, displayName: h.n, avatar: h.a } : null;
+  const h = !ACCT.user && ACCT.state !== 'ready' ? acctHint() : null, known = h && h.on ? { username: h.u, displayName: h.u, avatar: h.a } : null;
   const u = ACCT.user || known, lv = ACCT.user ? (ACCT.level ? ACCT.level.level : 1) : known ? h.l : 0;
   chip.classList.toggle('out', !u);
   $('acctAv').innerHTML = acctAvatar(u, lv);
   acctAvatarFallback($('acctAv'), u, lv);
-  $('acctName').textContent = u ? u.displayName : ACCT.state === 'off' ? _t('Profil') : _t('Se connecter');
-  $('acctSub').textContent = ACCT.user ? (ACCT.user.hasRecovery === false ? _t('Niveau {0} · créez votre code de secours', lv) : _t('Niveau {0} · voir mon profil', lv)) : known ? (ACCT.state === 'off' ? _t('Compte injoignable pour le moment') : _t('Connexion en cours...')) : ACCT.state === 'off' ? _t('Comptes indisponibles ici') : _t('Niveau, statistiques et multijoueur');
-  chip.setAttribute('aria-label', u ? `${_t('Profil de {0}, niveau {1}', u.displayName, lv)}` : _t('Se connecter'));
+  $('acctName').textContent = u ? u.username : ACCT.state === 'off' ? _t('Profil') : _t('Se connecter');
+  $('acctSub').textContent = ACCT.user ? (ACCT.user.hasRecovery === false ? _t('Niveau {0} · créez votre code de secours', lv) : _t('Niveau {0} · {1}', lv, acctPatentName())) : known ? (ACCT.state === 'off' ? _t('Compte injoignable pour le moment') : _t('Connexion en cours...')) : ACCT.state === 'off' ? _t('Comptes indisponibles ici') : _t('Niveau, statistiques et multijoueur');
+  chip.setAttribute('aria-label', u ? `${_t('Profil de {0}, niveau {1}', u.username, lv)}` : _t('Se connecter'));
 }
 
 /* ---------- Multijoueur : compte obligatoire ---------- */
@@ -104,7 +110,7 @@ function acctOnlineOk() { return ACCT.state === 'off' || !!ACCT.user; }
 /* Barre le salon à qui n'est pas connecté ; le pseudo en ligne est celui du compte */
 function acctSyncMulti() {
   const nm = $('netName');
-  if (nm) { nm.readOnly = !!ACCT.user; nm.title = ACCT.user ? _t('Votre nom d\u0027affichage (à changer dans Profil)') : ''; if (ACCT.user) nm.value = ACCT.user.displayName; }
+  if (nm) { nm.readOnly = !!ACCT.user; nm.title = ACCT.user ? _t('Votre nom public est définitif') : ''; if (ACCT.user) nm.value = ACCT.user.username; }
 }
 /* Appelé avant de créer ou de rejoindre un salon : renvoie false (et ouvre le Profil) si la connexion manque */
 function acctGate(code) {
@@ -170,7 +176,7 @@ function acctRenderAuth(body, sub) {
   const note = ACCT.note ? `<p class="ac-note" role="status">${esc(ACCT.note)}</p>` : '';
   const side = `<div class="card"><h3 class="lbl">${_t('Pourquoi un compte ?')}</h3>
       <p class="hint">${_t('Votre niveau, votre expérience et vos statistiques vous suivent d\u0027un appareil à l\u0027autre. Le multijoueur demande un compte. Le Solo se joue sans, mais rien n\u0027y est enregistré.')}</p>
-      <p class="hint">${_t('Aucune adresse e-mail. Un nom d\u0027utilisateur et un mot de passe suffisent. Les autres joueurs connectés voient votre nom d\u0027utilisateur, votre nom d\u0027affichage, votre niveau, vos statistiques et votre photo. Évitez d\u0027y mettre votre vrai nom.')} <button class="link" type="button" data-legal="privacy">${_t('Politique de confidentialité')}</button></p></div>`;
+      <p class="hint">${_t('Aucune adresse e-mail. Un nom d\u0027utilisateur et un mot de passe suffisent. Votre nom d\u0027utilisateur définitif est aussi votre nom public en jeu. Les autres joueurs connectés voient votre nom, votre niveau, votre patente, vos statistiques et votre photo. Évitez d\u0027y mettre votre vrai nom.')} <button class="link" type="button" data-legal="privacy">${_t('Politique de confidentialité')}</button></p></div>`;
   const tabs = _t('<div class="seg" id="acTabs" role="radiogroup" aria-label="Connexion ou création de compte"></div>');
   if (v === 'recover') {
     sub.textContent = _t('Mot de passe oublié');
@@ -198,7 +204,7 @@ function acctRenderAuth(body, sub) {
         <label class="ac-in"><span>${_t('Nom d\u0027utilisateur')}</span><input name="u" maxlength="${reg ? 16 : 64}" autocomplete="username" autocapitalize="off" spellcheck="false" value="${esc(d.u || '')}" required></label>
         <label class="ac-in"><span>${_t('Mot de passe')}</span><input name="p" type="password" maxlength="128" autocomplete="${reg ? 'new-password' : 'current-password'}" required></label>
         ${reg ? acctAcceptHtml(d.a) : ''}
-        <p class="hint">${reg ? _t('Le nom d\u0027utilisateur est votre identifiant public : 3 à 16 caractères (lettres sans accent, chiffres, tiret bas), définitif. Votre nom d\u0027affichage sera le même, et vous pourrez le changer. Mot de passe : 8 caractères au moins. Aucune adresse e-mail n\u0027est demandée : un code de secours s\u0027affichera, à noter pour retrouver le compte si vous oubliez le mot de passe.') : _t('<button class="link" type="button" id="acForgot">Mot de passe oublié ?</button>')}</p>
+        <p class="hint">${reg ? _t('Choisissez un nom public définitif et unique de 3 à 16 caractères (lettres sans accent, chiffres ou tiret bas). Le mot de passe doit contenir au moins 8 caractères. Aucune adresse e-mail n\u0027est demandée. Un code de secours s\u0027affichera. Notez-le pour retrouver le compte si vous oubliez le mot de passe.') : _t('<button class="link" type="button" id="acForgot">Mot de passe oublié ?</button>')}</p>
         <p class="ac-err" id="acErr" role="alert">${esc(ACCT.err)}</p>
         <button class="btn primary" type="submit">${reg ? _t('Créer le compte') : _t('Se connecter')}</button>
       </form>
@@ -275,6 +281,21 @@ function acctRenderCode(body, sub) {
 }
 const AC_HM = (s) => { const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60); return h ? `${h} h ${String(m).padStart(2, '0')}` : _t('{0} min', m); };
 const AC_PCT = (a, b) => (b ? Math.round((a / b) * 100) + PCT : '0' + PCT);
+function acctPatentName(patent = ACCT.patent) {
+  switch (patent && patent.id) {
+    case 'private': return _t('Soldat');
+    case 'corporal': return _t('Caporal');
+    case 'sergeant': return _t('Sergent');
+    case 'warrant': return _t('Adjudant');
+    case 'lieutenant': return _t('Lieutenant');
+    case 'captain': return _t('Capitaine');
+    case 'major': return _t('Commandant');
+    case 'colonel': return _t('Colonel');
+    case 'general': return _t('Général');
+    case 'marshal': return _t('Maréchal');
+    default: return _t('Recrue');
+  }
+}
 /* Statistiques d'un joueur (son Profil, le profil d'un autre) : quatre chiffres clés en grand (ratio, taux de victoire, éliminations, parties), le reste en
    liste compacte ; time : le temps de jeu (le sien seulement, le serveur ne le donne pas pour un autre joueur) */
 function acctStatsHtml(S, time) {
@@ -314,8 +335,9 @@ function acctRenderProfile(body, sub) {
       <div class="ac-main">
         <div class="card ac-top">
           <button class="ac-avbtn" id="acAvBtn" type="button" title="${esc(_t('Changer la photo de profil'))}" aria-label="${esc(_t('Changer la photo de profil'))}"><span class="acct-av" id="acAvBig">${acctAvatar(u, L.level)}</span><em>${_t('Modifier')}</em></button>
-          <div class="ac-id"><h3>${esc(u.displayName)}</h3><p>@${esc(u.username)} · ${_t('Niveau {0}', L.level)}</p>
+          <div class="ac-id"><h3>${esc(u.username)}</h3><p>@${esc(u.username)} · ${_t('Niveau {0}', L.level)}</p>
             <div class="ac-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${L.need}" aria-valuenow="${L.into}"><i style="transform:scaleX(${L.need ? L.into / L.need : 1})"></i></div>
+            <div class="ac-xp">${_t('Patente :')} <b>${esc(acctPatentName())}</b></div>
             <div class="ac-xp">${_t('{0} · {1} XP en tout', L.need ? `${_t('{0} / {1} XP avant le niveau {2}', L.into, L.need, L.level + 1)}` : _t('Niveau maximal'), L.xp)}</div></div>
         </div>
         ${acctStatsHtml(S, true)}
@@ -325,10 +347,7 @@ function acctRenderProfile(body, sub) {
         <div class="ac-field"><span>${_t('Photo de profil')}</span>
           <div class="row"><button class="btn" id="acAvEdit" type="button">${_t('Changer la photo')}</button>${u.avatar ? `<button class="btn" id="acAvDel" type="button">${_t('Retirer')}</button>` : ''}</div>
           ${u.avatar && u.avatarHidden ? `<p class="hint ac-hid">${_t('Votre photo a été signalée par plusieurs joueurs. Elle est masquée aux autres en attendant la modération.')}</p>` : ''}</div>
-        <form id="acName" class="ac-field"><label for="acNameIn">${_t('Nom d\u0027affichage (16 caractères au plus)')}</label>
-          <div class="row"><input id="acNameIn" name="n" maxlength="16" value="${esc(u.displayName)}" autocomplete="off" spellcheck="false" required><button class="btn" type="submit">${_t('Enregistrer')}</button></div>
-          <p class="ac-err" id="acErr" role="alert">${esc(ACCT.err)}</p></form>
-        <p class="hint">${_t('Identifiant :')} <b>${esc(u.username)}</b> ${_t('(définitif, visible dans le classement). Les autres joueurs voient aussi votre nom d\u0027affichage.')}</p>
+        <p class="hint">${_t('Votre nom public définitif :')} <b>${esc(u.username)}</b>. ${_t('Il ne peut pas être modifié.')}</p>
         <div class="btns"><button class="btn" id="acOut" type="button">${_t('Se déconnecter')}</button></div>
         <details class="ac-fold"><summary>${_t('Mot de passe et code de secours')}</summary>
           <form id="acPass"><span class="hint">${u.hasPassword ? _t('Changer le mot de passe (un nouveau code de secours vous sera donné)') : _t('Ajouter un mot de passe')}</span>
@@ -341,6 +360,7 @@ function acctRenderProfile(body, sub) {
         <details class="ac-fold ac-danger"><summary>${_t('Mes données et suppression du compte')}</summary>
           <p class="hint">${_t('Vous pouvez récupérer toutes vos données dans un fichier, ou supprimer le compte.')} <button class="link" type="button" data-legal="privacy">${_t('Politique de confidentialité')}</button></p>
           <div class="btns"><button class="btn" id="acExport" type="button">${_t('Télécharger mes données')}</button></div>
+          <p class="ac-err" id="acExportErr" role="alert"></p>
           <form id="acDel"><p class="hint">${_t('Supprimer efface le compte, la progression et l\u0027historique, définitivement. Tapez votre nom d\u0027utilisateur{0} pour confirmer.', u.hasPassword ? ' ' + _t('et votre mot de passe') : '')}</p>
             ${acctIn(_t('Nom d\u0027utilisateur'), `name="c" placeholder="${esc(u.username)}" autocomplete="off" autocapitalize="off" spellcheck="false" required`)}${u.hasPassword ? acctIn(_t('Mot de passe'), 'name="p" type="password" autocomplete="current-password" required') : ''}
             <p class="ac-err" id="acDelErr" role="alert"></p><button class="btn danger" type="submit">${_t('Supprimer définitivement')}</button></form></details>
@@ -351,11 +371,6 @@ function acctRenderProfile(body, sub) {
   for (const id of ['acAvBtn', 'acAvEdit']) $(id).addEventListener('click', () => { sfxUi('click'); avOpen(); });
   if ($('acAvDel')) $('acAvDel').addEventListener('click', () => { avRemove(); });
   if ($('acMod')) $('acMod').addEventListener('click', () => { sfxUi('click'); uiGo('moderation'); });
-  acctForm($('acName'), async (fd) => {
-    const r = await acctApi('profile', { displayName: String(fd.get('n')) });
-    if (!r.ok) return acctFail(r);
-    acctApply(r.data); acctChanged(); sfxUi('click');
-  });
   // formulaires secondaires du profil : même mécanique, l'erreur s'affiche sous le formulaire
   const wire = (id, errId, call, done) => $(id).addEventListener('submit', async (e) => {
     e.preventDefault(); if (ACCT.busy) return;
@@ -374,7 +389,7 @@ function acctRenderProfile(body, sub) {
       const r = await fetch('/api/account-export', { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' }, body: '{}' });
       if (!r.ok) throw new Error();
       const url = URL.createObjectURL(await r.blob()), a = document.createElement('a'); a.href = url; a.download = 'riposte-frontline-mes-donnees.json'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 5000);
-    } catch (e) { ACCT.err = _t('Export impossible : réessayez.'); $('acErr').textContent = ACCT.err; }
+    } catch (e) { ACCT.err = _t('Export impossible : réessayez.'); $('acExportErr').textContent = ACCT.err; }
   });
   $('acDel').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -391,7 +406,7 @@ function acctMatchStart() {
   if (!ACCT.user) return;
   const m = { t0: MATCH.time, token: null, online: !!MATCH.online, map: CURMAP.id, mode: MATCH.mode };
   ACCT.match = m;
-  acctApi('match-start', {}).then((r) => { if (r.ok && r.data && ACCT.match === m) m.token = r.data.token; });
+  acctApi('match-start', { online: m.online, map: m.map, mode: m.mode }).then((r) => { if (r.ok && r.data && ACCT.match === m) m.token = r.data.token; });
 }
 /* Fin (result : win, loss, draw ou quit) : envoie le résumé ; l'écran de fin affiche l'XP gagnée */
 async function acctMatchEnd(result, show) {
@@ -416,7 +431,7 @@ async function acctMatchEnd(result, show) {
     headshots: Math.min(PL.hsKills || 0, me.kills), shots: PL.shots, hits: Math.min(PL.hits, PL.shots), score: Math.max(0, me.score | 0), streak: Math.min(PL.bestStreak || 0, me.kills),
   } });
   if (!r.ok || !r.data) return;
-  ACCT.level = r.data.level; ACCT.stats = r.data.stats; ACCT.recent = r.data.recent; acctChanged();
+  ACCT.level = r.data.level; ACCT.patent = r.data.patent; ACCT.stats = r.data.stats; ACCT.recent = r.data.recent; acctChanged();
   if (show && box && MATCH.state === 'ended') {
     const L = r.data.level;
     box.innerHTML = endXpHtml({ xp: r.data.gained, level: L.level, into: L.into, need: L.need, up: r.data.levelUp, notes: [m.online ? '' : _t('Partie solo : XP réduite de moitié')] });

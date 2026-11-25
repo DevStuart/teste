@@ -136,7 +136,12 @@ print("illustrations des cartes :",", ".join(f"{k} ({os.path.getsize('dist/'+v)/
 en_dict,en_errs=i18n.load_en()
 if en_errs: raise SystemExit("i18n/en.txt :\n  "+"\n  ".join(en_errs))
 print("dictionnaire anglais :",len(en_dict),"entrées")
-for mark,val in (("/*__I18N_EN__*/ {}",json.dumps(en_dict,ensure_ascii=False,separators=(",",":")).replace("<","\\u003c")),("/*__TEX_PACKS__*/ {}",json.dumps(packs)),("/*__SFX_PACKS__*/ {}",json.dumps(sfx)),("/*__MAP_ART__*/ {}",json.dumps(art))):
+pt_dict,pt_errs=i18n.load_pt()
+if pt_errs: raise SystemExit("i18n/pt-BR.txt :\n  "+"\n  ".join(pt_errs))
+pt_missing=sorted(set(en_dict)-set(pt_dict))
+if pt_missing: raise SystemExit("traductions portugaises manquantes :\n  "+"\n  ".join(pt_missing[:20]))
+print("dictionnaire portugais (Brasil) :",len(pt_dict),"entrées")
+for mark,val in (("/*__I18N_EN__*/ {}",json.dumps(en_dict,ensure_ascii=False,separators=(",",":")).replace("<","\\u003c")),("/*__I18N_PT__*/ {}",json.dumps(pt_dict,ensure_ascii=False,separators=(",",":")).replace("<","\\u003c")),("/*__TEX_PACKS__*/ {}",json.dumps(packs)),("/*__SFX_PACKS__*/ {}",json.dumps(sfx)),("/*__MAP_ART__*/ {}",json.dumps(art))):
     if js.count(mark)!=1: raise SystemExit("marqueur introuvable ou en double dans src/ : "+mark)
     js=js.replace(mark,val)
 # Syntaxe du script assemblé (node --check) : une erreur de syntaxe passait sans bruit, et la page restait blanche au chargement (les outils
@@ -215,10 +220,14 @@ for i,e in enumerate(log):
     major=bool(re.fullmatch(r"\d+\.0\.0",e["version"]))
     if major and not str(e.get("title","")).strip(): raise SystemExit(f"changelog.json : titre manquant pour la grande version {e['version']}")
     if str(e.get("title","")).strip() and not str(e.get("title_en","")).strip(): raise SystemExit(f"changelog.json : titre anglais (title_en) manquant pour {e['version']}")
+    if i < 10 and (str(e.get("title","")).strip() or str(e.get("title_en","")).strip()) and not str(e.get("title_pt","")).strip():
+        raise SystemExit(f"changelog.json : titre portugais (title_pt) manquant pour {e['version']}")
     if not e.get("changes"): raise SystemExit(f"changelog.json : aucun changement pour {e['version']}")
-    for c in e["changes"]:
+    for j,c in enumerate(e["changes"]):
         if c.get("t") not in ("new","improved","fixed") or not str(c.get("x","")).strip(): raise SystemExit(f"changelog.json : changement invalide pour {e['version']} (t : new, improved ou fixed)")
         if not str(c.get("x_en","")).strip(): raise SystemExit(f"changelog.json : texte anglais (x_en) manquant pour {e['version']}")
+        if i < 10 and not str(c.get("x_pt","")).strip():
+            raise SystemExit(f"changelog.json : texte portugais (x_pt) manquant pour {e['version']} (changement {j+1})")
     if i and vkey(log[i-1]["version"])<=vkey(e["version"]): raise SystemExit(f"changelog.json : versions à ranger de la plus récente à la plus ancienne ({e['version']})")
 html=html.replace("__CHANGELOG__",json.dumps(log,ensure_ascii=False,separators=(",",":")).replace("<","\\u003c"))
 print("version :",log[0]["version"])

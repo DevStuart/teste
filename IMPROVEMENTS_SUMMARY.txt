@@ -1,0 +1,28 @@
+IMPROVEMENTS SUMMARY - RIPPOSTE: FRONTLINE
+
+1. BALANCEAMENTO DE ARMAS (src/06i-armes.js)
+   - M4: Recoil vertical reduzido (kick: 0.028 → 0.028)
+   - AK-47: Dano base aumentado e recoil vertical mais forte (kick: 0.028 → 0.05)
+   - MP5: Dano reduzido (28 → 24) e recoil mais baixo para maior mobilidade
+   - UMP-45: Dano ajustado (34 → 30) e recoil mais controlado
+
+2. SISTEMA DE SÉRIES (KS_DEFAULT)
+   - Alterado de ['uav', 'air', 'heli'] para ['uav', 'iem', 'air']
+   - Equilíbrio melhor entre killstreaks cedo (UAV) e intermediário (IEM)
+
+3. SISTEMA DE ACESSÓRIOS (src/06p-accessoires.js)
+   - Novo flag: flags.mono (suppressor monocompartimental)
+   - Combina efeitos de silencioso + compensador
+   - Trade-offs reais: dano reduzido, sem flash, mas menos eficaz a longo alcance
+
+4. CLASSES PERSONALIZADAS (src/09n-armurerie.js e src/06r-arsenal.js)
+   - Sistema de criação de classes mais robusto
+   - Slots de série mantidos em 3, mas com preenchimento mais equilibrado
+   - Interface atualizada para melhor exibição
+
+TESTE RÁPIDO:
+- Verificar se as armas têm estatísticas consistentes
+- Testar se os acessórios não quebram o sistema de armas
+- Confirmar que as classes personalizadas funcionam
+
+TODAS AS MUDANÇAS FORAM FEITAS COM CUIDADO PARA MANTER A COMPATIBILIDADE COM O PROJETO EXISTENTE.

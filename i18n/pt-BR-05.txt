@@ -1,0 +1,312 @@
+Nouveau code de secours. L'ancien ne sert plus. ⇒ Novo código de recuperação. O antigo não funciona mais.
+Ce lien reçu par e-mail ne sert plus. Le jeu ne garde plus d'adresse e-mail. Connectez-vous avec votre nom d'utilisateur. En cas d'oubli du mot de passe, utilisez votre code de secours. ⇒ Este link recebido por e-mail não funciona mais. O jogo não guarda mais endereços de e-mail. Entre com seu nome de usuário. Se esqueceu a senha, use seu código de recuperação.
+Le compte est réservé aux personnes de 15 ans au moins. Aucune adresse e-mail n'est demandée : vous gardez secrets votre mot de passe et votre code de secours (le seul moyen de retrouver le compte si vous oubliez le mot de passe) et vous êtes responsable de ce qui se fait avec votre compte. Un compte, une personne. ⇒ A conta é reservada para maiores de 15 anos. Nenhum endereço de e-mail é solicitado: você deve manter sua senha e seu código de recuperação em segredo (a única forma de recuperar a conta caso esqueça a senha). Você é responsável pelo uso da sua conta. Uma conta, uma pessoa.
+: nom d'utilisateur, nom d'affichage, mot de passe et code de secours (conservés hachés : ils ne sont lisibles par personne), dates de création et de dernière connexion, version et date des conditions acceptées. Aucune adresse e-mail, aucun nom réel, aucune date de naissance. Pour créer et gérer votre compte, vous connecter et vous permettre de retrouver un mot de passe oublié. ⇒ : nome de usuário, nome de exibição, senha e código de recuperação (kept hashed: ninguém pode lê-los), data de criação e última entrada, versão e data dos termos aceitos. Sem endereço de e-mail, nome verdadeiro, data de nascimento. Para criar e gerenciar sua conta, entre e deixe você recuperar uma senha esquecida.
+Pas de publicité, pas de revente ni de cession de données, pas de profilage. Pas d'e-mail : le jeu ne demande aucune adresse et n'envoie aucun message. ⇒ Nenhuma publicidade, nenhuma revenda ou transferência de dados, nenhum perfil. Nenhum e- mail: o jogo pede sem endereço e não envia mensagens.
+Un seul cookie, de session, strictement nécessaire pour rester connecté (il disparaît à la déconnexion ou après 90 jours sans visite) : aucun bandeau n'est donc demandé. Le navigateur garde aussi vos réglages (qualité, sensibilité, classe, pseudo de salon) sur votre appareil. La mesure d'audience du site ne dépose aucun cookie. ⇒ Um único cookie de sessão, estritamente necessário para permanecer assinado (desaparece ao sair ou após 90 dias sem visita): não é necessário nenhum banner. O navegador também mantém suas configurações (qualidade, sensibilidade, classe, apelido de sala) em seu dispositivo. A medição do público do site não define nenhum cookie.
+(nom d'affichage, mot de passe, code de secours : Profil), les ⇒ ele (nome de exibição, senha, código de recuperação: perfil),
+Connexion chiffrée (HTTPS), mots de passe et codes de secours hachés avec un sel propre à chacun, codes de secours à usage unique, sessions révocables, essais limités. Aucune sécurité n'est parfaite : en cas de violation de données susceptible de vous exposer, l'information sera publiée dans le jeu (aucune adresse ne permet de vous écrire). ⇒ Conexão criptografada (HTTPS), senhas e códigos de recuperação hashed com um sal próprio, códigos de recuperação de uso único, sessões revogáveis, tentativas limitadas. Nenhuma segurança é perfeita: no caso de uma violação de dados susceptível de expô-lo, as informações serão publicadas no jogo (nenhum endereço nos permite escrever para você).
+Créez votre code de secours. Sans lui, un mot de passe oublié ne peut pas être retrouvé (le jeu ne garde aucune adresse e-mail). ⇒ Crie seu código de recuperação. Sem ele, não é possível recuperar uma senha esquecida (o jogo não guarda nenhum endereço de e-mail).
+Changer le mot de passe (un nouveau code de secours vous sera donné) ⇒ Alterar senha (um novo código de recuperação será fornecido)
+: votre nom d'utilisateur, votre nom d'affichage, votre niveau, vos statistiques de jeu (sauf votre temps de jeu ; avec votre rang au classement), vos dernières parties et votre date d'inscription sont visibles des autres joueurs connectés, dans le classement et sur votre profil (avec votre photo de profil, si vous en avez une). Vos demandes d'ami, vos amis et vos notifications (demandes reçues, réponses, niveaux gagnés, nouveaux codes de secours, invitations dans un salon) sont conservés avec votre compte ; les notifications lues sont effacées après 30 jours. Vos amis voient si vous êtes en ligne et ce que vous faites (au menu, dans un salon, en partie), d'après le dernier signal de votre jeu, et peuvent vous inviter dans leur salon. Pour vous permettre de retrouver et d'ajouter d'autres joueurs. ⇒ : seu nome de usuário, nome de exibição, nível, estatísticas de jogo (exceto seu tempo de jogo; com sua classificação de tabela de classificação), as últimas partidas e data de inscrição são visíveis para outros jogadores assinados, na tabela de classificação e em seu perfil (com sua imagem de perfil, se você tiver um). Os pedidos de amigos, amigos e notificações (pedidos recebidos, respostas, níveis ganhos, novos códigos de recuperação, convites ao sala) são mantidos na sua conta; as notificações de leitura são excluídas após 30 dias. Seus amigos vêem se você está online e o que você está fazendo (nos menus, em um sala, em um jogo), a partir do último sinal do seu jogo, e pode convidá-lo para o sala deles. Para que você possa encontrar e adicionar outros jogadores.
+Un nouveau code de secours a été créé pour votre compte. Si ce n'est pas vous, changez votre mot de passe dans Profil. Cela remplace aussi le code. ⇒ Um novo código de recuperação foi criado para sua conta. Se não foi você, altere sua senha em Perfil. Isso também substitui o código antigo.
+Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (jeu et fonctions en ligne, exécutées en Europe). Base de données : Neon ({0}). Serveur de jeu (salons en ligne) : Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Allemagne (serveur en Allemagne). ⇒ Vercel Inc., 440 N Barranca Ave #413, Covina, CA 91723, Estados Unidos (funções de jogo e online, executado na Europa). Base de dados: Neon ({0}). Servidor de jogos (salas online): Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Alemanha (servidor na Alemanha).
+: une empreinte de votre adresse IP (calculée avec une clé secrète : l'adresse elle-même n'est pas gardée) et de l'identifiant saisi sert à limiter les essais de connexion, de récupération du mot de passe et les créations de compte ; elle est effacée après 48 heures au plus. Un jeton de session, dont seule l'empreinte est gardée. Pour protéger le service des abus. ⇒ : uma impressão digital do seu endereço IP (computado com uma chave secreta: o endereço em si não é mantido) e do nome de usuário introduzido é usado para limitar tentativas de login, tentativas de recuperação de senha e criações de conta; ele é excluído após 48 horas no máximo. Um símbolo de sessão, do qual apenas a impressão digital é mantida. Para proteger o serviço contra abusos.
+Compte et progression : jusqu'à ce que vous supprimiez le compte, ou 36 mois après votre dernière connexion. Session : 90 jours sans visite. Limitation des essais : 48 heures au plus. Signalements : 90 jours après la décision de la modération. Messages de la Communauté : jusqu'à ce que vous les effaciez ou supprimiez le compte. Les adresses e-mail données aux versions précédentes du jeu ont été effacées. Ce qui est supprimé (compte supprimé, adresses effacées) disparaît aussitôt de la base, et des sauvegardes de l'hébergeur à leur rotation. ⇒ Conta e progressão: até você excluir a conta, ou 36 meses após seu último login. Sessão: 90 dias sem visita. Tentativa limitante: 48 horas no máximo. Relatórios: 90 dias após a decisão dos moderadores. Mensagens comunitárias: até que as apague ou apague a conta. Endereços de e-mail dados para versões anteriores do jogo foram apagados. O que é excluído (conta deletada, endereços apagados) desaparece do banco de dados imediatamente, e dos backups do host quando eles giram.
+Uniquement nos prestataires techniques, pour fournir le service : Vercel (hébergement du jeu et des fonctions), Neon (base de données, {0}), Hetzner (serveur de jeu des salons en ligne, en Allemagne), Anthropic (vérification automatique des photos de profil, aux États-Unis). Pour fonctionner, la page charge aussi ses polices de caractères chez Google Fonts, qui reçoit donc votre adresse IP comme tout site. Certains de ces prestataires sont établis aux États-Unis : les transferts hors de l'Union européenne s'appuient sur les garanties prévues par le RGPD (décision d'adéquation du cadre UE-États-Unis ou clauses contractuelles types). ⇒ Apenas os nossos fornecedores técnicos, para fornecer o serviço: Vercel (alojamento do jogo e funções), Neon (base de dados,{0}), Hetzner (servidor de jogos para salas online, na Alemanha), Anthropic (checking automático de fotos de perfil, nos Estados Unidos). Para trabalhar, a página também carrega suas fontes do Google Fonts, que, portanto, recebe seu endereço IP como qualquer site. Alguns desses fornecedores estão baseados nos Estados Unidos: as transferências para fora da União Europeia dependem das salvaguardas previstas pelo RGPD (decisão de adequação do quadro UE-EUA ou cláusulas contrasuais padrão).
+Niveau {0} · créez votre code de secours ⇒ Nível{0}· criar seu código de recuperação
+Téléchargement demandé : vérifiez que le fichier est bien enregistré, sinon copiez le code ou notez-le à la main. ⇒ Download solicitado: verifique se o arquivo foi realmente salvo, caso contrário, copie o código ou anote-o à mão.
+Salon ouvert sur le serveur de jeu : {0} joueur. ⇒ Sala aberto no servidor do jogo:{0}Jogador.
+Salon ouvert sur le serveur de jeu : {0} joueurs. ⇒ Sala aberto no servidor do jogo:{0}Jogadores.
+Le serveur de jeu est saturé. Réessayez dans un instant. ⇒ O servidor de jogos está ocupado. Tente de novo daqui a pouco.
+Le serveur de jeu est injoignable depuis ce poste. Connexion coupée, réseau très restrictif ou serveur en maintenance. Réessayez dans un instant. ⇒ O servidor de jogo não pode ser alcançado a partir deste dispositivo. Conexão perdida, rede muito restritiva ou servidor em manutenção. Tente de novo daqui a pouco.
+Connexion au serveur de jeu en cours. ⇒ A ligar ao servidor de jogos.
+Le serveur de jeu est injoignable. ⇒ O servidor de jogo não pode ser alcançado.
+L'hôte ne répond pas. Réessayez, ou demandez-lui de créer un nouveau salon. ⇒ O hospedeiro não está a responder. Tente novamente, ou peça-lhes para criar um novo sala.
+: votre nom d'affichage, vos actions de jeu et vos messages de discussion sont transmis aux autres joueurs du salon par notre serveur de jeu (hébergé par Hetzner, en Allemagne). Les joueurs ne se connectent jamais directement entre eux : ⇒ : seu nome de exibição, suas ações de jogo e suas mensagens de bate-papo são transmitidas para os outros jogadores no sala pelo nosso servidor de jogo (hospedado por Hetzner, na Alemanha). Os jogadores nunca se conectam diretamente uns aos outros:
+votre adresse IP n'est pas visible des autres joueurs ⇒ seu endereço IP não é visível para outros jogadores
+, seulement du serveur, qui s'en sert, en mémoire, pour acheminer la connexion et limiter les abus. Il ne garde ni vos messages ni votre adresse une fois la connexion fermée. ⇒ , apenas para o servidor, que o usa, em memória, para encaminhar a conexão e limitar o abuso. Ele não mantém nem suas mensagens nem seu endereço quando a conexão é fechada.
+Base : exécution du service que vous demandez (art. 6.1.b) ; limitation des abus : intérêt légitime (art. 6.1.f). ⇒ Base: desempenho do serviço solicitado (art. 6.1.b); limitação do abuso: interesse legítimo (art. 6.1.f).
+{0} joueur en ligne en ce moment ⇒ {0}jogador online agora
+{0} joueurs en ligne en ce moment ⇒ {0}jogadores online agora
+Liste des parties publiques indisponible pour le moment. ⇒ A lista de fósforos está indisponível neste momento.
+Aucune partie publique pour le moment. Lancez-en une avec "Jouer maintenant". ⇒ Não há partida pública neste momento. Começa com "Jogar agora".
+En partie ⇒ Em partida
+Hôte : {0} ⇒ Anfitrião:{0}
+Recherche d'une partie publique... ⇒ À procura de um jogo público...
+Privé ⇒ Privado
+Public ⇒ Público
+Jouer maintenant ⇒ Jogar agora
+Parties publiques ⇒ Partidas públicas
+Jouez tout de suite, rejoignez une partie publique, ou créez un salon pour vos amis. ⇒ Jogue imediatamente, participe de um jogo público ou crie um sala para seus amigos.
+Si vous ouvrez un salon public (ou lancez "Jouer maintenant"), votre nom d'affichage, la carte, le mode et le nombre de joueurs figurent dans la liste des parties publiques, visible de tous, tant que le salon est ouvert. ⇒ Se você abrir um sala público (ou usar "Play now"), seu nome de exibição, o mapa, o modo e o número de jogadores aparecem na lista pública de jogos, visíveis para todos, enquanto o sala está aberto.
+La partie commence dans ⇒ A partida começa em
+En avant ! ⇒ Vamos!
+Entre amis ⇒ Com amigos
+Rejoindre ou lancer une partie publique ⇒ Entrar ou iniciar uma partida pública
+Vous réglez la partie et invitez vos amis ⇒ Preparas o jogo e convidas os seus amigos.
+Rejoindre un salon ⇒ Junte-se a um sala
+Avec le code ou le lien de l'hôte ⇒ Com o código ou link da anfitrião
+Paramètres de partie ⇒ Configuração da partida
+Inviter des amis ⇒ Convidar amigos
+Vos amis tapent ce code dans Rejoindre un salon, ou ouvrent le lien. ⇒ Seus amigos digitem este código em Junte-se a um sala ou abra o link.
+Code copié ⇒ Código copiado
+Copier le code ⇒ Copiar o código
+Lien copié ⇒ Conexão copiada
+Copiez-le à la main ⇒ Copiar à mão
+Copier le lien ⇒ Copiar o link
+Rejoignez mon salon {0} ⇒ Junta-te ao meu sala{0}
+Bot ⇒ Bot
+Installer Riposte ⇒ Instalar o Riposte
+Ouvrez le fichier téléchargé dans le dossier Téléchargements et confirmez. L'installation se termine seule et revient au mode Jeu. ⇒ Abra o arquivo baixado na pasta Downloads e confirme. A instalação termina por conta própria e retorna ao modo de jogo.
+Installez le jeu dans Steam pour y jouer depuis le mode Jeu. ⇒ Instale o jogo no Steam para jogá-lo a partir do Modo de Jogos.
+Télécharger de nouveau ⇒ Baixar novamente
+Installer sur Steam Deck ⇒ Instalar no Deck Steam
+Si la manette ne répond pas, choisissez dans Steam la disposition Manette avec trackpad souris. ⇒ Se o controlador não responder, escolha o Gamepad com layout do Rato Trackpad no Steam.
+Bouton Steam et X pour le clavier à l'écran ⇒ Botão de vapor e X para o teclado na tela
+Communauté ⇒ Comunidade
+Avis, idées et problèmes des joueurs ⇒ Resenhas, ideias e problemas do jogador
+Avis ⇒ Revisões
+Idées ⇒ Ideias
+Problèmes ⇒ Questões
+Idée ⇒ Ideia
+Problème ⇒ Questão
+Signalés ({0}) ⇒ Informado ({0})
+Messages à afficher ⇒ Mensagens a mostrar
+Ordre ⇒ Ordem
+Populaires ⇒ Popular
+Récents ⇒ Recente
+Donner mon avis ⇒ Escrever uma avaliação
+Modifier mon avis ⇒ Editar minha revisão
+Proposer une idée ⇒ Sugerir uma ideia
+Signaler un problème ⇒ Relatar uma questão
+Modifier le message ⇒ Editar mensagem
+Jouez une partie pour donner votre avis. ⇒ Jogue um match para escrever uma avaliação.
+Connectez-vous pour lire les avis des joueurs et donner le vôtre. ⇒ Entre para ler comentários do jogador e escreva o seu próprio.
+Votre note et quelques mots sur le jeu. Les joueurs connectés les verront avec votre nom. ⇒ A sua classificação e algumas palavras sobre o jogo. Jogadores assinados irão vê-los com o seu nome.
+Une idée par message. Les autres joueurs pourront l'appuyer. ⇒ Uma ideia por mensagem. Outros jogadores podem aumentar a votação.
+Dites ce qui se passe, sur quelle carte et sur quel appareil. ⇒ Diga o que acontece, em que mapa e em que dispositivo.
+Ce que vous en pensez (facultatif) ⇒ O que você acha disso (opcional)
+Votre idée ⇒ A sua ideia.
+Le problème rencontré ⇒ A questão que encontrou
+Note ⇒ Classificação
+Publier ⇒ Publicação
+Effacer ⇒ Apagar
+Choisissez une note de 1 à 5 étoiles. ⇒ Escolha uma classificação de 1 a 5 estrelas.
+Un avis ⇒ Uma revisão
+{0} avis ⇒ {0}revisões
+{0} étoile ⇒ {0}estrela
+{0} étoiles ⇒ {0}estrelas
+{0} étoile sur 5 ⇒ {0}estrela de 5
+{0} étoiles sur 5 ⇒ {0}estrelas de 5
+{0} appui ⇒ {0}upvote
+{0} appuis ⇒ {0}upvotes
+{0} signalement ⇒ {0}relatório
+{0} signalements ⇒ {0}relatórios
+Moi aussi ⇒ Eu também.
+Masqué ⇒ Escondido
+modifié ⇒ editado
+Prévue ⇒ Planejado
+Ajoutée au jeu ⇒ Adicionado ao jogo
+Pris en compte ⇒ Entendido.
+Sans état ⇒ Sem status
+Répondre ⇒ Responder
+Modifier la réponse ⇒ Editar resposta
+Rétablir ⇒ Restaurar
+Réponse de l'équipe ⇒ Resposta da equipe
+Réponse de l'équipe (facultative) ⇒ Resposta da equipe (opcional)
+Profil de {0} ⇒ {0}Perfil
+Aucun avis pour le moment. ⇒ Ainda não há críticas.
+Aucune idée pour le moment. ⇒ Ainda não tenho ideias.
+Aucun problème signalé pour le moment. ⇒ Nenhum problema relatado ainda.
+Aucun message signalé. ⇒ Nenhuma mensagem reportada.
+Restez courtois. Les liens et la publicité ne sont pas acceptés. Un message signalé par plusieurs joueurs est masqué en attendant l'équipe. ⇒ Seja educado. Links e publicidade não são permitidos. Uma mensagem relatada por vários jogadores é escondida até que a equipe olhe para ele.
+L'équipe a répondu à votre message dans Communauté. ⇒ A equipa respondeu à sua mensagem na Comunidade.
+Voir la réponse ⇒ Ver a resposta
+: vos avis (note et texte), vos idées et les problèmes que vous signalez sont visibles des joueurs connectés, avec votre nom d'utilisateur, votre nom d'affichage et votre photo de profil. Vous pouvez les modifier ou les effacer à tout moment. Vos appuis ("Moi aussi") et les messages que vous signalez sont gardés avec votre compte. L'équipe peut répondre à un message, le masquer ou l'effacer. Pour recueillir l'avis des joueurs et améliorer le jeu. ⇒ : seus comentários (rating and text), suas ideias e os problemas que você relata são visíveis para jogadores assinados, com seu nome de usuário, nome de exibição e imagem de perfil. Você pode editá-los ou excluí-los a qualquer momento. Seus upvotes ("Eu também") e as mensagens que você relata são mantidas com sua conta. A equipe pode responder a uma mensagem, escondê-la ou excluí-la. Para reunir feedback do jogador e melhorar o jogo.
+Vous pourrez revenir dans ce salon depuis la liste des salons publics. ⇒ Podes voltar para este sala da lista pública.
+Rejoignez une partie publique, ou créez un salon privé pour vos amis. ⇒ Participe de um jogo público ou crie um sala privado para seus amigos.
+Connexion au salon... ⇒ Ligando-se à entrada...
+Ce salon public n'existe plus. Choisissez-en un autre. ⇒ Este sala público já não existe. Escolhe outro.
+Ce salon public est complet. ⇒ Este sala público está cheio.
+Ce salon public accueille une autre version du jeu. Choisissez-en un autre. ⇒ Este sala público está executando outra versão do jogo. Escolhe outro.
+Vous êtes déjà dans ce salon depuis un autre onglet. ⇒ Já você está nesta entrada noutra página.
+La partie a été interrompue, son hôte est parti. ⇒ A partida foi interrompida, seu anfitrião partiu.
+En attente de joueurs ⇒ À espera de jogadores
+Départ imminent ⇒ Começando em breve
+Lancement ⇒ Lançamento
+Connexion perdue. Nouvel essai... ⇒ Conexão perdida. A tentar de novo...
+La partie se lance à {1} joueurs. Encore {0} joueur. ⇒ A partida começa com{1}Jogadores.{0}Mais jogador necessário.
+La partie se lance à {1} joueurs. Encore {0} joueurs. ⇒ A partida começa com{1}Jogadores.{0}mais jogadores necessários.
+La partie commence dans {0} s. Votez pour la carte. ⇒ A partida começa em{0}s. Vote no mapa.
+La partie commence dans {0} s sur {1}. ⇒ A partida começa em{0}s on{1}.
+Ouverture de la partie sur {0}... ⇒ Abrindo o jogo em{0}...
+Partie en cours sur {0}. ⇒ Correspondência em andamento{0}.
+Salon public ⇒ Sala público
+Partie en cours ⇒ Correspondência em curso
+Votez pour la prochaine carte ⇒ Vote no próximo mapa
+Prochaine carte ⇒ Próximo mapa
+{0} vote ⇒ {0} voto
+{0} votes ⇒ {0} votos
+mon vote ⇒ Meu voto
+Début dans {0} s ⇒ Iniciando em{0}s
+Lancement de la partie... ⇒ A iniciar a partida...
+Connexion à la partie... ⇒ A juntar-se à partida...
+Liste des salons publics indisponible pour le moment. ⇒ Lista de entrada pública indisponível neste momento.
+Salons publics ⇒ Lobbies públicos
+Salon public {0} ⇒ Sala público{0}
+Salon public, {0} ⇒ O sala público,{0}
+Vous êtes dans un salon public. Lancer une partie ici le quitte. ⇒ Estás num sala público. Começar um fósforo aqui deixa-o.
+Dans un salon public permanent, votre nom d'affichage et votre niveau sont vus des autres joueurs de ce salon. La liste des salons publics ne montre que la carte, le mode et le nombre de joueurs. ⇒ Em um sala público permanente, seu nome e nível de exibição são vistos pelos outros jogadores desse sala. A lista pública de sala só mostra o mapa, o modo e o número de jogadores.
+Vous êtes le chef du salon. Un autre joueur prendra votre place. ⇒ Você é o líder do sala. Outro jogador tomará o seu lugar.
+Public ou privé, vous réglez la partie ⇒ Público ou privado, você marcou o jogo
+Ce salon est privé. Entrez le code que vous a donné son chef. ⇒ Este sala é privado. Digite o código que o líder lhe deu.
+Le chef du salon vous a exclu. ⇒ O líder do sala retirou-te.
+Réglés par le chef du salon ⇒ Definido pelo líder do sala
+Au salon ⇒ No sala
+Réglez la partie, puis lancez-la quand vous voulez. ⇒ Configure o jogo e inicie-o quando quiser.
+En attente du lancement par le chef du salon. ⇒ À espera que o líder comece o jogo.
+chef ⇒ líder
+En attente du chef ⇒ À espera do líder
+Chef : {0} ⇒ Líder:{0}
+Vous réglez la partie et la lancez quand vous voulez. Le salon reste ouvert tant qu'il y a quelqu'un. ⇒ Prepara o jogo e começa quando quiseres. O sala fica aberto enquanto alguém estiver nele.
+Dans la liste des salons, ouvert à tous ⇒ Na lista de entrada, aberta a todos
+Salon privé ⇒ Sala privado
+Dans la liste des salons, on n'y entre qu'avec son code ⇒ Na lista de sala, os jogadores precisam de seu código para participar
+Avec son code ou son lien d'invitation ⇒ Com o seu código ou link de convite
+Si vous créez un salon, public ou privé, votre nom d'affichage, la carte, le mode et le nombre de joueurs figurent dans la liste des salons, visible de tous, tant que le salon est ouvert. Le code d'un salon privé n'y figure pas. ⇒ Se você criar um sala, público ou privado, seu nome de exibição, o mapa, o modo e o número de jogadores aparecem na lista de sala, visíveis para todos, enquanto o sala está aberto. O código de um sala privado não é mostrado lá.
+Connexion perdue. La partie continue chez un autre joueur. ⇒ Conexão perdida. O jogo continua com outro jogador hospedando.
+L'hôte est parti. Vous hébergez maintenant la partie. ⇒ O anfitrião partiu. Agora és a anfitriã do jogo.
+La partie continue avec un nouvel hôte. ⇒ O jogo continua com um novo anfitrião.
+Ne quittez pas ⇒ Por favor, aguarde.
+Migration de l'hôte ⇒ Migração da anfitrião
+Un autre joueur reprend la partie. ⇒ Outro jogador está assumindo o jogo.
+Vous devenez l'hôte de la partie. ⇒ Estás a tornar-te o anfitrião do jogo.
+Reconnexion ⇒ Reconectando
+Connexion perdue. Retour dans la partie... ⇒ Conexão perdida. Pôr-te de volta ao jogo...
+La connexion au serveur de jeu est perdue. ⇒ A conexão com o servidor de jogos foi perdida.
+{0} est de retour. ⇒ {0}Está de volta.
+{0} a perdu la connexion. ⇒ {0}perdeu a conexão.
+Hors de la zone de combat ⇒ Fora da zona de combate
+Revenez avant la fin du compte à rebours ⇒ Retorne antes o tempo acabar
+Oasis ⇒ Oásis
+Camp nord ⇒ Acampamento norte
+Camp sud ⇒ Acampamento sul
+Épave ⇒ Destroços
+Campement ⇒ Acampamento
+Rochers ⇒ Pedras
+Impossible de rejoindre cette partie, son hôte ne répond pas. Choisissez un autre salon ou réessayez dans un moment. ⇒ Não foi possível juntar- se a este jogo, a sua anfitrião não está a responder. Escolha outro sala ou tente novamente em um momento.
+Zones des cartes ⇒ Zonas dos mapas
+Miroir ⇒ Espelho
+Ajouter ⇒ Adicionar
+Annuler les retouches ⇒ Desfazer alterações
+Copier la configuration ⇒ Copiar configuração
+Largage {0} ⇒ Largar{0}
+Domination {0} ⇒ Dominação{0}
+Alpha à {0} m, Bravo à {1} m. ⇒ Alfa{0}Estou longe, Bravo.{1}Estou longe.
+Le mecha ne peut pas se poser ici. ⇒ O meca não pode aterrar aqui.
+Le mecha se posera à {0} m. ⇒ O Mecha vai aterrar.{0}Estou longe.
+Faites glisser une zone pour la déplacer. ⇒ Arraste uma zona para a mover.
+Configuration copiée. ⇒ Configuração copiada.
+Copiez ce texte ⇒ Copiar este texto
+Pas de sol praticable sous ce point. ⇒ Não há chão utilizável neste ponto.
+Chaleur ⇒ Calor
+Surchauffe ! Sortez du mecha ⇒ Superaquecimento! Saia do mecha
+Surchauffe ! Maintenir {0} pour sortir ⇒ A sobreaquecer! Esperar{0}para sair
+Surchauffe ! {0} Sortir du mecha ⇒ A sobreaquecer!{0}Sai do mecha.
+Canons ⇒ Canhões
+Monter dans le mecha ⇒ Embarque no mecha
+Descendre du mecha ⇒ Sair do mecha
+Maintenir {0} pour monter dans le mecha ⇒ Esperar{0}para embarcar no mecha
+Maintenir {0} pour descendre du mecha ⇒ Esperar{0}para deixar o mecha
+{0} Monter dans le mecha ⇒ {0}Embarque no mecha
+{0} Descendre du mecha ⇒ {0}Deixa o mecha.
+Votre mecha a explosé ⇒ Seu mecha explodiu
+Mecha allié détruit ⇒ Mecha aliado destruído
+Mecha ennemi détruit ⇒ Mecha inimigo destruído
+Prête ⇒ Pronta
+Ennemi ⇒ Inimigo
+Touches 1 à 7 prête, Maj et 1 à 7 ennemi ⇒ Chaves 1 a 7 prontas, Shift e inimigo 1 a 7
+Trajectoire des grenades (en tenant une grenade) ⇒ Trajetória da granada (enquanto segura uma granada)
+Frag ⇒ Frag
+Grenade à fragmentation ⇒ Granada de fragmentação
+Elle explose 3,5 secondes après la cuillère. La garder en main raccourcit la mèche. ⇒ Ele dispara 3,5 segundos depois da colher voar. Segurar encurta o fusível.
+Flash ⇒ Flash
+Grenade incapacitante ⇒ Granada atordoante
+Elle aveugle et assourdit, d'autant plus qu'on est près et face à elle. Aucun dégât. ⇒ Cega e ensurdece, mais de perto e encara-a. Nenhum dano.
+Fumigène ⇒ Fumaça
+Grenade fumigène ⇒ Granada de fumaça
+Un nuage épais d'environ sept mètres, pendant une quinzaine de secondes. Personne ne voit à travers. ⇒ Uma espessa nuvem de cerca de sete metros de largura, por cerca de quinze segundos. Ninguém percebe.
+{0} grenade incapacitante ⇒ {0}flashbang
+{0} grenades incapacitantes ⇒ {0}flashbangs
+{0} grenade fumigène ⇒ {0}granada de fumo
+{0} grenades fumigènes ⇒ {0}granadas de fumo
+Classe personnalisée {0} sur {1}. Choisissez une grenade ou le couteau de lancer, vous en avez deux à chaque vie ⇒ Classe personalizada{0}de{1}Escolha uma granada ou a faca de atirar, você tem dois a cada vida
+{0} accessoire ⇒ {0}anexo
+{0} accessoires ⇒ {0}anexos
+Principale ⇒ Primária
+{0} par vie ⇒ {0}por vida
+Un seul par classe ⇒ Uma por classe
+D'origine ⇒ Padrão
+Mèche ⇒ Pavio
+{0} s ⇒ {0}s
+Par vie ⇒ Por vida
+Effet ⇒ Efeito
+Aveugle jusqu'à {0} s ⇒ Atordoa por até {0} s
+{0} m ⇒ {0}m
+Nuage de {0} s ⇒ Nuvem por {0} s
+Largeur ⇒ Duração
+Jusqu'à {0} de dégâts ⇒ Até {0} de dano
+Rayon ⇒ Raio
+Emplacements de la classe ⇒ Slots da classe
+Couteau de lancer ⇒ Faca arremessável
+Il part presque droit et tue d'un coup s'il touche. Il se ramasse en passant dessus. ⇒ Voa quase em linha recta e mata num só golpe. Passa por cima para o apanhar.
+{0} couteau de lancer ⇒ {0}faca de atirar
+{0} couteaux de lancer ⇒ {0}facas de atirar
+Couteau de lancer récupéré ⇒ Faca arremessável recuperada
+Élimine d'un coup ⇒ Mata com um golpe
+Vitesse ⇒ Velocidade
+{0} m/s ⇒ {0}m/s
+Au sol ⇒ No chão
+Se ramasse ⇒ Pode ser coletada
+Chantier ⇒ Construção
+Garage ⇒ Garagem
+Maison témoin ⇒ Casa modelo
+Sente ⇒ Vereda
+Piscine ⇒ Piscina
+Jardins ⇒ Jardins
+Raquette ⇒ Rotatória
+Rue des Mésanges ⇒ Rue des Mésanges
+Pavillons ⇒ Casas
+Seul, entre amis ou en ligne ⇒ Sozinho, com amigos ou online
+Vous êtes maintenant amis. ⇒ Vocês agora são amigos.
+Demande d'ami envoyée. ⇒ Pedido de amizade enviado.
+Invitation envoyée à {0}. ⇒ Convite enviado para {0}.
+Hors ligne ⇒ Offline
+Au menu ⇒ No menu
+Dans un salon ⇒ Em uma sala
+Connectez-vous pour retrouver vos amis. ⇒ Entre para encontrar seus amigos.
+{0} ami en ligne ⇒ {0} amigo online
+{0} amis en ligne ⇒ {0} amigos online
+Demande reçue ⇒ Pedido recebido
+Nom d'utilisateur de l'ami à ajouter ⇒ Nome de usuário do amigo a adicionar
+Demandes reçues ⇒ Pedidos recebidos
+En ligne ({0}) ⇒ Online ({0})
+Hors ligne ({0}) ⇒ Offline ({0})
+Demandes envoyées ⇒ Pedidos enviados
+Vous n'avez pas encore d'ami. Ajoutez un joueur par son nom d'utilisateur, ou depuis le classement (Joueurs). ⇒ Ainda não você tem amigos. Adicione um jogador por seu nome de usuário, ou da tabela de classificação (Players).
+Vous contre des bots, sans connexion. Pour s'entraîner. ⇒ Tu contra os bots, offline. Para praticar.
+Jouer ⇒ Jogar
+Amis ⇒ Amigos
+Seul contre des bots, entre amis ou en ligne ⇒ Sozinho contra bots, com amigos ou online
+{0} vous a invité dans son salon {1}. ⇒ {0}convidou-o para o seu sala{1}.
+{0} vous invite dans son salon. ⇒ {0}convida-o para a entrada deles.
+Code et lien ⇒ Código e link
+Renvoyer l'invitation ⇒ Reenviar convite
+Inviter dans mon salon ⇒ Convidar para minha sala
+Un salon privé contre des bots. Invitez vos amis connectés depuis le salon. ⇒ Um sala privado contra bots. Convide seus amigos online do sala.
+Les salons publics lancés par des joueurs. Vous pouvez aussi y créer votre salon. ⇒ Lobbies públicos iniciados por jogadores. Você também pode criar seu próprio sala lá.
+Sprinter, retenir son souffle en lunette ⇒ Correr, prender a respiração na mira
+pour avancer. Poussé au-delà du cercle, il fait sprinter. ⇒ Para te mexeres. Passado pelo círculo, corre.
+Se déplacer (analogique). L3 (appui sur le bâton) pour sprinter, en lunette pour retenir son souffle ⇒ Mover (analógico). L3 (pressionar o direcional) para correr; ao mirar, para prender a respiração
+Aucun salon public pour le moment. Créez le vôtre, il apparaîtra ici. ⇒ Não há entrada pública neste momento. Crie o seu e ele vai aparecer aqui.

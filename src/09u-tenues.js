@@ -116,6 +116,7 @@ function skinPick(s) {
   if (!skinUnlocked(s)) { skinRefresh(); return; }
   if (s === skinMine() && s === skinId(Settings.skin)) { skinRefresh(); return; }
   Settings.skin = s; saveSettings();
+  arsLoadoutEdit();
   if (VM_LOOK.hand) vmSetLook(s, 0);
   soldierLookAll();
   if (NET.on) NET.flush = true; // la présence suivante annonce la nouvelle tenue

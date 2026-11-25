@@ -1,17 +1,23 @@
-/* Parcours des écrans du jeu dans une langue : node tools/dev/visual/langues.js en|fr [dossier de captures]
+/* Parcours des écrans du jeu dans une langue : node tools/dev/visual/langues.js en|fr|pt-BR [dossier de captures]
    Relève le texte visible de chaque écran et signale, en anglais, ce qui ressemble encore à du français, ainsi que les clés
    absentes du dictionnaire (I18N_MISS). Sert de contrôle après tout ajout de texte (README, « Langues »). */
 const { openGame } = require('./common');
 const path = require('path');
-const lang = process.argv[2] === 'fr' ? 'fr' : 'en', out = process.argv[3];
+const lang = ['fr', 'pt-BR'].includes(process.argv[2]) ? process.argv[2] : 'en', out = process.argv[3];
 /* Mots français : ceux des clés de i18n/en.txt qui ne figurent dans aucune traduction anglaise ; toute ligne qui en contient un est suspecte */
 const fs = require('fs');
 const pairs = fs.readFileSync(path.join(__dirname, '../../../i18n/en.txt'), 'utf8').split('\n').filter((l) => l && !l.startsWith('#') && l.includes(' ⇒ ')).map((l) => l.split(' ⇒ ')).map(([k, v]) => [k, v === '=' ? k : v]);
 const words = (t) => (t.toLowerCase().match(/[a-zà-ÿœ]{3,}/g) || []);
 const enWords = new Set(pairs.flatMap(([, v]) => words(v)));
-const frWords = new Set(pairs.flatMap(([k]) => words(k)).filter((w) => !enWords.has(w)));
-const FR = { test: (v) => /[àâçéèêëîïôùûœ]/i.test(v) || words(v.replace(/<[^>]*>/g, ' ')).some((w) => frWords.has(w)) };
-const OK = /Kervénec|Hôtel du Col|Café de la Marine|Français|Riposte: Frontline|\[Nom ou raison|\[Adresse|\[région/;
+const ptPath = path.join(__dirname, '../../../i18n/pt-BR.txt');
+const ptWords = fs.readFileSync(ptPath, 'utf8').split('\n').filter((l) => l && !l.startsWith('#') && l.includes(' ⇒ ')).map((l) => {
+  const [k, v] = l.split(' ⇒ ');
+  return words(v === '=' ? k : v);
+}).flat();
+const localizedWords = new Set([...enWords, ...ptWords]);
+const frWords = new Set(pairs.flatMap(([k]) => words(k)).filter((w) => !localizedWords.has(w)));
+const FR = { test: (v) => (lang === 'en' && /[àâçéèêëîïôùûœ]/i.test(v)) || words(v.replace(/<[^>]*>/g, ' ')).some((w) => frWords.has(w)) };
+const OK = /Kervénec|Hôtel du Col|Café de la Marine|Français|Francês|Riposte: Frontline|\[Nom ou raison|\[Adresse|\[région/;
 (async () => {
   const { browser, page, logs } = await openGame({ w: 1280, h: 800, settings: { quality: 'low', lang, map: 'sable' }, noHdri: true });
   const seen = new Set(), left = [];
@@ -28,7 +34,7 @@ const OK = /Kervénec|Hôtel du Col|Café de la Marine|Français|Riposte: Frontl
       document.querySelectorAll('[placeholder],[aria-label],[title]').forEach((e) => { for (const a of ['placeholder', 'aria-label', 'title']) { const v = e.getAttribute(a); if (v) r.push(v); } });
       return r;
     }, !!all);
-    for (const v of t) if (lang === 'en' && FR.test(v) && !OK.test(v) && !seen.has(v)) { seen.add(v); left.push(`${name}: ${v.slice(0, 110)}`); }
+    for (const v of t) if (lang !== 'fr' && FR.test(v) && !OK.test(v) && !seen.has(v)) { seen.add(v); left.push(`${name}: ${v.slice(0, 110)}`); }
     await shot(name);
   };
   await page.evaluate(() => { const b = document.getElementById('wnOk'); if (b) b.click(); });
@@ -80,9 +86,9 @@ const OK = /Kervénec|Hôtel du Col|Café de la Marine|Français|Riposte: Frontl
   await page.evaluate(() => { try { resumeGame(); } catch (e) { /* ignoré */ } });
   await page.evaluate(() => { try { MATCH.score[0] = MATCH.limit; endMatch(); } catch (e) { /* ignoré */ } }); await page.waitForTimeout(6000); await scan('end');
   await scan('static', true);
-  console.log(left.length ? 'RESTE DU FRANÇAIS EN ANGLAIS :\n  ' + left.join('\n  ') : 'aucun texte français détecté');
-  const miss = await page.evaluate(() => [...I18N_MISS]);
-  console.log(lang === 'en' ? (miss.length ? 'CLÉS SANS TRADUCTION :\n  ' + miss.map((k) => JSON.stringify(k.slice(0, 100))).join('\n  ') : 'aucune clé sans traduction') : '(français : pas de contrôle de clés)');
+  console.log(left.length ? `RESTE DU FRANÇAIS EN ${lang === 'en' ? 'ANGLAIS' : 'PORTUGAIS'} :\n  ` + left.join('\n  ') : (lang === 'pt-BR' ? 'nenhum texto em francês detectado' : 'aucun texte français détecté'));
+  const miss = await page.evaluate((lang) => [...(lang === 'pt-BR' ? I18N_PT_MISS : I18N_MISS)], lang);
+  console.log(lang !== 'fr' ? (miss.length ? 'CLÉS SEM TRADUÇÃO:\n  ' + miss.map((k) => JSON.stringify(k.slice(0, 100))).join('\n  ') : 'nenhuma chave sem tradução') : '(français : pas de contrôle de clés)');
   console.log(logs.filter((l) => !l.includes('HDRI') && !l.includes('ERR_')).slice(0, 12).join('\n'));
   await browser.close();
 })();

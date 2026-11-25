@@ -435,7 +435,7 @@ function fillScoreboard() {
 /* ---------- Écran de résultats : classement des deux équipes, affiché quelques secondes après la killcam finale ---------- */
 const END = { t: 0, shown: -1 };
 const END_SECONDS = 15;
-const ordinal = (n) => (LANG === 'en' ? n + ((n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10]) || 'th') : n === 1 ? '1er' : n + 'e');
+const ordinal = (n) => (LANG === 'en' ? n + ((n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10]) || 'th') : LANG === 'pt-BR' ? `${n}º` : n === 1 ? '1er' : n + 'e');
 /* Tableaux de l'écran de résultats : mon équipe à gauche (comme le score et le tableau en partie), rang, nom (MVP), score, éliminations, morts,
    ratio, aides ; ma ligne marquée (trait jaune et gras) */
 const endHead = () => `<thead><tr><th>#</th><th>${_t('Nom')}</th><th>${_t('Score')}</th><th>${_t('Élim.')}</th><th>${_t('Morts')}</th><th>${_t('Ratio')}</th><th>${_t('Aides')}</th></tr></thead>`;

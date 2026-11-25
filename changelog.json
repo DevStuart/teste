@@ -6,17 +6,20 @@
       {
         "t": "new",
         "x": "Le code source du jeu est public, sous licence MIT. Le lien \"Code source\" en bas du menu principal y mène, chacun peut le lire et s'en servir pour ses propres jeux.",
-        "x_en": "The game's source code is public, under the MIT license. The \"Source code\" link at the bottom of the main menu leads to it, and anyone can read it and use it for their own games."
+        "x_en": "The game's source code is public, under the MIT license. The \"Source code\" link at the bottom of the main menu leads to it, and anyone can read it and use it for their own games.",
+        "x_pt": "O código-fonte do jogo é público, sob licença MIT. O link \"Código-fonte\" na parte inferior do menu principal leva até ele, e qualquer pessoa pode lê-lo e usá-lo em seus próprios jogos."
       },
       {
         "t": "fixed",
         "x": "Après une mort aux commandes du drone kamikaze ou dans un mecha, on réapparaît avec son arme en main.",
-        "x_en": "After dying while flying the kamikaze drone or inside a mech, you now respawn with your weapon in hand."
+        "x_en": "After dying while flying the kamikaze drone or inside a mech, you now respawn with your weapon in hand.",
+        "x_pt": "Depois de morrer pilotando o drone suicida ou dentro de um mecha, agora você reaparece com a arma na mão."
       },
       {
         "t": "fixed",
         "x": "Le gilet de la tenue Gilet jaune ne rentre plus dans le corps du soldat.",
-        "x_en": "The vest of the Gilet jaune outfit no longer clips into the soldier's body."
+        "x_en": "The vest of the Gilet jaune outfit no longer clips into the soldier's body.",
+        "x_pt": "O colete do traje Gilet jaune não atravessa mais o corpo do soldado."
       }
     ]
   },
@@ -27,37 +30,44 @@
       {
         "t": "new",
         "x": "Nouveau plafond d'images par seconde, \"Moitié de l'écran\". Le jeu dessine une image tous les deux rafraîchissements, pour une cadence régulière (140 images par seconde sur un écran de 280 Hz).",
-        "x_en": "New frame rate cap, \"Half refresh rate\". The game draws one frame every two screen refreshes, for an even pace (140 frames per second on a 280 Hz screen)."
+        "x_en": "New frame rate cap, \"Half refresh rate\". The game draws one frame every two screen refreshes, for an even pace (140 frames per second on a 280 Hz screen).",
+        "x_pt": "Novo limite de taxa de quadros: \"Metade da taxa de atualização\". O jogo renderiza um quadro a cada duas atualizações da tela, mantendo um ritmo uniforme (140 quadros por segundo em uma tela de 280 Hz)."
       },
       {
         "t": "new",
         "x": "Rapport de performances dans Options, Vidéo. Avec l'affichage des performances, il suit chaque image d'une partie et se copie à la fin pour comprendre les chutes d'images.",
-        "x_en": "Performance report in Options, Video. With the performance display on, it tracks every frame of a match and can be copied at the end to understand frame drops."
+        "x_en": "Performance report in Options, Video. With the performance display on, it tracks every frame of a match and can be copied at the end to understand frame drops.",
+        "x_pt": "Relatório de desempenho em Opções, Vídeo. Com a exibição de desempenho ativada, ele acompanha todos os quadros de uma partida e pode ser copiado ao final para entender quedas de taxa de quadros."
       },
       {
         "t": "improved",
         "x": "Les grenades flash, les couteaux de lancer, les coups de couteau et le drone kamikaze affichent une croix de touche quand ils atteignent un ennemi.",
-        "x_en": "Flashbangs, throwing knives, knife hits and the kamikaze drone now show a hit marker when they reach an enemy."
+        "x_en": "Flashbangs, throwing knives, knife hits and the kamikaze drone now show a hit marker when they reach an enemy.",
+        "x_pt": "Granadas de luz, facas arremessadas, acertos de faca e o drone suicida agora mostram um marcador de acerto ao atingir um inimigo."
       },
       {
         "t": "improved",
         "x": "Le drone kamikaze a un vrai bruit d'hélices, qui monte avec sa vitesse.",
-        "x_en": "The kamikaze drone has a real propeller sound, which rises with its speed."
+        "x_en": "The kamikaze drone has a real propeller sound, which rises with its speed.",
+        "x_pt": "O drone suicida tem um som real de hélices, que fica mais agudo conforme sua velocidade."
       },
       {
         "t": "improved",
         "x": "Moins de ralentissements après une explosion au milieu des caisses et des objets du décor, surtout sur Kervénec.",
-        "x_en": "Fewer slowdowns after an explosion among crates and props, especially on Kervénec."
+        "x_en": "Fewer slowdowns after an explosion among crates and props, especially on Kervénec.",
+        "x_pt": "Menos travamentos após uma explosão entre caixas e objetos cenográficos, especialmente em Kervénec."
       },
       {
         "t": "improved",
         "x": "En domination, la mini-carte demande beaucoup moins de calcul et les points ne causent plus d'à-coup au début de la partie.",
-        "x_en": "In Domination, the minimap takes far less work and the capture points no longer cause a stutter at the start of the match."
+        "x_en": "In Domination, the minimap takes far less work and the capture points no longer cause a stutter at the start of the match.",
+        "x_pt": "Em Dominação, o minimapa exige muito menos processamento e os pontos de captura não causam mais travadinhas no início da partida."
       },
       {
         "t": "fixed",
         "x": "Une élimination au couteau de lancer ne compte plus deux fois dans les enchaînements d'éliminations.",
-        "x_en": "A throwing knife kill no longer counts twice in kill chains."
+        "x_en": "A throwing knife kill no longer counts twice in kill chains.",
+        "x_pt": "Uma eliminação com faca arremessada não conta mais duas vezes nas sequências de eliminações."
       }
     ]
   },
@@ -68,12 +78,14 @@
       {
         "t": "new",
         "x": "Nouvelle tenue de défi, Gilet jaune. Elle se gagne sur les cartes françaises, Val-Blanc, Kervénec et French Dream.",
-        "x_en": "New challenge outfit, Yellow Vest. Unlock it on the French maps, Val-Blanc, Kervénec and French Dream."
+        "x_en": "New challenge outfit, Yellow Vest. Unlock it on the French maps, Val-Blanc, Kervénec and French Dream.",
+        "x_pt": "Novo traje de desafio: Colete Amarelo. Desbloqueie-o nos mapas franceses Val-Blanc, Kervénec e French Dream."
       },
       {
         "t": "fixed",
         "x": "Les bots éblouis par une grenade flash ne restent plus aveugles à la partie suivante. Ils restaient au point d'apparition à tituber sans tirer, surtout en ligne.",
-        "x_en": "Bots blinded by a flashbang no longer stay blind in the next match. They used to stagger at their spawn without shooting, mostly online."
+        "x_en": "Bots blinded by a flashbang no longer stay blind in the next match. They used to stagger at their spawn without shooting, mostly online.",
+        "x_pt": "Os bots cegados por uma granada de luz não ficam mais cegos na partida seguinte. Eles costumavam cambalear no ponto de renascimento sem atirar, principalmente no modo online."
       }
     ]
   },
@@ -84,17 +96,20 @@
       {
         "t": "improved",
         "x": "Les cartes ont de nouvelles descriptions.",
-        "x_en": "Maps have new descriptions."
+        "x_en": "Maps have new descriptions.",
+        "x_pt": "Os mapas têm novas descrições."
       },
       {
         "t": "improved",
         "x": "Les descriptions des armes, des grenades, des classes, des séries, des accessoires et des modes sont plus courtes.",
-        "x_en": "Descriptions of weapons, grenades, classes, killstreaks, attachments and modes are shorter."
+        "x_en": "Descriptions of weapons, grenades, classes, killstreaks, attachments and modes are shorter.",
+        "x_pt": "As descrições de armas, granadas, classes, sequências de eliminações, acessórios e modos ficaram mais curtas."
       },
       {
         "t": "improved",
         "x": "L'écran de chargement d'une partie n'affiche plus d'astuce.",
-        "x_en": "The match loading screen no longer shows a tip."
+        "x_en": "The match loading screen no longer shows a tip.",
+        "x_pt": "A tela de carregamento da partida não mostra mais dicas."
       }
     ]
   },
@@ -105,42 +120,50 @@
       {
         "t": "new",
         "x": "Un bouton Jouer remplace Solo et Multijoueur. On y choisit de jouer seul contre des bots, entre amis ou dans une partie publique.",
-        "x_en": "A Play button replaces Solo and Multiplayer. Pick whether to play alone against bots, with friends or in a public match."
+        "x_en": "A Play button replaces Solo and Multiplayer. Pick whether to play alone against bots, with friends or in a public match.",
+        "x_pt": "Um botão Jogar substitui Solo e Multijogador. Escolha se vai jogar sozinho contra bots, com amigos ou em uma partida pública."
       },
       {
         "t": "new",
         "x": "Nouveau menu Amis. On y voit ses amis connectés et ce qu'ils font, et on les invite dans son salon d'un toucher. L'invitation apparaît chez eux, ils rejoignent sans taper de code.",
-        "x_en": "New Friends menu. See which friends are online and what they are doing, and invite them to your lobby in one tap. The invite pops up on their screen and they join without typing a code."
+        "x_en": "New Friends menu. See which friends are online and what they are doing, and invite them to your lobby in one tap. The invite pops up on their screen and they join without typing a code.",
+        "x_pt": "Novo menu Amigos. Veja quais amigos estão online e o que estão fazendo, e convide-os para o seu lobby com um toque. O convite aparece na tela deles, e eles entram sem digitar código."
       },
       {
         "t": "improved",
         "x": "Parties publiques ne montre plus que les salons publics lancés par des joueurs, et seulement ceux où il y a du monde.",
-        "x_en": "Public matches now only lists public lobbies started by players, and only the ones with people in them."
+        "x_en": "Public matches now only lists public lobbies started by players, and only the ones with people in them.",
+        "x_pt": "O modo Partidas públicas agora mostra apenas lobbies públicos iniciados por jogadores e somente aqueles com pessoas."
       },
       {
         "t": "improved",
         "x": "La killcam montre les touches du tueur, avec leur son.",
-        "x_en": "The killcam now shows the killer's hit markers, with their sound."
+        "x_en": "The killcam now shows the killer's hit markers, with their sound.",
+        "x_pt": "A killcam agora mostra os marcadores de acerto do assassino, junto com o som correspondente."
       },
       {
         "t": "improved",
         "x": "Les boutons du haut du menu principal n'affichent plus que leur icône, sur ordinateur comme sur téléphone.",
-        "x_en": "The buttons at the top of the main menu now only show their icon, on computer as on phone."
+        "x_en": "The buttons at the top of the main menu now only show their icon, on computer as on phone.",
+        "x_pt": "Os botões no topo do menu principal agora mostram apenas seus ícones, no computador e no celular."
       },
       {
         "t": "fixed",
         "x": "En ligne, les bots ne restent plus figés quand le joueur qui héberge la partie passe sur un autre onglet.",
-        "x_en": "Online, bots no longer freeze when the player hosting the match switches to another tab."
+        "x_en": "Online, bots no longer freeze when the player hosting the match switches to another tab.",
+        "x_pt": "No modo online, os bots não ficam mais parados quando o jogador que hospeda a partida troca de aba."
       },
       {
         "t": "fixed",
         "x": "La killcam d'un pilote de mecha montre la cabine, sans les bras et l'arme du soldat par-dessus.",
-        "x_en": "The killcam of a mecha pilot shows the cockpit, without the soldier's arms and weapon on top of it."
+        "x_en": "The killcam of a mecha pilot shows the cockpit, without the soldier's arms and weapon on top of it.",
+        "x_pt": "A killcam de um piloto de mecha mostra a cabine, sem os braços e a arma do soldado sobrepostos."
       },
       {
         "t": "fixed",
         "x": "Avec une manette, sur Steam Deck notamment, le dégradé du bas de l'écran descend jusqu'au bord.",
-        "x_en": "With a controller, on Steam Deck in particular, the shading at the bottom of the screen now reaches the edge."
+        "x_en": "With a controller, on Steam Deck in particular, the shading at the bottom of the screen now reaches the edge.",
+        "x_pt": "Com um controle, especialmente no Steam Deck, a gradação na parte inferior da tela agora alcança a borda."
       }
     ]
   },
@@ -151,12 +174,14 @@
       {
         "t": "fixed",
         "x": "Recharger en courant ne couche plus l'arme en travers de l'écran. Elle garde la pose du rechargement, un peu plus bas, et ne gêne plus la visée.",
-        "x_en": "Reloading while sprinting no longer swings the weapon across the screen. It keeps its reload pose, a little lower, and stays out of your aim."
+        "x_en": "Reloading while sprinting no longer swings the weapon across the screen. It keeps its reload pose, a little lower, and stays out of your aim.",
+        "x_pt": "Recarregar enquanto corre não faz mais a arma passar pela tela. Ela mantém a pose de recarga, um pouco mais baixa, e não atrapalha sua mira."
       },
       {
         "t": "fixed",
         "x": "L'arme reprend sa pose de course quand on sprinte. Elle restait à la hanche depuis la 5.2.0.",
-        "x_en": "The weapon goes back to its sprint pose when you sprint. It had stayed at the hip since 5.2.0."
+        "x_en": "The weapon goes back to its sprint pose when you sprint. It had stayed at the hip since 5.2.0.",
+        "x_pt": "A arma volta à pose de corrida ao correr. Ela havia ficado na lateral desde a versão 5.2.0."
       }
     ]
   },
@@ -167,27 +192,32 @@
       {
         "t": "new",
         "x": "Nouvelle carte, French Dream. Un lotissement de province où toutes les maisons se ressemblent, la plus petite carte du jeu, faite pour le combat rapproché. Le chantier, la maison témoin et son étage, la raquette et des jardins fermés de thuyas.",
-        "x_en": "New map, French Dream. A small-town housing estate where every house looks the same, the smallest map in the game, built for close combat. The building site, the show home and its upper floor, the cul-de-sac and gardens closed off by hedges."
+        "x_en": "New map, French Dream. A small-town housing estate where every house looks the same, the smallest map in the game, built for close combat. The building site, the show home and its upper floor, the cul-de-sac and gardens closed off by hedges.",
+        "x_pt": "Novo mapa: French Dream. Um bairro residencial de cidade pequena onde todas as casas são iguais, o menor mapa do jogo, feito para combate próximo. A obra, a casa-modelo e seu andar superior, o beco sem saída e os jardins cercados por sebes."
       },
       {
         "t": "improved",
         "x": "Le jeu est plus nerveux. On court, glisse, change d'arme, recharge et vise plus vite, et les animations des armes sont plus franches.",
-        "x_en": "The game is snappier. Running, sliding, switching weapons, reloading and aiming are all faster, and weapon animations hit harder."
+        "x_en": "The game is snappier. Running, sliding, switching weapons, reloading and aiming are all faster, and weapon animations hit harder.",
+        "x_pt": "O jogo ficou mais ágil. Correr, deslizar, trocar de arma, recarregar e mirar ficam mais rápidos, e as animações das armas são mais incisivas."
       },
       {
         "t": "improved",
         "x": "Les voitures ont été refaites. Formes arrondies, vitres placées comme sur de vraies voitures, peinture brillante et roues plus grandes. Le 4x4 et le camion militaire aussi.",
-        "x_en": "Cars have been remade. Rounded shapes, windows laid out like on real cars, glossy paint and bigger wheels. The 4x4 and the army truck too."
+        "x_en": "Cars have been remade. Rounded shapes, windows laid out like on real cars, glossy paint and bigger wheels. The 4x4 and the army truck too.",
+        "x_pt": "Os carros foram refeitos. Formas arredondadas, vidros distribuídos como em carros reais, pintura brilhante e rodas maiores. O 4x4 e o caminhão militar também."
       },
       {
         "t": "improved",
         "x": "Les véhicules ont de vraies vitres. On voit l'habitacle à travers, et les balles passent.",
-        "x_en": "Vehicles have real windows. You can see the interior through them, and bullets go through."
+        "x_en": "Vehicles have real windows. You can see the interior through them, and bullets go through.",
+        "x_pt": "Os veículos têm vidros reais. É possível ver o interior por meio deles, e os tiros atravessam."
       },
       {
         "t": "fixed",
         "x": "Sauter sur un canapé ou une table sous un plafond bas ne projette plus le personnage à l'autre bout de la pièce.",
-        "x_en": "Jumping onto a sofa or a table under a low ceiling no longer throws your character to the other side of the room."
+        "x_en": "Jumping onto a sofa or a table under a low ceiling no longer throws your character to the other side of the room.",
+        "x_pt": "Pular sobre um sofá ou uma mesa sob um teto baixo não joga mais seu personagem para o outro lado da sala."
       }
     ]
   },
@@ -198,47 +228,56 @@
       {
         "t": "new",
         "x": "Choisissez l'équipement de chaque classe dans l'atelier. Grenade à fragmentation, grenade flash, fumigène ou couteau de lancer, deux à chaque vie.",
-        "x_en": "Pick each class's equipment in the class workshop. Frag grenade, flashbang, smoke grenade or throwing knife, two every life."
+        "x_en": "Pick each class's equipment in the class workshop. Frag grenade, flashbang, smoke grenade or throwing knife, two every life.",
+        "x_pt": "Escolha o equipamento de cada classe na oficina de classes. Granada de fragmentação, granada de luz, granada de fumaça ou faca arremessada, duas por vida."
       },
       {
         "t": "new",
         "x": "Grenade flash. Elle aveugle et assourdit ceux qui la regardent, d'autant plus fort et longtemps qu'ils sont près. Elle ne blesse personne.",
-        "x_en": "Flashbang. It blinds and deafens whoever looks at it, harder and longer the closer they are. It hurts no one."
+        "x_en": "Flashbang. It blinds and deafens whoever looks at it, harder and longer the closer they are. It hurts no one.",
+        "x_pt": "Granada de luz. Ela cega e ensurdece quem olha para ela, com efeito mais intenso e duradouro quanto mais perto a pessoa estiver. Não causa dano."
       },
       {
         "t": "new",
         "x": "Fumigène. Il ouvre un nuage d'environ sept mètres pendant une quinzaine de secondes. Personne ne voit à travers, les bots non plus.",
-        "x_en": "Smoke grenade. It opens a cloud about seven meters wide for around fifteen seconds. No one sees through it, bots included."
+        "x_en": "Smoke grenade. It opens a cloud about seven meters wide for around fifteen seconds. No one sees through it, bots included.",
+        "x_pt": "Granada de fumaça. Ela cria uma nuvem com cerca de sete metros de largura por aproximadamente quinze segundos. Ninguém vê através dela, nem os bots."
       },
       {
         "t": "new",
         "x": "Couteau de lancer. Il part tout droit vers le réticule et tue d'un coup. Raté, il reste planté et se ramasse en passant dessus.",
-        "x_en": "Throwing knife. It flies straight at the crosshair and kills in one hit. If you miss, it stays stuck and you pick it up by walking over it."
+        "x_en": "Throwing knife. It flies straight at the crosshair and kills in one hit. If you miss, it stays stuck and you pick it up by walking over it.",
+        "x_pt": "Faca arremessada. Ela voa em linha reta até a mira e mata com um único acerto. Se errar, fica presa e pode ser recolhida ao passar por cima."
       },
       {
         "t": "improved",
         "x": "Les grenades ont plus de poids. Courbe plus lourde, rebonds plus vifs, et elles ne dérivent plus quand on se déplace de côté en les lançant.",
-        "x_en": "Grenades feel heavier. A weightier arc, livelier bounces, and they no longer drift when you strafe while throwing."
+        "x_en": "Grenades feel heavier. A weightier arc, livelier bounces, and they no longer drift when you strafe while throwing.",
+        "x_pt": "As granadas ficaram mais pesadas. Trajetória mais ponderada, ricochetes mais vivos e elas não desviam mais ao lançar enquanto se movimenta lateralmente."
       },
       {
         "t": "new",
         "x": "La trajectoire de la grenade s'affiche quand on la tient. On peut la couper dans Options, onglet Jeu, rubrique Interface.",
-        "x_en": "The grenade's path now shows while you hold it. You can turn it off in Options, Game tab, Interface section."
+        "x_en": "The grenade's path now shows while you hold it. You can turn it off in Options, Game tab, Interface section.",
+        "x_pt": "A trajetória da granada aparece enquanto você a segura. É possível desativá-la em Opções, guia Jogo, seção Interface."
       },
       {
         "t": "improved",
         "x": "Seule la grenade à fragmentation se cuit en main. La flash et le fumigène se tiennent sans risque et partent au lancer.",
-        "x_en": "Only the frag grenade can be cooked. Flashbangs and smoke grenades are safe to hold and only start when thrown."
+        "x_en": "Only the frag grenade can be cooked. Flashbangs and smoke grenades are safe to hold and only start when thrown.",
+        "x_pt": "Somente a granada de fragmentação pode ser acionada antes do lançamento. As granadas de luz e de fumaça podem ser seguradas sem risco e só são acionadas ao serem lançadas."
       },
       {
         "t": "improved",
         "x": "L'atelier de classe montre en haut les quatre emplacements de la classe, avec ce qui est équipé dans chacun.",
-        "x_en": "The class workshop now shows the class's four slots at the top, with what is equipped in each."
+        "x_en": "The class workshop now shows the class's four slots at the top, with what is equipped in each.",
+        "x_pt": "A oficina de classes agora mostra os quatro encaixes da classe na parte superior, indicando o que está equipado em cada um."
       },
       {
         "t": "improved",
         "x": "Le mecha piloté frappe plus fort, ses obus éclatent à l'impact. En face, les bots viennent le combattre au lieu de le fuir.",
-        "x_en": "The piloted mecha hits harder and its shells burst on impact. Bots now come to fight it instead of running away."
+        "x_en": "The piloted mecha hits harder and its shells burst on impact. Bots now come to fight it instead of running away.",
+        "x_pt": "O mecha pilotado causa mais dano e suas munições explodem no impacto. Agora os bots vão enfrentá-lo em vez de fugir."
       }
     ]
   },
@@ -251,44 +290,53 @@
       {
         "t": "new",
         "x": "Séries d'éliminations au choix. Chaque classe en emporte trois, à trois seuils différents, à régler dans le nouvel onglet Séries de l'atelier.",
-        "x_en": "Pick your killstreaks. Each class takes three, at three different thresholds, set in the new Killstreaks tab of the class workshop."
+        "x_en": "Pick your killstreaks. Each class takes three, at three different thresholds, set in the new Killstreaks tab of the class workshop.",
+        "x_pt": "Escolha suas sequências de eliminações. Cada classe leva três, em três limites diferentes, que podem ser definidos na nova guia Sequências da oficina de classes."
       },
       {
         "t": "new",
         "x": "Mecha, à 13 éliminations. Il tombe du ciel sur la zone choisie à la tablette et mitraille les ennemis autour de lui. Approchez-vous pour monter à bord et le piloter. Il chauffe avec le temps et sous les tirs, sortez avant qu'il explose.",
-        "x_en": "Mecha, at 13 kills. It drops from the sky on the zone you pick on the tablet and guns down enemies around it. Walk up to it to climb aboard and pilot it. It heats up over time and under fire, so get out before it blows up."
+        "x_en": "Mecha, at 13 kills. It drops from the sky on the zone you pick on the tablet and guns down enemies around it. Walk up to it to climb aboard and pilot it. It heats up over time and under fire, so get out before it blows up.",
+        "x_pt": "Mecha, com 13 eliminações. Ele cai do céu na zona escolhida no tablet e alveja os inimigos ao redor. Aproxima-se para embarcar e pilotá-lo. Ele esquenta com o tempo e sob fogo, então saia antes que exploda."
       },
       {
         "t": "new",
         "x": "Drone kamikaze, à 6 éliminations. Vous le pilotez jusqu'à 30 secondes et il explose sur l'ennemi. Votre corps reste sur place, sans défense.",
-        "x_en": "Kamikaze drone, at 6 kills. You fly it for up to 30 seconds and it blows up on the enemy. Your body stays put, defenseless."
+        "x_en": "Kamikaze drone, at 6 kills. You fly it for up to 30 seconds and it blows up on the enemy. Your body stays put, defenseless.",
+        "x_pt": "Drone suicida, com 6 eliminações. Você o pilota por até 30 segundos e ele explode no inimigo. Seu corpo fica no lugar, indefeso."
       },
       {
         "t": "new",
         "x": "IEM, à 8 éliminations. Elle brouille l'équipe adverse pendant 25 secondes. Sa mini-carte ne montre plus rien et ses séries ne s'appellent plus.",
-        "x_en": "EMP, at 8 kills. It jams the enemy team for 25 seconds. Their minimap goes blank and their killstreaks can't be called."
+        "x_en": "EMP, at 8 kills. It jams the enemy team for 25 seconds. Their minimap goes blank and their killstreaks can't be called.",
+        "x_pt": "EME, com 8 eliminações. Ela bloqueia a equipe inimiga por 25 segundos. O minimapa deles fica vazio e suas sequências de eliminações não podem ser acionadas."
       },
       {
         "t": "new",
         "x": "Satellite, à 10 éliminations. Il montre les ennemis en direct sur la mini-carte pendant 30 secondes.",
-        "x_en": "Satellite, at 10 kills. It shows enemies live on the minimap for 30 seconds."
+        "x_en": "Satellite, at 10 kills. It shows enemies live on the minimap for 30 seconds.",
+        "x_pt": "Satélite, com 10 eliminações. Ele mostra os inimigos em tempo real no minimapa."
       },
       {
         "t": "improved",
         "x": "L'UAV relève la position des ennemis toutes les 3 secondes, comme un sonar. Chacun apparaît sur la mini-carte au passage de l'onde, puis s'efface.",
-        "x_en": "The UAV now scans enemy positions every 3 seconds, like a sonar. Each one shows up on the minimap as the wave passes, then fades."
+        "x_en": "The UAV now scans enemy positions every 3 seconds, like a sonar. Each one shows up on the minimap as the wave passes, then fades.",
+        "x_pt": "O UAV agora detecta as posições inimigas a cada 3 segundos, como um sonar. Cada inimigo aparece no minimapa conforme a onda passa e depois desaparece."
       },
       {
         "t": "new",
         "x": "Des annonces radio pour les nouvelles séries, en français et en anglais.",
-        "x_en": "Radio callouts for the new killstreaks, in English and French."
+        "x_en": "Radio callouts for the new killstreaks, in English and French.",
+        "x_pt": "Avisos por rádio para as novas sequências de eliminações, em inglês e francês."
       },
       {
         "t": "improved",
         "x": "Les bots se servent eux aussi des nouvelles séries, et face à un mecha ils se mettent à l'abri et lui lancent leurs grenades.",
-        "x_en": "Bots use the new killstreaks too, and against a mecha they take cover and throw their grenades at it."
+        "x_en": "Bots use the new killstreaks too, and against a mecha they take cover and throw their grenades at it.",
+        "x_pt": "Os bots também usam as novas sequências de eliminações e, contra um mecha, procuram cobertura e lançam granadas nele."
       }
-    ]
+    ],
+    "title_pt": "Escolha suas sequências de eliminações"
   },
   {
     "version": "4.22.0",
@@ -297,17 +345,20 @@
       {
         "t": "improved",
         "x": "Les apparitions ont été revues. Vous ne réapparaissez plus sous les yeux d'un adversaire, ni près d'un combat ou d'une grenade. Si l'équipe adverse campe votre base, vous réapparaissez ailleurs sur la carte.",
-        "x_en": "Respawns have been reworked. You no longer respawn in an enemy's sight, or next to a fight or a grenade. If the other team camps your base, you respawn somewhere else on the map."
+        "x_en": "Respawns have been reworked. You no longer respawn in an enemy's sight, or next to a fight or a grenade. If the other team camps your base, you respawn somewhere else on the map.",
+        "x_pt": "Os renascimentos foram reformulados. Você não renasce mais à vista de um inimigo, nem perto de uma luta ou de uma granada. Se a equipe adversária acampar na sua base, você renasce em outro lugar do mapa."
       },
       {
         "t": "improved",
         "x": "Au début d'une partie, chaque joueur a sa propre place. Deux coéquipiers n'apparaissent plus au même endroit.",
-        "x_en": "At the start of a match, every player has their own spot. Two teammates no longer appear in the same place."
+        "x_en": "At the start of a match, every player has their own spot. Two teammates no longer appear in the same place.",
+        "x_pt": "No início de uma partida, cada jogador tem seu próprio ponto. Dois companheiros de equipe não aparecem mais no mesmo lugar."
       },
       {
         "t": "improved",
         "x": "En match à mort par équipe, vous êtes protégé deux secondes à votre réapparition, comme dans les autres modes. Tirer met fin à la protection.",
-        "x_en": "In Team deathmatch, you are protected for two seconds after you respawn, like in the other modes. Firing ends the protection."
+        "x_en": "In Team deathmatch, you are protected for two seconds after you respawn, like in the other modes. Firing ends the protection.",
+        "x_pt": "Em Mata-mata em equipe, você fica protegido por dois segundos após renascer, como nos outros modos. Atirar encerra a proteção."
       }
     ]
   },

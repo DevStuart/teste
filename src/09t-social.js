@@ -1,12 +1,7 @@
 /* ==========================================================================
-   VIE SOCIALE : CLASSEMENT DES JOUEURS, PROFILS, AMIS ET NOTIFICATIONS
-   Le serveur (api/_lib/social.js) classe les joueurs par XP de toujours (le classement est permanent et commun à tous). Trois écrans,
-   ouverts depuis les boutons en haut du menu principal :
-   - « Joueurs » (ranking) : le classement, avec recherche par nom et filtre « Mes amis », 25 joueurs à la fois ;
-   - le profil public d'un joueur (player) : niveau, rang et XP, statistiques, dernières parties, et le bouton d'ami qui convient à l'état de la relation ;
-   - les notifications (notifs) : demandes d'ami (à accepter ou refuser sur place), réponses, niveaux gagnés, bienvenue.
-   La photo de profil d'un joueur, s'il en a une, s'affiche dans le classement et sur son profil
-   (/api/avatar?u=, réservé aux joueurs connectés), sinon une initiale et une teinte.
+   CLASSEMENT ET PROFILS PUBLICS
+   Le classement général et les profils publics utilisent les données d'XP et de patente persistées par l'API du compte.
+   Les fonctions d'amis, de notifications, de communauté et de modération du site officiel ne sont pas incluses dans cette copie.
    Le serveur ne garde que le genre de la notification : le texte est fabriqué ici, dans la langue du joueur. Le nombre de notifications non
    lues s'affiche sur la cloche, relevé à la connexion, toutes les minutes au menu principal, et à chaque retour sur la page.
    ========================================================================== */
@@ -20,14 +15,11 @@ const SOC = {
 /* Qui peut voir ces écrans : un compte connecté ; boutons du menu principal et cloche */
 function socChanged() {
   const on = !!ACCT.user;
-  for (const id of ['friendsBtn', 'rankBtn', 'commBtn', 'notifBtn']) { const b = $(id); if (b) b.classList.toggle('hidden', !on); }
-  amisChanged(); // présence, invitations dans un salon (09ta-amis.js)
-  if (!on) { SOC.notifs = { items: [], unread: 0, loaded: false, busy: false, fresh: new Set() }; SOC.rank.players = []; SOC.rank.me = null; socBadge(); clearInterval(SOC.timer); SOC.timer = 0; return; }
-  if (!SOC.timer) {
-    SOC.timer = setInterval(() => { if (!document.hidden && MATCH.state === 'menu' && UI.screen !== 'notifs') socNotifLoad(); }, 60000);
-    document.addEventListener('visibilitychange', () => { if (!document.hidden && ACCT.user && MATCH.state === 'menu') socNotifLoad(); });
-  }
-  if (!SOC.notifs.loaded && !SOC.notifs.busy) socNotifLoad();
+  for (const id of ['friendsBtn', 'commBtn', 'notifBtn']) { const b = $(id); if (b) b.classList.add('hidden'); }
+  const rank = $('rankBtn'); if (rank) rank.classList.toggle('hidden', !on);
+  amisChanged();
+  const invite = $('amiInvite'); if (invite) invite.classList.add('hidden');
+  if (!on) { SOC.notifs = { items: [], unread: 0, loaded: false, busy: false, fresh: new Set() }; SOC.rank.players = []; SOC.rank.me = null; socBadge(); clearInterval(SOC.timer); SOC.timer = 0; }
 }
 function socBadge() {
   const n = SOC.notifs.unread, b = $('notifBadge'); if (!b) return;
@@ -121,17 +113,16 @@ function socRankRender() {
   $('rkSub').textContent = !R.loaded ? '' : (R.me && R.me.rank ? _t('Vous êtes {0} sur {1} joueurs', ordinal(R.me.rank), fmtNum(R.me.total)) : _t('Vous n\u0027êtes pas encore classé'));
   const rows = R.players.map((p) => `<div class="rk-row${p.relation === 'me' ? ' me' : ''}" data-open="${esc(p.username)}" role="button" tabindex="0" aria-label="${esc(_t('Profil de {0}, niveau {1}', p.displayName, p.level))}">
       <b class="rk-n">${p.rank || '-'}</b><span class="acct-av" data-u="${esc(p.username)}" data-n="${esc(p.displayName)}">${socAv(p.username, p.displayName, p.avatar)}</span>
-      <span class="rk-id"><b>${esc(p.displayName)}</b><small>@${esc(p.username)} · ${_t('Niveau {0}', p.level)}</small></span>
+      <span class="rk-id"><b>${esc(p.displayName)}</b><small>@${esc(p.username)} · ${_t('Niveau {0}', p.level)} · ${esc(acctPatentName(p.patent))}</small></span>
       <span class="rk-st"><b>${fmtNum(p.xp)}</b><small>XP</small></span><span class="rk-st"><b>${fmtNum(p.kd, 2)}</b><small>${_t('Ratio É/M')}</small></span>
-      <span class="rk-act">${p.relation === 'me' ? `<span class="soc-tag">${_t('Vous')}</span>` : socFriendBtns(p.username, p.relation, false)}</span></div>`).join('');
+      <span class="rk-act">${p.relation === 'me' ? `<span class="soc-tag">${_t('Vous')}</span>` : ''}</span></div>`).join('');
   const empty = !R.players.length && !R.busy ? `<p class="hint">${R.scope === 'friends' && !R.q ? _t('Vous n\u0027avez pas encore d\u0027ami. Trouvez des joueurs dans le classement général et ajoutez-les.') : R.q ? _t('Aucun joueur trouvé.') : _t('Personne n\u0027est encore classé.')}</p>` : '';
   const how = R.loaded && !R.err ? `<p class="hint rk-how">${_t('Les joueurs sont classés selon toute l\u0027XP gagnée depuis leur inscription. Le classement ne repart jamais de zéro.')}</p>` : '';
-  body.innerHTML = `<div class="rk-bar"><div class="seg" id="rkScope" role="radiogroup" aria-label="${esc(_t('Joueurs à afficher'))}"></div>
+  body.innerHTML = `<div class="rk-bar">
       <form class="rk-find" id="rkFind"><input name="q" maxlength="32" value="${esc(R.q)}" placeholder="${esc(_t('Chercher un joueur'))}" aria-label="${esc(_t('Chercher un joueur'))}" autocomplete="off" autocapitalize="off" spellcheck="false"><button class="btn" type="submit">${_t('Chercher')}</button></form></div>
     <p class="ac-err" id="rkErr" role="alert">${esc(R.err)}</p>
     <div class="rk-list">${rows}</div>${empty}${R.busy ? `<p class="hint">${_t('Chargement...')}</p>` : ''}${R.more || R.busy ? '' : how}
     ${R.more && !R.busy ? `<div class="btns"><button class="btn" type="button" data-act="more">${_t('Voir plus')}</button></div>` : ''}`;
-  seg($('rkScope'), [['all', _t('Tous les joueurs')], ['friends', _t('Mes amis')]], () => R.scope, (v) => { R.scope = v; socRankLoad(true); });
   $('rkFind').addEventListener('submit', (e) => { e.preventDefault(); R.q = String(new FormData(e.target).get('q')).trim(); socRankLoad(true); });
   socAvFallback(body);
   for (const r of body.querySelectorAll('.rk-row')) r.addEventListener('keydown', (e) => { if ((e.key === 'Enter' || e.key === ' ') && e.target === r) { e.preventDefault(); socOpenPlayer(r.dataset.open); } });
@@ -155,18 +146,12 @@ function socPlayerRender() {
   const rows = acctGamesHtml(d.recent, false); // pas d'XP ni de temps de jeu : le serveur ne les donne pas pour un autre joueur
   const since = new Date(d.user.createdAt), sinceTxt = isNaN(since) ? '' : ` · ${_t('Inscrit le {0}', fmtDate(since, { day: 'numeric', month: 'long', year: 'numeric' }))}`;
   // signaler (nom, photo, triche, comportement) : un formulaire sous l'en-tête du profil, envoyé à la modération (api/_lib/moderation.js)
-  const rep = P.rep, mine = d.relation === 'me';
-  const repBtn = mine ? '' : rep && rep.sent ? `<span class="soc-tag">${_t('Signalé')}</span>` : `<button class="btn" type="button" id="plRep" aria-expanded="${rep ? 'true' : 'false'}">${_t('Signaler')}</button>`;
-  const repCard = rep && !rep.sent ? `<div class="card pl-rep"><h3 class="lbl">${_t('Signaler {0}', esc(d.user.displayName))}</h3>
-      <p class="hint">${_t('La modération regarde chaque signalement. Pour quelle raison ?')}</p>
-      <div class="seg" id="plRepWhy" role="radiogroup" aria-label="${esc(_t('Raison du signalement'))}"></div>
-      <input id="plRepNote" maxlength="200" value="${esc(rep.note)}" placeholder="${esc(_t('Précisez si besoin (facultatif)'))}" aria-label="${esc(_t('Précisez si besoin (facultatif)'))}" autocomplete="off">
-      <p class="ac-err" id="plRepErr" role="alert">${esc(rep.err)}</p>
-      <div class="btns"><button class="btn primary" type="button" id="plRepGo"${rep.why && !rep.busy ? '' : ' disabled'}>${_t('Envoyer le signalement')}</button><button class="btn" type="button" id="plRepNo">${_t('Annuler')}</button></div></div>` : '';
+  const rep = null, mine = d.relation === 'me';
+  const repBtn = '', repCard = '';
   body.innerHTML = `${rep && rep.sent ? `<p class="ac-note">${_t('Merci : la modération va regarder ce signalement.')}</p>` : ''}<div class="card ac-top"><span class="acct-av pl-av" data-u="${esc(d.user.username)}" data-n="${esc(d.user.displayName)}">${socAv(d.user.username, d.user.displayName, d.user.avatar)}</span>
-      <div class="ac-id"><h3>${esc(d.user.displayName)}</h3><p>@${esc(d.user.username)} · ${_t('Niveau {0}', L.level)}${d.rank ? ' · ' + _t('{0} au classement', ordinal(d.rank)) : ''}${esc(sinceTxt)}</p>
+      <div class="ac-id"><h3>${esc(d.user.displayName)}</h3><p>@${esc(d.user.username)} · ${_t('Niveau {0}', L.level)} · ${esc(acctPatentName(d.patent))}${d.rank ? ' · ' + _t('{0} au classement', ordinal(d.rank)) : ''}${esc(sinceTxt)}</p>
         <div class="ac-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${L.need}" aria-valuenow="${L.into}"><i style="transform:scaleX(${L.need ? L.into / L.need : 1})"></i></div>
-        <div class="soc-acts">${mine ? `<button class="btn" type="button" id="plMine">${_t('Mon profil')}</button>` : socFriendBtns(d.user.username, d.relation, true)}${repBtn}</div>
+        <div class="soc-acts">${mine ? `<button class="btn" type="button" id="plMine">${_t('Mon profil')}</button>` : ''}${repBtn}</div>
         <p class="ac-err" id="plErr" role="alert"></p></div></div>${repCard}
     <div class="ac-cols pl-cols">
       <div class="card pl-rank"><h3 class="lbl">${_t('Classement')}</h3>${d.rank ? acctKpis([[ordinal(d.rank), _t('Rang')], [fmtNum(L.xp), 'XP']]) : `<p class="hint">${_t('Pas encore classé.')}</p>`}</div>

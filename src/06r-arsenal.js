@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    ARSENAL : progression par arme, déblocages, classes préconçues et personnalisées
    Chaque arme gagne de l'XP à chaque élimination (100, plus 50 à la tête) et monte de niveau (1 à WLEVEL_MAX). Le niveau
    d'une arme débloque, dans l'ordre : ses accessoires (ATT[id].lvl), ses camouflages (CAMOS[id].lvl, par paliers de niveau
@@ -114,8 +114,8 @@ function levelOfXp(xp) { let l = 1; while (l < 100 && xp >= pxpForLevel(l + 1)) 
 /* Niveau retenu pour les déblocages : celui du compte, ou celui des parties jouées sans compte, le plus grand des deux (un
    déblocage ne se perd pas en changeant de situation) */
 function playerLevel() {
-  const acct = typeof ACCT !== 'undefined' && ACCT.user && ACCT.level ? ACCT.level.level : 1;
-  return Math.max(acct, levelOfXp(ARS.px));
+  if (typeof ACCT !== 'undefined' && ACCT.user) return ACCT.level ? ACCT.level.level : 1;
+  return levelOfXp(ARS.px);
 }
 /* XP d'une partie jouée sans compte, avec les règles du serveur (api/_lib/progress.js, matchXp) ; appelé à la fin de la partie */
 function arsLocalXp(result) {
@@ -282,10 +282,10 @@ function classClearWeapon(i, which) {
 function arsSaveSoon() { if (ARS.saveT) return; ARS.saveT = setTimeout(arsSave, 700); }
 /* Une classe personnalisée ou la configuration d'une arme vient de changer : notée, elle passera devant celle des autres appareils */
 function arsLoadoutEdit() { ARS.lt = Math.max(Date.now(), ARS.lt + 1); arsSaveSoon(); }
-/* Instantané enregistrable : stockage local et copie du compte (api/_lib/handlers.js, arsenal) */
+/* Instantané enregistrable : stockage local et copie du compte (api/arsenal.js). */
 function arsSnapshot() {
   const custom = CLASSES.slice(PRESETS).map((c) => (c.made ? { n: c.name, p: c.primary, pa: c.pa, pc: c.pc, s: c.secondary, sa: c.sa, sc: c.sc, k: c.ks, g: c.nade } : null));
-  return { v: ARS.ver, wxp: ARS.wxp, k: ARS.k, h: ARS.h, px: Math.floor(ARS.px), cfg: ARS.cfg, lt: ARS.lt, custom, ch: ARS.ch, cm: ARS.chMaps };
+  return { v: ARS.ver, wxp: ARS.wxp, k: ARS.k, h: ARS.h, px: Math.floor(ARS.px), cfg: ARS.cfg, lt: ARS.lt, custom, ch: ARS.ch, cm: ARS.chMaps, loadout: Settings.loadout, skin: Settings.skin };
 }
 function arsSave() {
   ARS.saveT = 0;
@@ -302,11 +302,12 @@ function arsPushSoon() {
    personnalisées et la configuration des armes, la copie retouchée le plus récemment, voir arsApply), puis renvoie le résultat au compte. */
 async function arsSync() {
   if (!ACCT.user) return;
-  const r = await acctApi('arsenal', {});
+  const r = await acctApi('arsenal');
   if (!r.ok || !r.data) return;
   if (r.data.data) { arsApply(r.data.data, true); for (const c of CLASSES) classCleanAll(c); classFix(); }
   ARS.syncT = Date.now();
   arsSave(); // enregistre la fusion sur l'appareil et la renvoie au compte
+  skinAcct();
   PICKERS.forEach(renderPicker); if (UI.screen === 'classes') classesHeader(); // les écrans déjà dessinés montrent la progression fusionnée
 }
 /* Une application de téléphone reste ouverte des jours sans se recharger : la copie du compte n'était lue qu'au chargement de la page, la progression gagnée ailleurs
@@ -339,7 +340,7 @@ function arsApply(s, merge) {
   const cm = Array.isArray(s.cm) ? s.cm.map(String).filter((m, i, a) => MAPS.some((x) => x.id === m) && a.indexOf(m) === i) : [];
   if (merge) { ARS.wxp = join(ARS.wxp, wxp); ARS.k = join(ARS.k, num(s.k)); ARS.h = join(ARS.h, num(s.h)); ARS.px = Math.max(ARS.px, px); ARS.ch = join(ARS.ch, ch); for (const m of cm) if (!ARS.chMaps.includes(m)) ARS.chMaps.push(m); }
   else { ARS.wxp = wxp; ARS.k = num(s.k); ARS.h = num(s.h); ARS.px = px; ARS.ch = ch; ARS.chMaps = cm; }
-  /* Classes personnalisées et configuration des armes : la copie retouchée le plus récemment (lt) l'emporte, entière, classes supprimées comprises.
+  /* Classes, configurations et choix visuels : la copie retouchée le plus récemment (lt) l'emporte ; les classes supprimées sont aussi respectées.
      Avant, celle de l'appareil gardait toujours ses classes : retouchées sur l'ordinateur, elles ne changeaient jamais sur le téléphone, et une
      classe supprimée revenait de l'autre appareil. Sans date des deux côtés (copies d'avant), les emplacements vides se remplissent seulement */
   const lt = Number.isFinite(+s.lt) && +s.lt > 0 ? Math.floor(+s.lt) : 0, take = !merge || lt > ARS.lt, fill = merge && !lt && !ARS.lt;
@@ -354,6 +355,13 @@ function arsApply(s, merge) {
     c.pc = x.pc ? String(x.pc) : null; c.sc = x.sc ? String(x.sc) : null;
     c.ks = ksFill(Array.isArray(x.k) ? x.k.map(String) : null); // séries (absentes des copies d'avant : celles d'origine)
     c.nade = NADE_TYPES[x.g] ? x.g : 'frag'; // type de grenade (absent des copies d'avant : la frag)
+  }
+  if (merge && (take || fill)) {
+    let settingsChanged = false;
+    const loadout = Number(s.loadout);
+    if (Number.isInteger(loadout) && classAvail(loadout) && Settings.loadout !== loadout) { Settings.loadout = loadout; settingsChanged = true; }
+    if (typeof s.skin === 'string' && skinUnlocked(s.skin) && Settings.skin !== s.skin) { Settings.skin = s.skin; settingsChanged = true; }
+    if (settingsChanged && typeof saveSettings === 'function') saveSettings();
   }
 }
 function arsLoad() {

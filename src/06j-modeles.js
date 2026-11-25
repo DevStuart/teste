@@ -28,11 +28,16 @@ function gunSpec(key) {
   return (_gunSpecs[key] = { key, model, att, A, camo: camo && hasKey(CAMOS, camo) ? camo : null });
 }
 /* Famille d'animation d'un modèle (rifle, smg, sniper, shotgun, pistol) */
-function gunFam(key) { return GUN_MODELS[gunSpec(key).model].fam; }
+function gunFam(key) {
+  const B = GUN_MODELS[gunSpec(key).model];
+  if (!B) throw new Error('modèle d\u0027arme inconnu : ' + gunSpec(key).model);
+  return B.fam;
+}
 
 /* ---------- Assemblage ---------- */
 function buildGunModel(key) {
   const spec = gunSpec(key), B = GUN_MODELS[spec.model], M = camoMaterials(spec.camo), g = new THREE.Group();
+  if (!B) throw new Error('modèle d\u0027arme inconnu : ' + spec.model);
   const info = {
     group: g, muzzle: new THREE.Object3D(), eject: new THREE.Object3D(), mag: new THREE.Group(), magHome: new V3(), gripR: new V3(), gripL: new V3(),
     sightY: 0.1, adsZ: 0.26, bolt: null, kind: B.fam, model: spec.model, key, spec, keep: [], mount: {}, gripDef: null, trigDef: null,

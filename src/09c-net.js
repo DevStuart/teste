@@ -152,7 +152,7 @@ function netLevelSync() {
 }
 function netNick() {
   const el = $('netName');
-  let n = ACCT.user ? ACCT.user.displayName : ((el && el.value) || '').trim(); // connecté : le nom d'affichage du compte
+  let n = ACCT.user ? ACCT.user.username : ((el && el.value) || '').trim(); // connecté : le nom public définitif du compte
   n = n ? netClean(n) : _t('Soldat') + '-' + (100 + Math.floor(Math.random() * 900));
   NET.nick = n; if (el) el.value = n;
   try { localStorage.setItem('cod_nick', n); } catch (e) { /* stockage indisponible */ }

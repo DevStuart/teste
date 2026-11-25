@@ -1,0 +1,312 @@
+Village de ruelles ⇒ Vila de ruela
+Un village écrasé de soleil où il ne se passe jamais rien. Sauf aujourd'hui. ⇒ Um vilarejo ao sol, onde nada acontece. A não ser hoje.
+Gare de montagne enneigée ⇒ Estação de montanha na neve
+Une gare de montagne sous la neige. Le prochain train a du retard depuis 1987. ⇒ Uma estação de montanha debaixo da neve. O próximo trem está atrasado desde 1987.
+Port de pêche et criée ⇒ Porto de pesca e mercado
+Un port breton au soleil couchant. Il fait beau, ce qui inquiète tout le monde. ⇒ Um porto bretão ao pôr do sol. O tempo está bom, o que preocupa todos.
+Jardin botanique et grande serre ⇒ Jardim botânico e grande estufa
+Un jardin botanique en pleine floraison. Prière de ne pas marcher sur les pelouses, même mort. ⇒ Um jardin botânico em plena floração. Por favor, não ande no gramado, mesmo morto.
+Île des Cyclades ⇒ Ilha dos Ciclades
+Un village blanc au bord de la mer Égée. Le vent y souffle depuis l'Antiquité, personne n'a pensé à l'éteindre. ⇒ Um vilarejo branco na costa do Egeu. O vento soprava desde a antiguidade e ninguém pensou em desligá-lo.
+Station volcanologique ⇒ Estação vulcânica
+Une station de recherche au pied d'un volcan en éruption. Le volcan avait prévenu. ⇒ Uma estação de pesquisa aos pés de um vulcão em erupção. O vulcão tinha avisado.
+Îles flottantes ⇒ Ilhas flutuantes
+Des îles suspendues au-dessus des nuages, reliées par des ponts de cordes. Personne ne les a jamais fait réviser. ⇒ Ilhas flutuantes acima das nuvens, ligadas por pontes de corda. Ninguém as inspecionou.
+Mer de dunes ⇒ Mar de areia
+Une oasis au milieu des dunes. Au-delà, il n'y a que du sable et ceux qui sont partis vérifier. ⇒ Uma oásis no meio das dunas. Além, só areia e quem foi verificar.
+Lotissement pavillonnaire ⇒ Bairro planejado
+Un lotissement où toutes les maisons se ressemblent. Le syndic décline toute responsabilité. ⇒ Um bairro planejado onde todas as casas se parecem. O sindicato não responde por nada.
+Drone en vol ⇒ Drone em voo
+Satellite en ligne ⇒ Satélite online
+IEM déclenchée ⇒ EME ativada
+Mecha ⇒ Mecha
+Un mecha tombe sur la zone choisie et défend sa position. Montez à bord pour le piloter. Il finit par exploser, sortez avant. ⇒ Um mecha cai na zona escolhida e defende a posição. Suba para pilotar. Ele vai explodir, saia antes.
+Drone kamikaze ⇒ Drone suicida
+Drone ⇒ =
+Vous pilotez un drone explosif pendant 30 secondes. Il explose au contact ou quand vous tirez. Votre soldat reste sans défense. ⇒ Você pilota um drone explosivo por 30 segundos. Ele explode ao contato ou quando você atira. O seu soldado fica sem defesa.
+IEM ⇒ EME
+Brouille l'équipe adverse pendant 25 secondes. Plus de mini-carte ni de séries, son UAV et son satellite s'éteignent. ⇒ Engana a equipe adversária por 25 segundos. Sem minimapa nem ondas de ataque, e o seu UAV e satélite desligam.
+Satellite ⇒ =
+Pendant 30 secondes, la mini-carte montre les ennemis en direct et où ils regardent. Seule une IEM le coupe. ⇒ Por 30 segundos, o minimapa mostra os inimigos ao vivo e onde olham. Só uma EME corta.
+Pendant 30 secondes, la mini-carte montre les ennemis toutes les 3 secondes. ⇒ Por 30 segundos, o minimapa mostra os inimigos a cada 3 segundos.
+Deux chasseurs bombardent la zone choisie sur la carte. Un toit protège bien. ⇒ Dois caças bombardeados a zona escolhida no mapa. Um telhado dá boa proteção.
+Un hélicoptère tire sur les ennemis à découvert pendant 34 secondes. Il peut être abattu. ⇒ Um helicóptero atira nos inimigos em campo aberto por 34 segundos. Pode ser abatido.
+Fusils d'assaut ⇒ Rifles de assalto
+Pistolets-mitrailleurs ⇒ Submetralhadoras
+Fusils de précision ⇒ Rifles de precisão
+Fusils à pompe ⇒ Espingardas
+Pistolets ⇒ Pistolas
+Fusil d'assaut ⇒ Rifle de assalto
+La carabine de référence. Précise et maîtrisable à toutes les distances. ⇒ A carabina de referência. Precisa e dominável em todas as distâncias.
+Pistolet-mitrailleur ⇒ Submetralhadora
+Le pistolet-mitrailleur des unités d'intervention. Cadence élevée, recul doux, redoutable de près. ⇒ A submetralhadora das unidades de intervenção. Alta cadência, recuo suave, temida de perto.
+Fusil de précision ⇒ Rifle de precisão
+Fusil à verrou de l'armée britannique. Une balle au torse suffit, à n'importe quelle distance. ⇒ O rifle a percussão da polícia britânica. Uma bala no corpo basta, a qualquer distância.
+Fusil à pompe ⇒ Espingarda
+Semi-automatique de la marine. Huit chevrotines par coup, dévastateur en intérieur. ⇒ Semiautomática da marinha. Oito percussões por tiro, devastadora no interior.
+Pistolet ⇒ Pistola
+L'arme de poing réglementaire. Fiable et rapide à dégainer. ⇒ A arma de fogo regimental. Confiável e rápida de pegar.
+Le fusil le plus répandu au monde. Lourd de recul, mais chaque balle frappe fort. ⇒ O rifle mais usado do mundo. Recuo pesado, mas cada bala pesa.
+Fusil de bataille des forces spéciales. Cartouche lourde, trois balles au torse suffisent. ⇒ Rifle de assalto das forças especiais. Cartucho pesado, três tiros no torso bastam.
+Le "clairon" français. Un bullpup compact qui tire plus de mille coups par minute. ⇒ O "clarinho" francês. Um bullpup compacto que dispara mais de mil tiros por minuto.
+Ultra-compacte. Quarante coups, recul presque nul, très rapide à épauler. ⇒ Ultracompacta. Quarenta tiros, recuo quase nulo, muito rápida de empunhar.
+Le .45 ACP en rafales. Cadence posée et balles lourdes, trois suffisent de près. ⇒ O .45 ACP em rajadas. Cadência medida e balas pesadas, três bastam de perto.
+Douze cents coups par minute. Une tronçonneuse de couloir, mais le chargeur se vide vite. ⇒ Mil e cem balas por minuto. Uma motosserra de corredor, mas a revista esvazia rápido.
+Fusil de tireur d'élite semi-automatique. Deux balles au torse, une seule à la tête. ⇒ Rifle semiautomático de atirador de elite. Duas tiros no torso, um só na cabeça.
+Fusil antimatériel de calibre .50. Toute touche au corps est fatale, mais il est lourd et lent à épauler. ⇒ Rifle antimaterial de 12,7 mm. Qualquer impacto no corpo é fatal, mas é pesado e lento de mirar.
+La pompe des policiers et des chasseurs. Gerbe serrée et portée plus longue, une pompe entre deux coups. ⇒ A pump dos pol... (continuar)
+Fusil à pompe entièrement automatique. Trois cents coups par minute, vingt dans le tambour étendu. ⇒ Uma espingarda totalmente automática. Trezentos tiros por minuto, vinte no tambor estendido.
+Le .45 ACP des forces spéciales. Moins de coups que le M9, mais plus de dégâts. ⇒ Forças especiais .45 ACP. Menos balas que a M9, mas mais danos.
+Pistolet entièrement automatique. Il vide son chargeur en moins de deux secondes. ⇒ Pistola totalmente automática. Ele esvazia sua revista em menos de dois segundos.
+Le .50 Action Express. Deux balles au torse, une à la tête, mais sept coups seulement. ⇒ O Expresso de Acção .50. Dois golpes no tronco, um tiro na cabeça, mas apenas sete tiros.
+Bullpup compact à lunette intégrée. Stable à moyenne distance, avec une bonne mobilité. ⇒ Bullpup compacto com uma óptica integrada. Estável em média e fácil de manusear.
+Un chargeur généreux et une silhouette ultra-compacte. Parfait pour avancer sans perdre le rythme. ⇒ Uma revista de alta capacidade num pacote ultra-compacto. Ideal para avançar sem perder impulso.
+Mitrailleuse légère à grande capacité. Lourde à déplacer, elle tient bien une ligne de tir. ⇒ Metralhadora leve de alta capacidade. Pesado para se mover, mas excelente para segurar uma pista de tiro.
+Carabine légère et compacte. Facile à épauler et régulière en rafales courtes. ⇒ Uma carabina leve e compacta. Rápido para o ombro e estável em rajadas curtas.
+Fusil à pompe de huit cartouches. Faites coulisser le garde-main entre chaque tir. ⇒ Uma espingarda de oito balas. Desliza a parte dianteira entre os tiros.
+Fusil de bataille en 7,62 mm. Puissant et précis, mais son recul ralentit les tirs répétés. ⇒ Uma espingarda de combate de 7,62 mm. Poderoso e preciso, mas o seu recuo retarda as imagens de seguimento.
+Pistolet léger de dix-sept coups. Rapide à dégainer et équilibré pour le combat rapproché. ⇒ Uma pistola leve de 17 balas. Rápido para desenhar e bem equilibrado para combate próximo.
+Carabine moderne à garde-main court. Agile en mouvement et précise en rafales contrôlées. ⇒ Uma carabina moderna com uma pequena guarda de mão. Ágil em movimento e preciso em rajadas controladas.
+Assaut ⇒ Agressão
+Le choix polyvalent, à l'aise à toutes les distances. ⇒ O todo-round, à vontade a cada alcance.
+Nettoyeur ⇒ Limpador
+Vitesse et cadence pour le corps à corps. ⇒ Velocidade e velocidade de fogo para quartos fechados.
+Tireur d'élite ⇒ Atirador
+Une balle au torse suffit. En visée, retenez votre souffle pour stabiliser la lunette. ⇒ Um golpe no tronco é suficiente. Enquanto mira, segure a respiração para estabilizar o escopo.
+Brèche ⇒ Violador
+Dévastateur en intérieur, inoffensif au-delà de vingt mètres. ⇒ Devastadores dentro de casa, inofensivos para além de 20 metros.
+Optique ⇒ Optic
+Bouche ⇒ Focinho
+Canon ⇒ Barril
+Sous-canon ⇒ Subbarril
+Rail latéral ⇒ Trilho lateral
+Chargeur ⇒ Revista
+Crosse ⇒ Unidade populacional
+Munitions ⇒ Munições
+Bouche et canon ⇒ Focinho e barril
+Chargeur et munitions ⇒ Revista e munição
+Point rouge ⇒ Ponto vermelho
+Point lumineux sur verre. Visée rapide et dégagée. ⇒ Um ponto iluminado no vidro. Imagem rápida e clara.
+Holographique ⇒ Holográfico
+Réticule en cercle sur grande fenêtre. On garde les deux yeux ouverts, mais la mise en joue est un peu plus lente. ⇒ Círculo retícula em uma janela grande. Mantém os dois olhos abertos, mas apontar é um pouco mais lento.
+Lunette de combat 4x. De la portée et de la précision, au prix d'un champ réduit et d'une mise en joue plus lente. ⇒ 4x alcance de combate. Mais alcance e precisão, ao custo de um campo de visão mais estreito e objetivando mais lentamente.
+Silencieux ⇒ Supressor
+Tir étouffé, sans flash ni traçante. Portée et dégâts un peu réduits. ⇒ Tiro abafado, sem flash ou localizador. Alcance e danos ligeiramente reduzidos.
+Compensateur ⇒ Compensador
+Évents orientés vers le haut. Le canon monte beaucoup moins, mais dérive un peu plus sur les côtés. ⇒ Ventiladores virados para cima. O barril sobe muito menos, mas flutua um pouco mais de lado.
+Frein de bouche ⇒ Travão de boca
+Recul plus droit, mais flash plus large et vue secouée. ⇒ Recuo mais reto, mas um flash mais largo e uma visão mais shakier.
+Choke serré ⇒ Engasgado apertado
+Resserre la gerbe. Les chevrotines portent plus loin et se dispersent moins. ⇒ Aperta o espalhamento. Pellets levar mais longe e dispersar menos.
+Canon long ⇒ Barril longo
+Plus de portée et de précision en visée. L'arme est plus lourde à épauler. ⇒ Mais alcance e precisão ao apontar. A arma é mais pesada para o ombro.
+Canon court ⇒ Barril curto
+Arme plus vive et plus maniable. Moins de portée et un recul plus sec. ⇒ Uma arma mais viva e mais habilidosa. Menos alcance e recuo snappier.
+Poignée verticale ⇒ Aperto vertical
+Bonne prise de la main d'appui. Le recul est domestiqué, mais l'arme se met en joue plus lentement. ⇒ Um bom abraço com a mão de apoio. O recuo é domesticado, mas a arma demora mais tempo a apontar.
+Poignée angulaire ⇒ Punho angular
+Mise en joue plus rapide et tir à la hanche plus précis. Le recul vertical reste entier. ⇒ Apontar mais rápido e mais precisos. O recuo vertical permanece intacto.
+Bipied ⇒ Bipod
+Accroupi et immobile, recul et dispersion presque annulés. Debout, l'arme est plus lourde. ⇒ Agachado e ainda, recuar e espalhar quase cancelado. De pé, a arma é mais pesada.
+Pointeur laser ⇒ Visão laser
+Un point rouge marque l'impact. Tir à la hanche bien plus précis. ⇒ Um ponto vermelho marca o ponto de impacto. Muito mais preciso fogo na anca.
+Chargeur rapide ⇒ Mag rápido
+Chargeur à sangle d'extraction. Le rechargement est un quart plus court. ⇒ Revista com cinta de extracção. A recarga é um quarto mais curta.
+Chargeur étendu ⇒ Mag estendido
+Une moitié de munitions en plus par chargeur. Plus lourd et un peu plus long à changer. ⇒ Metade das munições por revista. Mais pesado e mais lento para trocar.
+Crosse renforcée ⇒ Unidade populacional reforçada
+Épaulée à fond, l'arme tient mieux la ligne de mire. Elle est plus lourde à manier. ⇒ Totalmente ombro, a arma mantém sua linha de visão melhor. É mais pesado de lidar.
+Sans crosse ⇒ Nenhuma unidade populacional
+Arme compacte et vive, mais bien plus difficile à maîtriser. ⇒ Compacto e vivo, mas muito mais difícil de controlar.
+Pointe creuse ⇒ Ponto oco
+Balles à expansion. Plus de dégâts, mais la portée efficace fond. ⇒ Expansão de balas. Mais danos, mas o alcance efetivo cai.
+Balle unique ⇒ Slug
+Une seule balle lourde à la place des chevrotines. Précise et efficace à moyenne distance. ⇒ Uma única bala pesada em vez de chumbo. Acurado e eficaz em média gama.
+Tube étendu ⇒ Tubo estendido
+Dégâts ⇒ Danos
+Portée ⇒ Intervalo
+Cadence de tir ⇒ Taxa de incêndio
+Capacité du chargeur ⇒ Capacidade da revista
+Durée de rechargement ⇒ Tempo de recarga
+Temps de mise en joue ⇒ Hora de mirar para baixo
+Grossissement ⇒ Ampliação
+Dispersion à la hanche ⇒ Espalhamento de ancas
+Dispersion en visée ⇒ Espalhamento destinado
+Recul vertical ⇒ Recuo vertical
+Recul horizontal ⇒ Recuo horizontal
+Secousse de l'arme ⇒ Chute de arma
+Mobilité ⇒ Mobilidade
+Flash de bouche ⇒ Flash de focinho
+Secousse de la vue ⇒ Ver agitar
+Tir silencieux : les bots ne l'entendent que de tout près ⇒ Tiro silencioso: bots só ouvir de muito perto
+Point laser visible à la hanche ⇒ Ponto laser visível quando a anca dispara
+Posé (accroupi, immobile), recul et dispersion réduits ⇒ Desempregado (agachado, imóvel), recuo e propagação reduzida
+Une seule balle lourde, sans gerbe ⇒ Uma única bala pesada, sem espalhamento
+Désert ⇒ Deserto
+Forêt ⇒ Floresta
+Urbain ⇒ Urbano
+Neige ⇒ Neve
+Tigre ⇒ Tigre
+Cobalt ⇒ Cobalto
+Braise ⇒ Ember
+Diamant ⇒ Diamante
+Trois séries au plus. Retirez-en une avant d'en choisir une autre. ⇒ Três trilhos no máximo. Remova um antes de escolher outro.
+Montez le {0} au niveau {1} (niveau {2}) ⇒ Aumentar o {0} para o nível {1} (agora nível {2})
+Niveau {0} de l'arme (niveau {1}) ⇒ Nível de arma {0} (agora nível {1})
+niveau {0} de l'arme (niveau {1}) ⇒ nível da arma {0} (agora nível {1})
+Camouflage {0} ⇒ Camo {0}
++{0} XP · {1} élim. ⇒ + {0} XP · {1} mata
+niveau {0}{1} ⇒ nível {0} {1}
+Classe {0} ⇒ Classe {0}
+Une classe de votre composition, avec armes, accessoires et camouflages. ⇒ Uma aula sua, com armas, acessórios e camuflagens.
+Cette classe ne se modifie pas. ⇒ Esta classe não pode ser editada.
+Cet accessoire ne va pas sur cette arme. ⇒ Este anexo não se encaixa nesta arma.
+Accessoire verrouillé : {0}. ⇒ Anexo bloqueado: {0}.
+Une arme porte {0} accessoires au plus. Retirez-en un. ⇒ Uma arma carrega no máximo anexos {0}. Remova um.
+Recrue ⇒ Recrutamento
+Régulier ⇒ Regular
+Vétéran ⇒ Veterano
+Grenade ! ⇒ Granada!
+Grenade ⇒ Granada
+Vous ⇒ Você
+Couteau ⇒ Faca
+Largage du mecha ⇒ Mecha airdrop
+Touchez une zone de largage ⇒ Toque numa zona de descida
+Aucune zone de largage sur cette carte ⇒ Nenhuma zona de largada neste mapa
+Séries brouillées par une IEM ⇒ Killstreaks travados por um PEM
+Satellite allié ({0}) ⇒ Satélite aliado ({ 0}) {0}
+Satellite ennemi en ligne ⇒ satélite inimigo online
+IEM alliée ({0}) ⇒ EMP aliado ({ 0}) {0}
+IEM ennemie, vos appareils sont brouillés ⇒ EMP inimigo, seus dispositivos estão bloqueados
+UAV en ligne ⇒ UAV online
+Liaison drone ⇒ Ligação do drone
+Appui aérien ⇒ Apoio aéreo
+Cible confirmée ⇒ Alvo confirmado
+Annulé ⇒ Cancelado
+Sélection de la cible ⇒ Selecionar um alvo
+Frappe aérienne en approche ⇒ Ataque aéreo a chegar
+Frappe aérienne ⇒ Ataque aéreo
+Échanger {0} contre {1} ⇒ Troca {0} por {1}
+Maintenir {0} pour échanger {1} contre {2} ⇒ Manter {0} para trocar {1} por {2}
+Hélicoptère ⇒ Helicóptero
+Appuyer pour appeler ⇒ Pressione para chamar
+Hélicoptère : vous êtes ciblé ! ⇒ Helicóptero: você está sendo alvo!
+Hélicoptère abattu ⇒ Helicóptero abatido
+Hélicoptère en approche ⇒ Helicóptero a caminho
+Hélicoptère allié ({0}) ⇒ Helicóptero aliado ({0})
+Hélicoptère ennemi en approche ! Mettez-vous à couvert ⇒ Helicóptero inimigo a chegar! Protejam-se.
+Votre hélicoptère est abattu ⇒ O seu helicóptero foi abatido.
+Hélicoptère ennemi abattu ⇒ Helicóptero inimigo abatido
+Hélicoptère allié parti ⇒ O helicóptero aliado foi-se.
+Hélicoptère ennemi parti ⇒ O helicóptero inimigo desapareceu.
+Un hélicoptère est déjà en vol ⇒ Um helicóptero já está no ar.
+Drone kamikaze allié ({0}) ⇒ drone kamikaze aliado ({ 0}) {0}
+Drone kamikaze ennemi ! ⇒ drone inimigo kamikaze!
+Drone abattu ⇒ Drone abatido.
+{0} Exploser ⇒ {0} Detonar
+Exploser ⇒ Detonar
+Mecha en approche ⇒ Mecha a caminho
+Mecha allié en approche ({0}) ⇒ Mecha aliado a entrar ({0})
+Mecha ennemi en approche ! ⇒ Inimigo Mecha a chegar!
+Mecha : vous êtes ciblé ! ⇒ Mecha: você é o alvo!
+Signal brouillé ⇒ Sinal bloqueado
+Première série ⇒ Primeiro trilho mata
+Deuxième série ⇒ Segunda batalha de morte
+Troisième série ⇒ Terceira rua de morte
+{0} disponible : {1} ⇒ {0} pronto: {1}
+{0} disponible ⇒ {0} pronto
+Tir en pleine tête ⇒ Tiro na cabeça
+Élimination ⇒ Matar
+Bonus tête ⇒ Bónus de tiro na cabeça
+Bonus combo ⇒ Bónus de combinação
+Assistance à la visée (au doigt, à la manette, au pavé tactile) ⇒ Mirar assistência (toque, controlador, trackpad)
+Normale ⇒ Normal
+Désactivée ⇒ Desligado
+Tir automatique (quand le réticule est sur un ennemi, la visée remplace le bouton de tir) ⇒ Auto- fogo (quando a mira está sobre um inimigo, o botão de mira substitui o botão de fogo)
+Tir au relâchement (fusils de précision, appuyer pour viser et relâcher pour tirer) ⇒ Fogo ao soltar (fuzileiros, pressione para mirar e solte para atirar)
+Vibrations (touche, élimination, coup reçu) ⇒ Vibração (bater, matar, danificar)
+Opacité des boutons ⇒ Opacidade do botão
+Aide ⇒ Assistir
+UAV allié ({0}) ⇒ UAV aliado ({ 0}) {0}
+UAV ennemi en ligne ⇒ VANT inimigo online
+Frappe aérienne alliée ⇒ Ataque aéreo aliado
+Frappe aérienne ennemie ! ⇒ Ataque aéreo inimigo!
+Double élimination ⇒ Morte dupla
+Triple élimination ⇒ Tripla morte
+Quadruple élimination ⇒ Morte quádrupla
+Série de {0} éliminations ⇒ Raia de morte {0}
+<em>tête</em> ⇒ <em>headshot</em>
+Éliminé par ⇒ Morto por
+Vous vous êtes éliminé ⇒ Mataste-te.
+Tombé dans le vide ⇒ Caiu no vazio
+Perdu dans le désert ⇒ Perdidos no deserto
+Premier à {0} · vous êtes {1} ⇒ Primeiro a {0} · você é {1}
+{0} Recharger ⇒ {0} Recarregar
+{0} Retenir son souffle ⇒ {0} Sustém a respiração
+(bot) ⇒ (bot)
+Classement, premier à {0} ⇒ Ranking, primeiro a {0}
+Nom ⇒ Nome
+Score ⇒ Pontuação
+Élim. ⇒ Mata
+Morts ⇒ Mortes
+Aides ⇒ Ajudas
+Ratio ⇒ Razão
+Classement ⇒ Ranking
+Vainqueur : {0} ⇒ Vencedor: {0}
+{0} dans {1} s ⇒ {0} em {1}
+Retour au salon ⇒ De volta ao átrio
+Retour au menu ⇒ Voltar ao menu
+Premier à {0} points ⇒ Primeiro a {0} pontos
+Premier à {0} ⇒ Primeiro a {0}
+Éliminations ⇒ Mata
+Précision ⇒ Precisão
+Meilleure série ⇒ Melhor sequência
+Rejouer ⇒ Reproduzir novamente
+Quitter le match ⇒ Sair da correspondência
+Terminer la partie ⇒ Terminar a correspondência
+{0} : équipée à votre prochaine réapparition ⇒ {0}: equipado na próxima pausa
+Préparation des effets ⇒ Preparação dos efeitos
+Éclairage de la scène ⇒ Iluminação da cena
+Préparation des soldats ⇒ Preparar soldados
+Préparation des menus ⇒ Preparando menus
+Prêt ⇒ Pronto
+Le chargement a échoué : {0}. Rechargez la page ou passez la qualité en Basse. ⇒ O carregamento falhou: {0}. Recarregar a página ou definir a qualidade para Baixo.
+WebGL est indisponible sur ce navigateur. ⇒ WebGL não está disponível neste navegador.
+{0} · {1} m ⇒ {0} · {1} m
+{0} Réapparaître tout de suite ⇒ {0} Respawn agora
+{0} ou {1} Réapparaître tout de suite ⇒ {0} ou {1} Respawn agora
++{0} XP ⇒ + {0} XP
+Chargement des textures ⇒ Carregando texturas
+Génération des matières ⇒ Materiais de produção
+Construction de {0} ⇒ Construção {0}
+Éclairage cuit de la carte ⇒ Fazer a iluminação do mapa
+Calcul des itinéraires des bots ⇒ Rotas bot de computação
+Relevé satellite de la carte ⇒ Capturando a visão de satélite do mapa
+Éclairage HDRI ⇒ Iluminação HDRI
+Compilation des shaders ⇒ Compilação de sombreadores
+Killcam finale ⇒ Final killcam
+Killcam ⇒ Killcam
+{0} Passer aux résultats ⇒ {0} Ir para os resultados
+{0} Passer et réapparaître ⇒ {0} Saltar e recuperar
+{0} ou {1} Passer aux résultats ⇒ {0} ou {1} Saltar para os resultados
+{0} ou {1} Passer et réapparaître ⇒ {0} ou {1} Saltar e respawn
+{0} a été exclu du salon. ⇒ Foi retirado do quarto. {0}
+L'hôte vous a exclu du salon. ⇒ O anfitrião tirou-te da sala.
+masqué ⇒ mutado
+Afficher ⇒ Desmute
+Masquer ⇒ Mudo
+Afficher de nouveau les messages de ce joueur ⇒ Mostrar novamente as mensagens deste jogador
+Ne plus voir les messages de ce joueur ⇒ Parar de ver as mensagens deste jogador
+Confirmer l'exclusion ⇒ Confirmar remoção
+Exclure ⇒ Remover
+Retirer ce joueur du salon (il ne peut pas revenir) ⇒ Remover este jogador da sala (eles não podem voltar)
+Chute ⇒ Queda
+Connecté au salon. Aucun problème de connexion. ⇒ Ligado à entrada. Não há problema de ligação.
+Le relais ne connaît pas ce salon et le serveur de mise en relation (0.peerjs.com) est injoignable depuis ce poste. Vérifiez le code du salon. ⇒ O relé não conhece este lobby e o servidor de sinalização (0.peerjs.com) não pode ser alcançado a partir deste computador. Verifica o código da entrada.
+Ni la connexion directe ni le relais ne trouvent ce salon. Le code est faux ou l'hôte a fermé le salon. ⇒ Nem a ligação directa nem o relé conseguem encontrar este átrio. O código está errado ou o anfitrião fechou a entrada.
+La connexion directe est impossible depuis ce poste et le relais de secours (HTTPS, port 443) est injoignable aussi. Réseau très restrictif, relais hors service, ou quota du jour atteint (il revient à minuit UTC). ⇒ A conexão direta é impossível deste computador e o relé de backup (HTTPS, porta 443) é inacessível também. Rede muito restritiva, retransmissão fora de serviço, ou quota diária alcançada (repõe à meia-noite UTC).
+Le serveur de mise en relation (0.peerjs.com) est injoignable depuis ce poste. Sans doute bloqué par le proxy ou le pare-feu de l'entreprise, ou momentanément hors service. ⇒ O servidor de sinalização (0.peerjs.com) não pode ser alcançado a partir deste computador. Provavelmente bloqueado pelo proxy da empresa ou firewall, ou temporariamente para baixo.
+Le serveur ne connaît pas ce salon. L'hôte n'y est plus enregistré (onglet fermé, réseau coupé ou salon fermé). Demandez à l'hôte de créer un nouveau salon. ⇒ O servidor não conhece esta entrada. O host não está mais registrado lá (tab fechado, rede para baixo ou lobby fechado). Peça à máquina para criar um novo lobby.
+Rapport de l'hôte. Joignez-le à celui du joueur qui n'arrive pas à se connecter. ⇒ Relatório do anfitrião. Anexar ao do jogador que não pode se conectar.
+connecté ⇒ ligado
+injoignable ⇒ inatingível

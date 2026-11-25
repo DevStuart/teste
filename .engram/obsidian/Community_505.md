@@ -1,0 +1,25 @@
+# Community 505
+
+> 1 nodes
+
+## Key Concepts
+
+- **sky_quarry_01_lo.d34d10c9.js** (0 connections) — `dist/tex/sky_quarry_01_lo.d34d10c9.js`
+
+## Relationships
+
+- No strong cross-community connections detected
+
+## Source Files
+
+- `dist/tex/sky_quarry_01_lo.d34d10c9.js`
+
+## Audit Trail
+
+- EXTRACTED: 0 (0%)
+- INFERRED: 0 (0%)
+- AMBIGUOUS: 0 (0%)
+
+---
+
+*Part of the engram knowledge wiki. See [[index]] to navigate.*

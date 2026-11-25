@@ -1,0 +1,93 @@
+{
+  "5.6.0": {
+    "changes": [
+      "O código-fonte do jogo é público, sob licença MIT. O link \"Código-fonte\" na parte inferior do menu principal leva até ele, e qualquer pessoa pode lê-lo e usá-lo em seus próprios jogos.",
+      "Depois de morrer pilotando o drone suicida ou dentro de um mecha, agora você reaparece com a arma na mão.",
+      "O colete do traje Gilet jaune não atravessa mais o corpo do soldado."
+    ]
+  },
+  "5.5.0": {
+    "changes": [
+      "Novo limite de taxa de quadros: \"Metade da taxa de atualização\". O jogo renderiza um quadro a cada duas atualizações da tela, mantendo um ritmo uniforme (140 quadros por segundo em uma tela de 280 Hz).",
+      "Relatório de desempenho em Opções, Vídeo. Com a exibição de desempenho ativada, ele acompanha todos os quadros de uma partida e pode ser copiado ao final para entender quedas de taxa de quadros.",
+      "Granadas de luz, facas arremessadas, acertos de faca e o drone suicida agora mostram um marcador de acerto ao atingir um inimigo.",
+      "O drone suicida tem um som real de hélices, que fica mais agudo conforme sua velocidade.",
+      "Menos travamentos após uma explosão entre caixas e objetos cenográficos, especialmente em Kervénec.",
+      "Em Dominação, o minimapa exige muito menos processamento e os pontos de captura não causam mais travadinhas no início da partida.",
+      "Uma eliminação com faca arremessada não conta mais duas vezes nas sequências de eliminações."
+    ]
+  },
+  "5.4.0": {
+    "changes": [
+      "Novo traje de desafio: Colete Amarelo. Desbloqueie-o nos mapas franceses Val-Blanc, Kervénec e French Dream.",
+      "Os bots cegados por uma granada de luz não ficam mais cegos na partida seguinte. Eles costumavam cambalear no ponto de renascimento sem atirar, principalmente no modo online."
+    ]
+  },
+  "5.3.1": {
+    "changes": [
+      "Os mapas têm novas descrições.",
+      "As descrições de armas, granadas, classes, sequências de eliminações, acessórios e modos ficaram mais curtas.",
+      "A tela de carregamento da partida não mostra mais dicas."
+    ]
+  },
+  "5.3.0": {
+    "changes": [
+      "Um botão Jogar substitui Solo e Multijogador. Escolha se vai jogar sozinho contra bots, com amigos ou em uma partida pública.",
+      "Novo menu Amigos. Veja quais amigos estão online e o que estão fazendo, e convide-os para o seu lobby com um toque. O convite aparece na tela deles, e eles entram sem digitar código.",
+      "O modo Partidas públicas agora mostra apenas lobbies públicos iniciados por jogadores e somente aqueles com pessoas.",
+      "A killcam agora mostra os marcadores de acerto do assassino, junto com o som correspondente.",
+      "Os botões no topo do menu principal agora mostram apenas seus ícones, no computador e no celular.",
+      "No modo online, os bots não ficam mais parados quando o jogador que hospeda a partida troca de aba.",
+      "A killcam de um piloto de mecha mostra a cabine, sem os braços e a arma do soldado sobrepostos.",
+      "Com um controle, especialmente no Steam Deck, a gradação na parte inferior da tela agora alcança a borda."
+    ]
+  },
+  "5.2.1": {
+    "changes": [
+      "Recarregar enquanto corre não faz mais a arma passar pela tela. Ela mantém a pose de recarga, um pouco mais baixa, e não atrapalha sua mira.",
+      "A arma volta à pose de corrida ao correr. Ela havia ficado na lateral desde a versão 5.2.0."
+    ]
+  },
+  "5.2.0": {
+    "changes": [
+      "Novo mapa: French Dream. Um bairro residencial de cidade pequena onde todas as casas são iguais, o menor mapa do jogo, feito para combate próximo. A obra, a casa-modelo e seu andar superior, o beco sem saída e os jardins cercados por sebes.",
+      "O jogo ficou mais ágil. Correr, deslizar, trocar de arma, recarregar e mirar ficam mais rápidos, e as animações das armas são mais incisivas.",
+      "Os carros foram refeitos. Formas arredondadas, vidros distribuídos como em carros reais, pintura brilhante e rodas maiores. O 4x4 e o caminhão militar também.",
+      "Os veículos têm vidros reais. É possível ver o interior por meio deles, e os tiros atravessam.",
+      "Pular sobre um sofá ou uma mesa sob um teto baixo não joga mais seu personagem para o outro lado da sala."
+    ]
+  },
+  "5.1.0": {
+    "changes": [
+      "Escolha o equipamento de cada classe na oficina de classes. Granada de fragmentação, granada de luz, granada de fumaça ou faca arremessada, duas por vida.",
+      "Granada de luz. Ela cega e ensurdece quem olha para ela, com efeito mais intenso e duradouro quanto mais perto a pessoa estiver. Não causa dano.",
+      "Granada de fumaça. Ela cria uma nuvem com cerca de sete metros de largura por aproximadamente quinze segundos. Ninguém vê através dela, nem os bots.",
+      "Faca arremessada. Ela voa em linha reta até a mira e mata com um único acerto. Se errar, fica presa e pode ser recolhida ao passar por cima.",
+      "As granadas ficaram mais pesadas. Trajetória mais ponderada, ricochetes mais vivos e elas não desviam mais ao lançar enquanto se movimenta lateralmente.",
+      "A trajetória da granada aparece enquanto você a segura. É possível desativá-la em Opções, guia Jogo, seção Interface.",
+      "Somente a granada de fragmentação pode ser acionada antes do lançamento. As granadas de luz e de fumaça podem ser seguradas sem risco e só são acionadas ao serem lançadas.",
+      "A oficina de classes agora mostra os quatro encaixes da classe na parte superior, indicando o que está equipado em cada um.",
+      "O mecha pilotado causa mais dano e suas munições explodem no impacto. Agora os bots vão enfrentá-lo em vez de fugir."
+    ]
+  },
+  "5.0.0": {
+    "title_pt": "Escolha suas sequências de eliminações",
+    "changes": [
+      "Escolha suas sequências de eliminações. Cada classe leva três, em três limites diferentes, que podem ser definidos na nova guia Sequências da oficina de classes.",
+      "Mecha, com 13 eliminações. Ele cai do céu na zona escolhida no tablet e alveja os inimigos ao redor. Aproxima-se para embarcar e pilotá-lo. Ele esquenta com o tempo e sob fogo, então saia antes que exploda.",
+      "Drone suicida, com 6 eliminações. Você o pilota por até 30 segundos e ele explode no inimigo. Seu corpo fica no lugar, indefeso.",
+      "EME, com 8 eliminações. Ela bloqueia a equipe inimiga por 25 segundos. O minimapa deles fica vazio e suas sequências de eliminações não podem ser acionadas.",
+      "Satélite, com 10 eliminações. Ele mostra os inimigos em tempo real no minimapa.",
+      "O UAV agora detecta as posições inimigas a cada 3 segundos, como um sonar. Cada inimigo aparece no minimapa conforme a onda passa e depois desaparece.",
+      "Avisos por rádio para as novas sequências de eliminações, em inglês e francês.",
+      "Os bots também usam as novas sequências de eliminações e, contra um mecha, procuram cobertura e lançam granadas nele."
+    ]
+  },
+  "4.22.0": {
+    "changes": [
+      "Os renascimentos foram reformulados. Você não renasce mais à vista de um inimigo, nem perto de uma luta ou de uma granada. Se a equipe adversária acampar na sua base, você renasce em outro lugar do mapa.",
+      "No início de uma partida, cada jogador tem seu próprio ponto. Dois companheiros de equipe não aparecem mais no mesmo lugar.",
+      "Em Mata-mata em equipe, você fica protegido por dois segundos após renascer, como nos outros modos. Atirar encerra a proteção."
+    ]
+  }
+}

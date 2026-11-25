@@ -1,0 +1,326 @@
+Un appui donne un coup. Maintenu, il sort le couteau pour courir plus vite. Changer d'arme le range ⇒ Um toque golpeia. Ao manter pressionado, ele pega o facão para correr mais rápido. Trocar de arma guarda o facão
+Le bouton de ramassage apparaît près d'une arme au sol ⇒ O botão de coleta aparece perto de uma arma no chão
+Séries d'éliminations ⇒ Sequências de eliminações
+Boutons jaunes à gauche, quand elles sont prêtes ⇒ Botões amarelos à esquerda, quando estiverem prontos
+Pause, scores, discussion ⇒ Pausar, placar, chat
+Boutons en haut à droite ⇒ Botões no canto superior direito
+Joystick à gauche ⇒ Controle esquerdo
+Glissez à droite ⇒ Arraste à direita
+pour regarder autour de vous. ⇒ para olhar ao redor.
+Boutons : tirer, viser, sauter, s'accroupir (glissade en sprint), recharger, grenade, couteau. ⇒ Botões: atirar, mirar, pular, agachar (deslizar ao correr), recarregar, granada, faca.
+Le tir part tout seul quand le réticule est sur un ennemi. Boutons : viser, sauter, s'accroupir (glissade en sprint), recharger, grenade, couteau. ⇒ Você atira automaticamente quando a mira está em um inimigo. Botões: mirar, pular, agachar (deslizar ao correr), recarregar, granada, faca.
+Le tir part tout seul quand le réticule est sur un ennemi. Touchez deux fois l'écran pour viser. Boutons : sauter, s'accroupir (glissade en sprint), recharger, grenade, couteau. ⇒ Você atira automaticamente quando a mira está em um inimigo. Dê dois toques na tela para mirar. Botões: pular, agachar (deslizar ao correr), recarregar, granada, faca.
+Touchez deux fois l'écran pour viser. Boutons : tirer, sauter, s'accroupir (glissade en sprint), recharger, grenade, couteau. ⇒ Dê dois toques na tela para mirar. Botões: atirar, pular, agachar (deslizar ao correr), recarregar, granada, faca.
+Visée au double toucher (sans bouton Viser) ⇒ Mira por toque duplo (sem botão Mirar)
+Touchez pour commencer ⇒ Toque para começar
+Installez le jeu sur votre écran d'accueil. Plein écran, sans barre d'adresse. ⇒ Instale o jogo na tela inicial. Tela cheia, sem barra de endereço.
+Installer ⇒ Instalar
+Confirmer ⇒ Confirmar
+Tournez votre appareil ⇒ Vire seu aparelho
+Le jeu se joue en mode paysage. ⇒ O jogo é jogado no modo paisagem.
+Tirer ⇒ Atirar
+Sauter ⇒ Pular
+S'accroupir ⇒ Agachar
+Ramasser ⇒ Coletar
+Retenir son souffle ⇒ Segurar a respiração
+UAV ⇒ UAV
+Frappe ⇒ Ataque
+Hélico ⇒ Helicóptero
+Touchez Partager dans Safari (le carré avec une flèche vers le haut). ⇒ Toque em Compartilhar no Safari (o quadrado com a seta apontando para cima).
+Choisissez "Sur l'écran d'accueil". ⇒ Escolha "Adicionar à Tela de Início".
+Touchez Ajouter, puis lancez le jeu depuis sa nouvelle icône. ⇒ Toque em Adicionar e abra o jogo pelo novo ícone.
+Ouvrez le menu du navigateur (les trois points). ⇒ Abra o menu do navegador (os três pontos).
+Touchez "Installer l'application" ou "Ajouter à l'écran d'accueil". ⇒ Toque em "Instalar aplicativo" ou "Adicionar à tela inicial".
+Confirmez, puis lancez le jeu depuis sa nouvelle icône. ⇒ Confirme e abra o jogo pelo novo ícone.
+Sur iPhone et iPad, le jeu se joue en paysage. Désactivez le verrouillage de l'orientation. ⇒ No iPhone e iPad, o jogo é jogado em paisagem. Desative o bloqueio de orientação.
+Installer l'application ⇒ Instalar aplicativo
+Plein écran en paysage. Tout l'écran pour jouer ⇒ Tela cheia em paisagem. Use a tela inteira para jogar
+Une icône sur l'écran d'accueil. Un toucher et c'est parti ⇒ Um ícone na tela inicial. Um toque e pronto
+Le même jeu. Même progression, parties en ligne comprises ⇒ O mesmo jogo. Mesmo progresso, incluindo partidas online
+Votre session a expiré. Reconnectez-vous. ⇒ Sua sessão expirou. Entre novamente.
+Compte injoignable pour le moment ⇒ Conta indisponível no momento
+Connexion en cours... ⇒ Entrando...
+Emplacement de classe personnalisée {0} débloqué ⇒ Espaço para classe personalizada {0} desbloqueado
+Votre niveau de joueur monte ⇒ Seu nível de jogador aumentou
+Armes, accessoires et camouflages ⇒ Armas, acessórios e camuflagens
+L'affichage 3D a été interrompu pendant que le jeu était en arrière-plan. Relancez le jeu pour le reprendre. ⇒ A renderização 3D foi interrompida enquanto o jogo estava em segundo plano. Reinicie o jogo para continuar.
+L'affichage 3D a été interrompu par l'appareil. Relancez le jeu pour le reprendre. ⇒ O aparelho interrompeu a renderização 3D. Reinicie o jogo para continuar.
+Votre appareil a interrompu l'affichage 3D du jeu (mémoire ou temps de calcul graphique). Le mode graphique économique est activé. Relancez le jeu. ⇒ Seu aparelho interrompeu a renderização 3D do jogo (memória gráfica ou tempo de processamento). O modo gráfico econômico está ativo. Reinicie o jogo.
+L'affichage 3D a encore été interrompu, même en mode graphique économique. Relancez le jeu. Si cela se répète, ouvrez le rapport graphique. ⇒ A renderização 3D foi interrompida novamente, mesmo no modo gráfico econômico. Reinicie o jogo. Se continuar acontecendo, abra o relatório gráfico.
+affichage 3D interrompu par l'appareil ⇒ renderização 3D interrompida pelo aparelho
+Copié ⇒ Copiado
+Compilation des shaders : {0} % ⇒ Compilando shaders: {0}%
+le pilote graphique a refusé {0} programmes de rendu ⇒ o driver gráfico rejeitou {0} programas de renderização
+Changer de mode graphique recharge le jeu. Vous quittez le salon. Continuer ? ⇒ Trocar o modo gráfico recarrega o jogo. Você sairá da sala. Continuar?
+Mode graphique économique (si le jeu s'interrompt ou affiche du noir, relance le jeu) ⇒ Modo gráfico econômico (se o jogo travar ou ficar preto, reinicie-o)
+Rapport graphique ⇒ Relatório gráfico
+Rapport de performances ⇒ Relatório de desempenho
+Il suit chaque image de la dernière partie jouée avec les performances affichées. Copiez-le pour faire analyser les chutes d'images. ⇒ Ele registra cada quadro da última partida com o desempenho exibido. Copie-o para analisar as quedas de FPS.
+Aucune partie enregistrée. Cochez {0} dans Options, Vidéo, puis jouez une partie. ⇒ Nenhuma partida registrada. Marque {0} em Opções, Vídeo e jogue uma partida.
+L'affichage 3D a été interrompu par l'appareil pendant le chargement ({0}). Relancez le jeu. Le mode graphique économique est activé. ⇒ O aparelho interrompeu a renderização 3D durante o carregamento ({0}). Reinicie o jogo. O modo gráfico econômico está ativo.
+Réessayer en mode économique ⇒ Tentar novamente no modo econômico
+Affichage 3D interrompu ⇒ Renderização 3D interrompida
+Relancer le jeu ⇒ Reiniciar o jogo
+Il décrit l'appareil et le rendu. Copiez-le ou partagez-le pour comprendre un affichage noir ou un chargement qui échoue. ⇒ Ele descreve o aparelho e a renderização. Copie ou compartilhe para descobrir a causa de uma tela preta ou falha no carregamento.
+Copier ⇒ Copiar
+Partager ⇒ Compartilhar
+C'est installé ! ⇒ Instalação concluída!
+Le jeu est déjà installé ⇒ O jogo já está instalado
+Ouvrez Riposte: Frontline depuis son icône sur votre écran d'accueil. ⇒ Abra o Riposte: Frontline pelo ícone na tela inicial.
+Ouvrez-le depuis son icône. Plein écran, même progression. ⇒ Abra pelo ícone. Tela cheia, mesmo progresso.
+Jouer dans le navigateur quand même ⇒ Jogar no navegador mesmo assim
+Plus tard ⇒ Mais tarde
+Installez le jeu pour y jouer ⇒ Instale o jogo para jogar
+Il se joue en application. Plein écran, sans barre d'adresse, lancée d'un toucher depuis l'écran d'accueil. ⇒ Ele é executado como aplicativo. Tela cheia, sem barra de endereço, iniciado com um toque na tela inicial.
+Impossible d'installer ? ⇒ Não consigo instalar?
+Dans le navigateur d'une application (Facebook, Instagram, Discord...), ouvrez le lien dans Chrome ou Safari. Sinon, vous pouvez jouer ici, avec moins de confort. Barre d'adresse, pas de plein écran assuré. ⇒ Se estiver no navegador interno de um aplicativo (Facebook, Instagram, Discord...), abra o link no Chrome ou Safari. Caso contrário, jogue aqui com menos conforto. Barra de endereço e tela cheia não garantidas.
+Votre appareil a refusé certains rendus du jeu. Relancez le jeu. Ils seront remplacés par des versions simples (voir le rapport graphique). ⇒ Seu aparelho recusou algumas renderizações do jogo. Reinicie o jogo. Elas serão substituídas por versões simples (consulte o relatório gráfico).
+Votre appareil a refusé certains rendus du jeu pendant le chargement. Relancez le jeu. Ils seront remplacés par des versions simples (voir le rapport graphique). ⇒ Seu aparelho recusou algumas renderizações do jogo durante o carregamento. Reinicie o jogo. Elas serão substituídas por versões simples (consulte o relatório gráfico).
+L'affichage 3D a été interrompu. Le jeu s'adapte à votre appareil et se relance... ⇒ A renderização 3D foi interrompida. O jogo está se adaptando ao aparelho e reiniciando...
+three.js n'a pas pu être téléchargé. Vérifiez la connexion. Nouvel essai dans quelques secondes. ⇒ Não foi possível baixar o three.js. Verifique sua conexão. Nova tentativa em alguns segundos.
+Chrome a bloqué l'affichage 3D du jeu après une interruption et ne le rend qu'à son redémarrage. Fermez le jeu, arrêtez Chrome (Paramètres du téléphone, Applications, Chrome, Forcer l'arrêt), puis rouvrez le jeu. ⇒ O Chrome bloqueou a renderização 3D do jogo após uma interrupção e só a restaura ao reiniciar. Feche o jogo, encerre o Chrome (Configurações do telefone, Aplicativos, Chrome, Forçar parada) e reabra o jogo.
+Attente : {0} s ⇒ Aguardar: {0} s
+Le démarrage n'a pas abouti : {0} ⇒ A inicialização falhou: {0}
+Courir ⇒ Correr
+Course au doigt ⇒ Corrida por toque
+Bouton Courir ⇒ Botão Correr
+Joystick poussé au-delà du cercle ⇒ Controle analógico empurrado além do círculo
+Joystick ⇒ Controle
+Tirer. Le doigt peut glisser pour regarder ⇒ Atirar. O dedo pode deslizar para olhar
+Disposition des commandes tactiles ⇒ Layout dos controles de toque
+Disposition ⇒ Layout
+Options, Jeu : déplacer, agrandir ou retirer chaque bouton ⇒ Opções, Jogo: mover, aumentar ou remover cada botão
+Terminé ⇒ Concluído
+Réinitialiser ⇒ Redefinir
+Appliquer ⇒ Aplicar
+Remettre ⇒ Restaurar
+Disposition en texte ⇒ Layout em texto
+Touchez un bouton, puis glissez-le ⇒ Toque em um botão e arraste-o
+Copié. ⇒ Copiado.
+Sélectionnez le texte et copiez-le. ⇒ Selecione o texto e copie.
+Disposition appliquée. ⇒ Layout aplicado.
+Texte non reconnu. ⇒ Texto não reconhecido.
+Non connecté. Votre progression reste sur cet appareil. ⇒ Não conectado. Seu progresso fica neste aparelho.
+Apparaît sous le doigt ⇒ Aparece sob o dedo
+Fixe à l'écran ⇒ Fixo na tela
+Joystick (sa taille, il apparaît sous le doigt) ⇒ Controle analógico (tamanho: aparece sob o dedo)
+Niveau supérieur ⇒ Subiu de nível
+Notifications : {0} non lue ⇒ Notificações: {0} não lida
+Notifications : {0} non lues ⇒ Notificações: {0} não lidas
+Notifications ⇒ Notificações
+à l'instant ⇒ agora mesmo
+il y a {0} min ⇒ há {0} min
+il y a {0} h ⇒ há {0} h
+il y a {0} j ⇒ há {0} d
+Ajouter en ami ⇒ Adicionar amigo
+Demande envoyée ⇒ Solicitação enviada
+Annuler la demande ⇒ Cancelar solicitação
+Accepter ⇒ Aceitar
+Refuser ⇒ Recusar
+Ami ⇒ Amigo
+Retirer des amis ⇒ Remover amigo
+Connectez-vous pour voir le classement. ⇒ Entre para ver o ranking.
+Vous êtes {0} sur {1} joueurs ⇒ Você está em {0}º lugar entre {1} jogadores
+Vous n'êtes pas encore classé ⇒ Você ainda não tem ranking
+Personne n'est encore classé. ⇒ Ninguém tem ranking ainda.
+Les joueurs sont classés selon toute l'XP gagnée depuis leur inscription. Le classement ne repart jamais de zéro. ⇒ Os jogadores são classificados pela XP total obtida desde o cadastro. O ranking nunca recomeça do zero.
+Vous n'avez pas encore d'ami. Trouvez des joueurs dans le classement général et ajoutez-les. ⇒ Você ainda não tem amigos. Encontre jogadores no ranking geral e adicione-os.
+Aucun joueur trouvé. ⇒ Nenhum jogador encontrado.
+Chercher un joueur ⇒ Procurar jogador
+Chercher ⇒ Procurar
+Voir plus ⇒ Ver mais
+Réessayer ⇒ Tentar novamente
+Inscrit le {0} ⇒ Entrou em {0}
+{0} au classement ⇒ {0} no ranking
+Rang ⇒ Posição
+Pas encore classé. ⇒ Ainda sem ranking.
+Mon profil ⇒ Meu perfil
+Aucune partie enregistrée. ⇒ Nenhuma partida registrada.
+{0} vous a envoyé une demande d'ami. ⇒ {0} enviou uma solicitação de amizade.
+{0} a accepté votre demande d'ami. ⇒ {0} aceitou sua solicitação de amizade.
+Vous avez atteint le niveau {0} ! ⇒ Você alcançou o nível {0}!
+Bienvenue dans Riposte: Frontline ! Retrouvez les autres joueurs dans le classement et ajoutez-les en ami. ⇒ Bem-vindo ao Riposte: Frontline! Encontre outros jogadores no ranking e adicione-os como amigos.
+Connectez-vous pour voir vos notifications. ⇒ Entre para ver suas notificações.
+Voir le profil ⇒ Ver perfil
+Effacer les notifications lues ⇒ Limpar notificações lidas
+Aucune notification pour le moment. ⇒ Nenhuma notificação por enquanto.
+Classement des joueurs ⇒ Ranking dos jogadores
+Joueur ⇒ Jogador
+Demandes d'ami et nouveautés de votre compte ⇒ Solicitações de amizade e novidades da sua conta
+Classement, amis et notifications ⇒ Ranking, amigos e notificações
+Signalé ⇒ Denunciado
+Signaler ⇒ Denunciar
+Merci : la modération va regarder ce signalement. ⇒ Obrigado: a moderação analisará esta denúncia.
+Photo ⇒ Foto
+Triche ⇒ Trapaça
+Comportement ⇒ Comportamento
+La modération a retiré votre photo de profil. Elle ne respectait pas les règles du jeu. ⇒ A moderação removeu sua foto de perfil. Ela não seguia as regras do jogo.
+La modération a remis votre nom d'affichage à votre nom d'utilisateur. L'ancien ne respectait pas les règles du jeu. ⇒ A moderação redefiniu seu nome exibido para o nome de usuário. O anterior não seguia as regras do jogo.
+La modération vous a retiré du classement (triche ou abus). ⇒ A moderação removeu você do ranking (trapaça ou abuso).
+Modération ⇒ Moderação
+Réservé à la modération. ⇒ Restrito à moderação.
+Comptes bloqués ⇒ Contas bloqueadas
+{0} compte signalé ⇒ {0} conta denunciada
+{0} comptes signalés ⇒ {0} contas denunciadas
+Aucun signalement en attente ⇒ Nenhuma denúncia pendente
+Débloquer ⇒ Desbloquear
+Ignorer et rendre la photo ⇒ Descartar e restaurar a foto
+Ignorer ⇒ Descartar
+Remettre le nom ⇒ Restaurar o nome
+Retirer du classement ⇒ Remover do ranking
+Confirmer le blocage ⇒ Confirmar bloqueio
+Bloquer le compte ⇒ Bloquear conta
+Voir la photo ⇒ Ver foto
+Voir ⇒ Ver
+bloqué le {0} ⇒ bloqueado em {0}
+{0} XP, {1} parties, ratio {2} ⇒ {0} XP, {1} partidas, índice {2}
+retiré du classement ⇒ removido do ranking
+photo masquée ⇒ foto ocultada
+Aucun compte bloqué. ⇒ Nenhuma conta bloqueada.
+Aucun signalement en attente. ⇒ Nenhuma denúncia pendente.
+Liste à afficher ⇒ Lista a exibir
+Actualiser ⇒ Atualizar
+Signalés ⇒ Denunciados
+Bloqués ⇒ Bloqueados
+Régler ⇒ Ajustar
+Bâton gauche ⇒ Analógico esquerdo
+Bâton droit ⇒ Analógico direito
+Regarder. R3 (appui sur le bâton) pour le couteau, maintenu pour le garder en main ⇒ Olhar ao redor. R3 (pressionar o analógico) para pegar a faca; mantenha pressionado para continuar segurando
+Tirer / viser (maintenu) ⇒ Atirar / mirar (segurar)
+Ramasser l'arme au sol ⇒ Pegar a arma no chão
+Recharger, maintenir pour ramasser l'arme au sol ⇒ Recarregar; segure para pegar a arma no chão
+S'accroupir (glissade en sprintant) ⇒ Agachar (deslizar ao correr)
+Croix directionnelle ⇒ Direcional
+Haut : UAV, droite : frappe aérienne, bas : hélicoptère, gauche : inspecter l'arme ⇒ Cima: UAV, direita: ataque aéreo, baixo: helicóptero, esquerda: inspeção da arma
+Dans les menus ⇒ Nos menus
+Croix ou bâton gauche pour naviguer, A valider, B revenir, LB et RB changer d'onglet ⇒ Direcional ou analógico esquerdo para navegar, A para confirmar, B para voltar, LB e RB para trocar de aba
+Sensibilité de la manette ⇒ Sensibilidade do controle
+Zone morte des bâtons ⇒ Zona morta dos analógicos
+Réponse de la visée (manette) ⇒ Resposta da mira (controle)
+Réactive ⇒ Responsiva
+Progressive ⇒ Progressiva
+Linéaire ⇒ Linear
+Accélération de la visée (manette, bâton à fond) ⇒ Aceleração da mira (controle, analógico ao máximo)
+Aucune ⇒ Nenhuma
+Forte ⇒ Alta
+Disposition de la manette ⇒ Configuração do controle
+Par défaut ⇒ Padrão
+Gaucher (bâtons échangés) ⇒ Canhoto (analógicos trocados)
+Bumper jumper (saut sur LB) ⇒ Bumper jumper (pular com LB)
+Course à la manette ⇒ Correr com controle
+Appui sur le bâton gauche (L3) ⇒ Pressionar o analógico esquerdo (L3)
+Bâton poussé à fond ⇒ Analógico empurrado ao máximo
+Vibrations de la manette ⇒ Vibração do controle
+Manette (Xbox, PlayStation, 8BitDo...) ⇒ Controle (Xbox, PlayStation, 8BitDo...)
+{0} Échanger {1} contre {2} ⇒ {0} Trocar {1} por {2}
+Avancer ⇒ Mover para frente
+Reculer ⇒ Mover para trás
+Aller à gauche ⇒ Mover para a esquerda
+Aller à droite ⇒ Mover para a direita
+S'accroupir (maintenu), glisser en sprintant ⇒ Agachar (segurar), deslizar ao correr
+S'accroupir (bascule), glisser en sprintant ⇒ Agachar (alternar), deslizar ao correr
+Arme secondaire ⇒ Arma secundária
+Inspecter l'arme ⇒ Inspecionar arma
+Espace ⇒ Espaço
+Maj gauche ⇒ Shift esquerdo
+Maj droite ⇒ Shift direito
+Ctrl gauche ⇒ Ctrl esquerdo
+Ctrl droite ⇒ Ctrl direito
+Alt gauche ⇒ Alt esquerdo
+Alt droite ⇒ Alt direito
+Verr. maj ⇒ Caps Lock
+Retour arrière ⇒ Backspace
+Pavé {0} ⇒ Teclado numérico {0}
+Appuyez sur une touche... ⇒ Pressione uma tecla...
+Cette touche est réservée (Échap, P, T, Entrée, flèches et touches de fonction). ⇒ Esta tecla é reservada (Esc, P, T, Enter, setas e teclas de função).
+Rétablir les touches par défaut ⇒ Restaurar teclas padrão
+Clic sur une touche puis la nouvelle touche (Retour arrière : remettre celle par défaut). Hors plein écran, Ctrl+Maj avec une lettre peut déclencher un raccourci du navigateur. Préférez d'autres touches ou jouez en plein écran. ⇒ Clique em uma tecla e pressione a nova (Backspace: restaura o padrão). Fora da tela cheia, Ctrl+Shift com uma letra pode ativar um atalho do navegador. Prefira outras teclas ou jogue em tela cheia.
+Tab ⇒ Tab
+Visée au zoom (vitesse par rapport à la hanche) ⇒ Mira com zoom (velocidade em relação à mira livre)
+Visée au zoom (manette, vitesse par rapport à la hanche) ⇒ Mira com zoom (controle, velocidade em relação à mira livre)
+Onglets ⇒ Abas
+Jusqu'à 8 joueurs, complétés par des bots ⇒ Até 8 jogadores, completados por bots
+Chacun pour soi, joueurs humains seulement ⇒ Todos contra todos, apenas jogadores humanos
+6 contre 6, complétés par des bots ⇒ 6 contra 6, completados por bots
+Deux équipes, joueurs humains seulement ⇒ Duas equipes, apenas jogadores humanos
+Aucun message pour l'instant. ⇒ Nenhuma mensagem por enquanto.
+Réglés par l'hôte ⇒ Definido pelo anfitrião
+Écrire un message ⇒ Escrever uma mensagem
+Ligne de front, polyvalent ⇒ Linha de frente, versátil
+Commando ⇒ Commando
+Courte portée, agressif ⇒ Curto alcance, agressivo
+Ghillie ⇒ Ghillie
+Longue portée, précision ⇒ Longo alcance, precisão
+Ouverture, combat rapproché ⇒ Invasão, combate próximo
+<canvas class="vw-cv" aria-hidden="true"></canvas><div class="vw-help">Glissez pour faire tourner</div> ⇒ <canvas class="vw-cv" aria-hidden="true"></canvas><div class="vw-help">Arraste para girar</div>
+Tenue en 3D, flèches pour la faire tourner ⇒ Traje em 3D, setas para girar
+Tenues ⇒ Trajes
+Dix tenues, dont six à débloquer ⇒ Dez trajes, seis deles desbloqueáveis
+Votre tenue, quelle que soit votre arme. Elle change tout de suite. ⇒ Seu traje, independentemente da arma. A mudança é imediata.
+Nomade ⇒ Nômade
+Survie, brèche, sans frontières ⇒ Sobrevivência, invasão, sem fronteiras
+Tempête ⇒ Tempestade
+Reconnaissance, longue portée ⇒ Reconhecimento, longo alcance
+Fantôme vert ⇒ Fantasma Verde
+Affût, invisible dans les feuillages ⇒ À espera, invisível na folhagem
+Raptor ⇒ Raptor
+Vitesse, assaut rapproché ⇒ Velocidade, assalto próximo
+Néant ⇒ Vazio
+Infiltration, précision, domination ⇒ Infiltração, precisão, dominação
+Gilet jaune ⇒ Colete Amarelo
+Haute visibilité, aucune discrétion ⇒ Alta visibilidade, nenhuma discrição
+Éliminations au fusil à pompe ⇒ Eliminações com espingarda
+Éliminations au couteau ou à la grenade ⇒ Eliminações com faca ou granada
+Parties de match à mort finies dans les trois premiers ⇒ Partidas de mata-mata terminadas entre os três primeiros
+Mode Match à mort, en solo ou en ligne ⇒ Modo Mata-mata, solo ou online
+Éliminations au fusil de précision ⇒ Eliminações com rifle de precisão
+Éliminations à 50 m ou plus ⇒ Eliminações a 50 m ou mais
+Drones UAV appelés ⇒ UAV chamado
+Le drone se gagne avec une série de 4 éliminations ⇒ O drone é conquistado com uma sequência de 4 eliminações
+Éliminations avec un silencieux ⇒ Eliminações com silenciador
+Le silencieux se débloque au niveau 4 d'une arme, dans l'atelier de classe ⇒ O silenciador é desbloqueado no nível 4 da arma, na oficina de classe
+Éliminations accroupi ⇒ Eliminações agachado
+Cartes où vous avez terminé une partie ⇒ Mapas em que você terminou uma partida
+Éliminations au pistolet-mitrailleur ⇒ Eliminações com submetralhadora
+Éliminations en glissade ou en plein saut ⇒ Eliminações durante deslize ou salto
+Doubles éliminations ⇒ Eliminações duplas
+Deux éliminations à moins de 4 secondes d'écart ⇒ Duas eliminações em menos de 4 segundos
+Éliminations au fusil d'assaut ⇒ Eliminações com rifle de assalto
+Éliminations au pistolet ⇒ Eliminações com pistola
+Points capturés en Domination ⇒ Pontos capturados em Dominação
+Parties terminées sur une carte française ⇒ Partidas terminadas em um mapa francês
+Val-Blanc, Kervénec ou French Dream ⇒ Val-Blanc, Kervénec ou French Dream
+Victoires sur une carte française ⇒ Vitórias em um mapa francês
+Éliminations sur une carte française ⇒ Eliminações em um mapa francês
+Défi accompli ⇒ Desafio concluído
+Tenue débloquée : {0} ⇒ Traje desbloqueado: {0}
+À porter depuis l'écran Tenues ⇒ Use-o na tela Trajes
+Accompli ⇒ Concluído
+Défis ⇒ Desafios
+Défis {0} / {1} ⇒ Desafios {0} / {1}
+Tenues de défi ⇒ Trajes de desafio
+Relevez leurs défis pour les débloquer ⇒ Conclua seus desafios para desbloqueá-los
+Tenue unique ⇒ Traje exclusivo
+Faite pour vous, personne d'autre ne peut la porter ⇒ Feito para você, ninguém mais pode usar
+Code de secours ⇒ Código de recuperação
+Le code de secours s'affiche à la création du compte. Sans lui, un mot de passe oublié ne peut pas être retrouvé. Le jeu ne garde aucune adresse e-mail. Vos autres appareils seront déconnectés. ⇒ O código de recuperação aparece ao criar a conta. Sem ele, não é possível recuperar uma senha esquecida. O jogo não guarda endereço de e-mail. Seus outros aparelhos serão desconectados.
+Mot de passe changé. Votre ancien code de secours ne sert plus. Voici le nouveau. ⇒ Senha alterada. Seu código de recuperação antigo deixou de funcionar. Este é o novo.
+Compte créé : bienvenue ! ⇒ Conta criada: seja bem-vindo!
+Votre compte n'avait pas encore de code de secours. Le voici. Il remplace l'adresse e-mail, que le jeu ne garde plus. ⇒ Sua conta ainda não tinha código de recuperação. Aqui está. Ele substitui o endereço de e-mail, que o jogo não guarda mais.
+Votre code de secours ⇒ Seu código de recuperação
+Notez-le et gardez-le en lieu sûr. C'est le seul moyen de retrouver votre compte si vous oubliez votre mot de passe. Il ne sera plus affiché. ⇒ Anote-o e guarde-o em um lugar seguro. É a única forma de recuperar sua conta se esquecer a senha. Ele não será exibido novamente.
+Enregistrer dans un fichier ⇒ Salvar em arquivo
+J'ai noté mon code de secours ⇒ Anotei meu código de recuperação
+Code copié. ⇒ Código copiado.
+Copie impossible ici. Le code est sélectionné, notez-le à la main. ⇒ Não é possível copiar aqui. O código está selecionado; anote-o manualmente.
+Nom d'utilisateur : {0} ⇒ Nome de usuário: {0}
+Code de secours : {0} ⇒ Código de recuperação: {0}
+Donné le {0} ⇒ Emitido em {0}
+Il sert à choisir un nouveau mot de passe si vous oubliez le vôtre (Connexion, "Mot de passe oublié ?"). Il ne sert qu'une fois. Un nouveau code vous est alors donné. ⇒ Ele permite escolher uma nova senha caso você esqueça a atual (Entrar, "Esqueceu a senha?"). Só funciona uma vez. Um novo código é fornecido depois.
+riposte-frontline-code-de-secours.txt ⇒ riposte-frontline-codigo-de-recuperacao.txt
+Créer mon code de secours ⇒ Criar meu código de recuperação
+Mot de passe et code de secours ⇒ Senha e código de recuperação
+Ajouter un mot de passe ⇒ Adicionar uma senha
+Nouveau code de secours (code perdu). L'ancien ne servira plus. ⇒ Novo código de recuperação (código perdido). O antigo deixará de funcionar.
+Créer un nouveau code ⇒ Criar um novo código
+Votre code de secours est prêt. ⇒ Seu código de recuperação está pronto.

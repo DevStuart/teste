@@ -137,7 +137,7 @@ defineGun('usp', 'pistol', (c) => {
      chargeur strié ; chargeur noir à talon.
    Contrôle : node tools/dev/visual/contour.js --arme glock18 --photo <profil gauche, 1100 x 1100> --mmpx 0.196 --ancre 869,470,0.012,-0.008
    (recouvrement 98 %). ---------- */
-defineGun('glock18', 'pistol', (c) => {
+function buildGlock(c, fullAuto) {
   const { g, M, info } = c, B = M.dark, N = M.poly, F = M.tan, K = M.rubber, sx2 = [-1, 1], dotG = new THREE.SphereGeometry(1, 6, 4);
   const S = 0.000196, P = (x, y, r) => { const q = [0.012 + (x - 869) * S, -0.008 - (y - 470) * S]; if (r !== undefined) q.push(r); return q; };
   const Pz = (x) => P(x, 0)[0], Py = (y) => P(0, y)[1];
@@ -154,9 +154,11 @@ defineGun('glock18', 'pistol', (c) => {
   bx(sl, M.metal, w / 2 - 0.004, yT - 0.0022, Pz(650), 0.0062, 0.002, Pz(735) - Pz(565));
   // cannelures arrière, sur les deux flancs
   for (let k = 0; k < 7; k++) for (const sx of sx2) bx(sl, K, sx * (w / 2 + 0.0002), Py(262), Pz(764 + k * 11), 0.0012, Py(222) - Py(302), 0.0011);
-  // sélecteur de tir (flanc gauche, à l'arrière) : disque et levier
-  cy(sl, K, -(w / 2 + 0.0008), Py(262), Pz(884), 0.0042, 0.0016, 0, 0, Math.PI / 2);
-  { const a = P(856, 222), b = P(894, 280); rb(sl, B, -(w / 2 + 0.0016), (a[1] + b[1]) / 2, (a[0] + b[0]) / 2, 0.0014, hyp(a[0] - b[0], a[1] - b[1]) + 0.004, 0.0034, 0.0012, -Math.atan2(b[0] - a[0], a[1] - b[1])); }
+  if (fullAuto) {
+    // sélecteur de tir (flanc gauche, à l'arrière) : disque et levier
+    cy(sl, K, -(w / 2 + 0.0008), Py(262), Pz(884), 0.0042, 0.0016, 0, 0, Math.PI / 2);
+    { const a = P(856, 222), b = P(894, 280); rb(sl, B, -(w / 2 + 0.0016), (a[1] + b[1]) / 2, (a[0] + b[0]) / 2, 0.0014, hyp(a[0] - b[0], a[1] - b[1]) + 0.004, 0.0034, 0.0012, -Math.atan2(b[0] - a[0], a[1] - b[1])); }
+  }
   // hausse (deux points blancs) et guidon (point blanc) ; rien si une optique les remplace
   if (!c.optic) {
     prof(sl, B, [P(889, 205), P(893, 185, 0.0008), P(921, 185, 0.0008), P(925, 205)], 0.0185, 0, 0.0006, 0.001);
@@ -224,7 +226,9 @@ defineGun('glock18', 'pistol', (c) => {
   };
   info.gripDef.L = info.gripDef.R;
   info.trigDef = { at: [0.004, -0.008, Pz(568) - 0.0085], xTip: -0.003, guard: [] };
-});
+}
+defineGun('glock18', 'pistol', (c) => buildGlock(c, true));
+defineGun('glock17', 'pistol', (c) => buildGlock(c, false));
 
 /* ---------- Desert Eagle Mark XIX .50 AE, inox (d'après la photo du modèle à frein de bouche) ----------
    Un canon fixe et massif devant une glissière courte : seule la glissière recule au tir.

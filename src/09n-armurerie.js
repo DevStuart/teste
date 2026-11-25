@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    ATELIER DE CLASSE : composition d'une classe personnalisée (nom, arme principale et pistolet, accessoires, camouflages),
    annonces de progression en partie
    L'écran (section #scr-arsenal) s'ouvre depuis le détail d'une classe personnalisée (menu Classes, choix de la classe au
@@ -78,7 +78,7 @@ function renderArsNadeList() {
 /* Détail de la grenade équipée (ou de la dernière touchée) : son effet et ses chiffres */
 function renderArsNadePanel() {
   const c = CLASSES[ARSUI.cls], id = NADE_TYPES[ARSUI.nadeSee] ? ARSUI.nadeSee : c.nade, N = NADE_TYPES[id];
-  const num = (v) => v.toLocaleString(LANG === 'fr' ? 'fr-FR' : 'en-US');
+  const num = (v) => v.toLocaleString(LOCALE);
   const facts = id === 'knife' ? [[_t('Par vie'), String(NADE_COUNT)], [_t('Effet'), _t('Élimine d\u0027un coup')], [_t('Vitesse'), _t('{0} m/s', THROW_KNIFE.speed)], [_t('Au sol'), _t('Se ramasse')]]
     : [[_t('Mèche'), _t('{0} s', num(N.fuse))], [_t('Par vie'), String(NADE_COUNT)]].concat(
     id === 'flash' ? [[_t('Effet'), _t('Aveugle jusqu\u0027à {0} s', num(FLASH.max))], [_t('Portée'), _t('{0} m', FLASH.r)]]

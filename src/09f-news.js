@@ -15,13 +15,13 @@ const newsDate = (iso) => {
   const [y, m, d] = iso.split('-').map(Number), s = fmtDate(new Date(Date.UTC(y, m - 1, d)), { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
   return LANG === 'fr' && d === 1 ? s.replace(/^1 /, '1er ') : s;
 };
-/* Textes d'une entrée du journal : changelog.json porte le français (title, x) et l'anglais (title_en, x_en) */
-const newsTitle = (r) => (LANG === 'en' && r.title_en) || r.title || '';
+/* Textes d'une entrée du journal : le changelog peut fournir le français, l'anglais et le portugais séparément */
+const newsTitle = (r) => (LANG === 'en' && r.title_en) || (LANG === 'pt-BR' && r.title_pt) || r.title || '';
 const vkey = (v) => v.split('.').map(Number);
 const vNewer = (a, b) => { const x = vkey(a), y = vkey(b); for (let i = 0; i < 3; i++) if (x[i] !== y[i]) return x[i] > y[i]; return false; };
 /* La grande version (X.0.0) publiée depuis la dernière version vue : celle qu'on annonce en plein écran (aucune pour un nouveau joueur) */
 const newsMajor = () => { const seen = newsSeenGet(); return seen ? CHANGELOG.find((r) => /^\d+\.0\.0$/.test(r.version) && vNewer(r.version, seen)) || null : null; };
-const newsText = (c) => (LANG === 'en' && c.x_en) || c.x;
+const newsText = (c) => (LANG === 'en' && c.x_en) || (LANG === 'pt-BR' && c.x_pt) || c.x;
 const newsSeenGet = () => { try { return localStorage.getItem('cod_seen_version'); } catch (e) { return null; } };
 function newsMarkSeen() { try { localStorage.setItem('cod_seen_version', GAME_VERSION); } catch (e) { /* stockage indisponible */ } newsBadge(); }
 const newsUnseen = () => newsSeenGet() !== GAME_VERSION;

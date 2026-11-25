@@ -69,6 +69,14 @@ Fusil à pompe entièrement automatique. Trois cents coups par minute, vingt dan
 Le .45 ACP des forces spéciales. Moins de coups que le M9, mais plus de dégâts. ⇒ The special forces .45 ACP. Fewer rounds than the M9, but more damage.
 Pistolet entièrement automatique. Il vide son chargeur en moins de deux secondes. ⇒ Fully automatic pistol. It empties its magazine in under two seconds.
 Le .50 Action Express. Deux balles au torse, une à la tête, mais sept coups seulement. ⇒ The .50 Action Express. Two torso hits, one headshot, but only seven rounds.
+Bullpup compact à lunette intégrée. Stable à moyenne distance, avec une bonne mobilité. ⇒ Compact bullpup with an integrated optic. Stable at medium range and easy to handle.
+Un chargeur généreux et une silhouette ultra-compacte. Parfait pour avancer sans perdre le rythme. ⇒ A high-capacity magazine in an ultra-compact package. Ideal for pushing forward without losing momentum.
+Mitrailleuse légère à grande capacité. Lourde à déplacer, elle tient bien une ligne de tir. ⇒ High-capacity light machine gun. Heavy to move, but excellent for holding a firing lane.
+Carabine légère et compacte. Facile à épauler et régulière en rafales courtes. ⇒ A light, compact carbine. Quick to shoulder and steady in short bursts.
+Fusil à pompe de huit cartouches. Faites coulisser le garde-main entre chaque tir. ⇒ Eight-round pump-action shotgun. Slide the fore-end between shots.
+Fusil de bataille en 7,62 mm. Puissant et précis, mais son recul ralentit les tirs répétés. ⇒ A 7.62 mm battle rifle. Powerful and accurate, but its recoil slows follow-up shots.
+Pistolet léger de dix-sept coups. Rapide à dégainer et équilibré pour le combat rapproché. ⇒ A light 17-round pistol. Quick to draw and well balanced for close combat.
+Carabine moderne à garde-main court. Agile en mouvement et précise en rafales contrôlées. ⇒ A modern carbine with a short handguard. Agile on the move and accurate in controlled bursts.
 Assaut ⇒ Assault
 Le choix polyvalent, à l'aise à toutes les distances. ⇒ The all-rounder, at ease at every range.
 Nettoyeur ⇒ Cleaner
@@ -589,7 +597,22 @@ Se connecter ⇒ Sign in
 Comptes indisponibles ici ⇒ Accounts unavailable here
 Niveau, statistiques et multijoueur ⇒ Level, stats and multiplayer
 Profil de {0}, niveau {1} ⇒ {0}'s profile, level {1}
-Votre nom d'affichage (à changer dans Profil) ⇒ Your display name (change it in Profile)
+Votre nom public est définitif ⇒ Your public name is permanent
+Aucune adresse e-mail. Un nom d'utilisateur et un mot de passe suffisent. Votre nom d'utilisateur définitif est aussi votre nom public en jeu. Les autres joueurs connectés voient votre nom, votre niveau, votre patente, vos statistiques et votre photo. Évitez d'y mettre votre vrai nom. ⇒ No email address is required. A username and password are enough. Your permanent username is also your public in-game name. Other signed-in players can see your name, level, rank, stats, and avatar. Avoid using your real name.
+Choisissez un nom public définitif et unique de 3 à 16 caractères (lettres sans accent, chiffres ou tiret bas). Le mot de passe doit contenir au moins 8 caractères. Aucune adresse e-mail n'est demandée. Un code de secours s'affichera. Notez-le pour retrouver le compte si vous oubliez le mot de passe. ⇒ Choose a permanent, unique public name of 3 to 16 characters (unaccented letters, numbers, or underscores). Passwords must be at least 8 characters. No email address is required. A recovery code will be shown. Write it down to recover your account if you forget your password.
+Votre nom public définitif : ⇒ Your permanent public name:
+Il ne peut pas être modifié. ⇒ It cannot be changed.
+Patente : ⇒ Rank:
+Niveau {0} · {1} ⇒ Level {0} · {1}
+Caporal ⇒ Corporal
+Sergent ⇒ Sergeant
+Adjudant ⇒ Warrant Officer
+Lieutenant ⇒ Lieutenant
+Capitaine ⇒ Captain
+Commandant ⇒ Major
+Colonel ⇒ Colonel
+Général ⇒ General
+Maréchal ⇒ Marshal
 Connectez-vous pour rejoindre le salon {0}. ⇒ Sign in to join lobby {0}.
 Connectez-vous pour jouer en ligne. ⇒ Sign in to play online.
 Serveur injoignable : réessayez dans un instant. ⇒ Server unreachable: try again in a moment.
@@ -636,8 +659,6 @@ Résultat ⇒ Result
 Date ⇒ Date
 Mot de passe actuel ⇒ Current password
 Compte ⇒ Account
-Nom d'affichage (16 caractères au plus) ⇒ Display name (16 characters at most)
-Identifiant : ⇒ Username:
 Se déconnecter ⇒ Sign out
 Changer le mot de passe ⇒ Change the password
 Nouveau mot de passe (8 caractères au moins) ⇒ New password (at least 8 characters)
@@ -970,7 +991,6 @@ file courte ⇒ short queue
 Point {0} perdu ⇒ Point {0} lost
 Point {0} tenu ⇒ Point {0} held
 Point {0} : reprise ⇒ Point {0}: taking it back
-Niveau {0} · voir mon profil ⇒ Level {0} · view my profile
 et la ⇒ and the
 {0} min ⇒ {0} min
 {0} {1} contre {2} {3} ⇒ {0} {1} vs {2} {3}
@@ -1164,12 +1184,9 @@ Personne n'est encore classé. ⇒ Nobody is ranked yet.
 Les joueurs sont classés selon toute l'XP gagnée depuis leur inscription. Le classement ne repart jamais de zéro. ⇒ Players are ranked by all the XP they have earned since signing up. The leaderboard never starts over.
 Vous n'avez pas encore d'ami. Trouvez des joueurs dans le classement général et ajoutez-les. ⇒ You have no friends yet. Find players in the overall leaderboard and add them.
 Aucun joueur trouvé. ⇒ No player found.
-Joueurs à afficher ⇒ Players to show
 Chercher un joueur ⇒ Search for a player
 Chercher ⇒ Search
 Voir plus ⇒ Show more
-Tous les joueurs ⇒ All players
-Mes amis ⇒ My friends
 Réessayer ⇒ Try again
 Inscrit le {0} ⇒ Joined {0}
 {0} au classement ⇒ Ranked {0}
@@ -1191,11 +1208,6 @@ Demandes d'ami et nouveautés de votre compte ⇒ Friend requests and news about
 Classement, amis et notifications ⇒ Leaderboard, friends and notifications
 Signalé ⇒ Reported
 Signaler ⇒ Report
-Signaler {0} ⇒ Report {0}
-La modération regarde chaque signalement. Pour quelle raison ? ⇒ The moderators look at every report. What is the reason?
-Raison du signalement ⇒ Reason for the report
-Précisez si besoin (facultatif) ⇒ Add details if needed (optional)
-Envoyer le signalement ⇒ Send the report
 Merci : la modération va regarder ce signalement. ⇒ Thank you: the moderators will look at this report.
 Photo ⇒ Picture
 Triche ⇒ Cheating
@@ -1367,7 +1379,6 @@ Faite pour vous, personne d'autre ne peut la porter ⇒ Made for you, nobody els
 Code de secours ⇒ Recovery code
 Le code de secours s'affiche à la création du compte. Sans lui, un mot de passe oublié ne peut pas être retrouvé. Le jeu ne garde aucune adresse e-mail. Vos autres appareils seront déconnectés. ⇒ The recovery code is shown when the account is created. Without it, a forgotten password cannot be recovered. The game keeps no email address. Your other devices will be signed out.
 Mot de passe changé. Votre ancien code de secours ne sert plus. Voici le nouveau. ⇒ Password changed. Your old recovery code no longer works. Here is the new one.
-Le nom d'utilisateur est votre identifiant public : 3 à 16 caractères (lettres sans accent, chiffres, tiret bas), définitif. Votre nom d'affichage sera le même, et vous pourrez le changer. Mot de passe : 8 caractères au moins. Aucune adresse e-mail n'est demandée : un code de secours s'affichera, à noter pour retrouver le compte si vous oubliez le mot de passe. ⇒ The username is your public identifier: 3 to 16 characters (letters without accents, digits, underscore), permanent. Your display name will be the same, and you can change it. Password: at least 8 characters. No email address is required: a recovery code will be shown, to write down so you can recover the account if you forget the password.
 Compte créé : bienvenue ! ⇒ Account created: welcome!
 Votre compte n'avait pas encore de code de secours. Le voici. Il remplace l'adresse e-mail, que le jeu ne garde plus. ⇒ Your account did not have a recovery code yet. Here it is. It replaces the email address, which the game no longer keeps.
 Votre code de secours ⇒ Your recovery code
@@ -1399,8 +1410,6 @@ Créez votre code de secours. Sans lui, un mot de passe oublié ne peut pas êtr
 Changer le mot de passe (un nouveau code de secours vous sera donné) ⇒ Change the password (you will be given a new recovery code)
 : votre nom d'utilisateur, votre nom d'affichage, votre niveau, vos statistiques de jeu (sauf votre temps de jeu ; avec votre rang au classement), vos dernières parties et votre date d'inscription sont visibles des autres joueurs connectés, dans le classement et sur votre profil (avec votre photo de profil, si vous en avez une). Vos demandes d'ami, vos amis et vos notifications (demandes reçues, réponses, niveaux gagnés, nouveaux codes de secours, invitations dans un salon) sont conservés avec votre compte ; les notifications lues sont effacées après 30 jours. Vos amis voient si vous êtes en ligne et ce que vous faites (au menu, dans un salon, en partie), d'après le dernier signal de votre jeu, et peuvent vous inviter dans leur salon. Pour vous permettre de retrouver et d'ajouter d'autres joueurs. ⇒ : your username, display name, level, game statistics (except your play time; with your leaderboard rank), latest matches and sign-up date are visible to other signed-in players, in the leaderboard and on your profile (with your profile picture, if you have one). Your friend requests, friends and notifications (requests received, replies, levels gained, new recovery codes, lobby invites) are kept with your account; read notifications are deleted after 30 days. Your friends see whether you are online and what you are doing (in the menus, in a lobby, in a match), from your game's latest signal, and can invite you to their lobby. So that you can find and add other players.
 Un nouveau code de secours a été créé pour votre compte. Si ce n'est pas vous, changez votre mot de passe dans Profil. Cela remplace aussi le code. ⇒ A new recovery code was created for your account. If it was not you, change your password in Profile. That also replaces the code.
-Aucune adresse e-mail. Un nom d'utilisateur et un mot de passe suffisent. Les autres joueurs connectés voient votre nom d'utilisateur, votre nom d'affichage, votre niveau, vos statistiques et votre photo. Évitez d'y mettre votre vrai nom. ⇒ No email address. A username and a password are all you need. Other signed-in players see your username, display name, level, statistics and picture. Avoid putting your real name there.
-(définitif, visible dans le classement). Les autres joueurs voient aussi votre nom d'affichage. ⇒ (permanent, visible in the leaderboard). Other players also see your display name.
 Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (jeu et fonctions en ligne, exécutées en Europe). Base de données : Neon ({0}). Serveur de jeu (salons en ligne) : Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Allemagne (serveur en Allemagne). ⇒ Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States (game and online functions, run in Europe). Database: Neon ({0}). Game server (online lobbies): Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Germany (server in Germany).
 : une empreinte de votre adresse IP (calculée avec une clé secrète : l'adresse elle-même n'est pas gardée) et de l'identifiant saisi sert à limiter les essais de connexion, de récupération du mot de passe et les créations de compte ; elle est effacée après 48 heures au plus. Un jeton de session, dont seule l'empreinte est gardée. Pour protéger le service des abus. ⇒ : a fingerprint of your IP address (computed with a secret key: the address itself is not kept) and of the username entered is used to limit sign-in attempts, password recovery attempts and account creations; it is deleted after 48 hours at most. A session token, of which only the fingerprint is kept. To protect the service from abuse.
 Compte et progression : jusqu'à ce que vous supprimiez le compte, ou 36 mois après votre dernière connexion. Session : 90 jours sans visite. Limitation des essais : 48 heures au plus. Signalements : 90 jours après la décision de la modération. Messages de la Communauté : jusqu'à ce que vous les effaciez ou supprimiez le compte. Les adresses e-mail données aux versions précédentes du jeu ont été effacées. Ce qui est supprimé (compte supprimé, adresses effacées) disparaît aussitôt de la base, et des sauvegardes de l'hébergeur à leur rotation. ⇒ Account and progression: until you delete the account, or 36 months after your last sign-in. Session: 90 days without a visit. Attempt limiting: 48 hours at most. Reports: 90 days after the moderators' decision. Community messages: until you delete them or delete the account. Email addresses given to previous versions of the game have been erased. What is deleted (deleted account, erased addresses) disappears from the database at once, and from the host's backups when they rotate.
@@ -1704,11 +1713,6 @@ Amis ⇒ Friends
 Seul contre des bots, entre amis ou en ligne ⇒ Against bots, with friends or online
 {0} vous a invité dans son salon {1}. ⇒ {0} invited you to their lobby {1}.
 {0} vous invite dans son salon. ⇒ {0} invites you to their lobby.
-Vos amis ⇒ Your friends
-Ajoutez des amis dans le menu Amis pour les inviter ici. ⇒ Add friends in the Friends menu to invite them here.
-Invitation envoyée ⇒ Invite sent
-Renvoyer ⇒ Send again
-Inviter ⇒ Invite
 Code et lien ⇒ Code and link
 Renvoyer l'invitation ⇒ Send the invite again
 Inviter dans mon salon ⇒ Invite to my lobby
@@ -1718,3 +1722,23 @@ Sprinter, retenir son souffle en lunette ⇒ Sprint, hold your breath when scope
 pour avancer. Poussé au-delà du cercle, il fait sprinter. ⇒ to move. Pushed past the circle, it sprints.
 Se déplacer (analogique). L3 (appui sur le bâton) pour sprinter, en lunette pour retenir son souffle ⇒ Move (analog). L3 (press the stick) to sprint, in a scope to hold your breath
 Aucun salon public pour le moment. Créez le vôtre, il apparaîtra ici. ⇒ No public lobby right now. Create yours and it will show up here.
+
+# battlecamp + complexo
+Campement dans le désert ⇒ Desert camp
+Base militaire abandonnée dans le désert tropical. La tempête se referme. Personne ne sort. ⇒ Abandoned military base in the tropical desert. The storm closes in. Nobody gets out.
+Favela bahianaise ⇒ Bahian favela
+Ruelles, toits et birosca. Qui connaît le Complexo ne se perd pas, les autres si. ⇒ Alleys, rooftops and birosca. Who knows the Complexo does not get lost. The others do.
+QG central ⇒ Central HQ
+Bazar ⇒ Bazaar
+Avant-poste nord ⇒ North outpost
+Avant-poste sud ⇒ South outpost
+Campement nord ⇒ North camp
+Campement sud ⇒ South camp
+Piste ⇒ Airstrip
+Rond-point ⇒ Roundabout
+Birosca ⇒ Birosca
+Terrain de foot ⇒ Soccer pitch
+Voie ferrée ⇒ Rail track
+Belvédère ⇒ Lookout
+Barbearia ⇒ Barbershop
+Héliport ⇒ Helipad

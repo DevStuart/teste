@@ -1,0 +1,43 @@
+export const API_MESSAGES = {
+  'Method not allowed.': ['Méthode non autorisée.', 'Method not allowed.', 'Método não permitido.'],
+  'Request origin is not allowed.': ['Origine de la requête non autorisée.', 'Request origin is not allowed.', 'A origem da solicitação não é permitida.'],
+  'Request body is too large.': ['La requête est trop volumineuse.', 'Request body is too large.', 'O conteúdo da solicitação é muito grande.'],
+  'Invalid JSON body.': ['Le contenu JSON est invalide.', 'Invalid JSON body.', 'O conteúdo JSON é inválido.'],
+  'A JSON object is required.': ['Un objet JSON est requis.', 'A JSON object is required.', 'É necessário enviar um objeto JSON.'],
+  'Content-Type must be application/json.': ['Le type de contenu doit être application/json.', 'Content-Type must be application/json.', 'O Content-Type deve ser application/json.'],
+  'Please sign in again.': ['Reconnectez-vous.', 'Please sign in again.', 'Faça login novamente.'],
+  'Password must be between 8 and 128 characters.': ['Le mot de passe doit contenir entre 8 et 128 caractères.', 'Password must be between 8 and 128 characters.', 'A senha deve ter entre 8 e 128 caracteres.'],
+  'Username must be 3 to 16 letters, numbers, or underscores.': ['Le nom doit contenir 3 à 16 lettres sans accent, chiffres ou tirets bas.', 'Username must be 3 to 16 letters, numbers, or underscores.', 'O nome de usuário deve ter de 3 a 16 letras sem acento, números ou sublinhados.'],
+  'Too many attempts. Please wait and try again.': ['Trop de tentatives. Patientez avant de réessayer.', 'Too many attempts. Please wait and try again.', 'Muitas tentativas. Aguarde e tente novamente.'],
+  'Enter a username and password.': ['Saisissez un nom et un mot de passe.', 'Enter a username and password.', 'Informe o nome de usuário e a senha.'],
+  'Username or password is incorrect.': ['Nom ou mot de passe incorrect.', 'Username or password is incorrect.', 'Nome de usuário ou senha incorretos.'],
+  'You must accept the terms and privacy policy.': ['Vous devez accepter les conditions et la politique de confidentialité.', 'You must accept the terms and privacy policy.', 'Você precisa aceitar os termos e a política de privacidade.'],
+  'That username is already taken.': ['Ce nom est déjà utilisé.', 'That username is already taken.', 'Esse nome de usuário já está em uso.'],
+  'Invalid recovery code.': ['Code de secours invalide.', 'Invalid recovery code.', 'Código de recuperação inválido.'],
+  'That recovery code is no longer valid. Request a new one.': ["Ce code de secours n'est plus valide. Demandez-en un nouveau.", 'That recovery code is no longer valid. Request a new one.', 'Esse código de recuperação não é mais válido. Solicite um novo.'],
+  'Username or recovery code is incorrect.': ['Nom ou code de secours incorrect.', 'Username or recovery code is incorrect.', 'Nome de usuário ou código de recuperação incorretos.'],
+  'Current password is incorrect.': ['Le mot de passe actuel est incorrect.', 'Current password is incorrect.', 'A senha atual está incorreta.'],
+  'Password is incorrect.': ['Le mot de passe est incorrect.', 'Password is incorrect.', 'A senha está incorreta.'],
+  'Type your username to confirm account deletion.': ['Saisissez votre nom pour confirmer la suppression du compte.', 'Type your username to confirm account deletion.', 'Digite seu nome de usuário para confirmar a exclusão da conta.'],
+  'Account not found.': ['Compte introuvable.', 'Account not found.', 'Conta não encontrada.'],
+  'Invalid arsenal data.': ['Données d’arsenal invalides.', 'Invalid arsenal data.', 'Os dados do arsenal são inválidos.'],
+  'Arsenal data is too large.': ['Les données d’arsenal sont trop volumineuses.', 'Arsenal data is too large.', 'Os dados do arsenal são muito grandes.'],
+  'Avatar image is too large.': ['La photo est trop volumineuse.', 'Avatar image is too large.', 'A imagem do avatar é muito grande.'],
+  'Avatar must be a JPEG, WebP, or PNG image.': ['La photo doit être au format JPEG, WebP ou PNG.', 'Avatar must be a JPEG, WebP, or PNG image.', 'O avatar precisa estar no formato JPEG, WebP ou PNG.'],
+  'The image data is invalid.': ['Les données de la photo sont invalides.', 'The image data is invalid.', 'Os dados da imagem são inválidos.'],
+  'Invalid match token.': ['Jeton de partie invalide.', 'Invalid match token.', 'Token da partida inválido.'],
+  'Invalid match summary.': ['Résumé de partie invalide.', 'Invalid match summary.', 'Resumo da partida inválido.'],
+  'This match could not be recorded. It may have expired or already been submitted.': ["Cette partie n'a pas pu être enregistrée. Elle a peut-être expiré ou a déjà été envoyée.", 'This match could not be recorded. It may have expired or already been submitted.', 'Não foi possível registrar esta partida. Ela pode ter expirado ou já ter sido enviada.'],
+  'Match type is required.': ['Le type de partie est requis.', 'Match type is required.', 'O tipo de partida é obrigatório.'],
+  'Invalid map.': ['Carte invalide.', 'Invalid map.', 'Mapa inválido.'],
+  'Invalid mode.': ['Mode de jeu invalide.', 'Invalid mode.', 'Modo de jogo inválido.'],
+  'Only the public leaderboard is available.': ['Seul le classement général est disponible.', 'Only the public leaderboard is available.', 'Somente o ranking público está disponível.'],
+  'Invalid leaderboard offset.': ['Position de classement invalide.', 'Invalid leaderboard offset.', 'Posição no ranking inválida.'],
+  'Player not found.': ['Joueur introuvable.', 'Player not found.', 'Jogador não encontrado.'],
+  'The request could not be completed. Please try again.': ['La requête a échoué. Réessayez.', 'The request could not be completed. Please try again.', 'Não foi possível concluir a solicitação. Tente novamente.'],
+};
+
+export function apiMessage(message, language) {
+  const translations = API_MESSAGES[message];
+  return translations ? translations[language === 'fr' ? 0 : language === 'pt-BR' ? 2 : 1] : message;
+}

@@ -3,6 +3,8 @@
 02-map.js: Kervénec
 # Nom de la langue dans le sélecteur d'Options (jamais traduit)
 09e-menus.js: Français
+09e-menus.js: Português (Brasil)
+09e-menus.js: English
 # Libellé interne du journal de démarrage (BOT_T)
 09-game.js: début
 # Rapport de connexion et journal réseau : destinés au développeur, ils restent en français (README, « Langues »)

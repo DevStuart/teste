@@ -1,0 +1,19 @@
+# Mapas Battle Camp e Complexo
+Campement dans le désert ⇒ Acampamento no deserto
+Base militaire abandonnée dans le désert tropical. La tempête se referme. Personne ne sort. ⇒ Base militar abandonada no deserto tropical. A tempestade fecha. Ninguém sai.
+Favela bahianaise ⇒ Favela baiana
+Ruelles, toits et birosca. Qui connaît le Complexo ne se perd pas, les autres si. ⇒ Becos, lajes e birosca. Quem conhece o Complexo não se perde, os outros sim.
+QG central ⇒ QG Central
+Bazar ⇒ Bazar
+Avant-poste nord ⇒ Posto Norte
+Avant-poste sud ⇒ Posto Sul
+Campement nord ⇒ Acampamento Norte
+Campement sud ⇒ Acampamento Sul
+Piste ⇒ Pista
+Rond-point ⇒ Rotatória
+Birosca ⇒ =
+Terrain de foot ⇒ Quadra
+Voie ferrée ⇒ Trilho
+Belvédère ⇒ Mirante
+Barbearia ⇒ =
+Héliport ⇒ Heliponto

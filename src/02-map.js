@@ -33,10 +33,10 @@ const MAPS = [
     desc: _t('Une oasis au milieu des dunes. Au-delà, il n\u0027y a que du sable et ceux qui sont partis vérifier.') },
   { id: 'lotissement', name: 'French Dream', tag: _t('Lotissement pavillonnaire'), ok: true,
     desc: _t('Un lotissement où toutes les maisons se ressemblent. Le syndic décline toute responsabilité.') },
-  { id: 'battlecamp', name: 'Battle Camp', tag: _t('Acampamento no deserto'), ok: true,
-    desc: _t('Base militar abandonada no deserto tropical. A tempestade fecha. Ninguém sai.') },
-  { id: 'complexo', name: 'Complexo', tag: _t('Favela baiana'), ok: true,
-    desc: _t('Becos, lajes e birosca. Quem conhece o Complexo não se perde, os outros sim.') },
+  { id: 'battlecamp', name: 'Battle Camp', tag: _t('Campement dans le désert'), ok: true,
+    desc: _t('Base militaire abandonnée dans le désert tropical. La tempête se referme. Personne ne sort.') },
+  { id: 'complexo', name: 'Complexo', tag: _t('Favela bahianaise'), ok: true,
+    desc: _t('Ruelles, toits et birosca. Qui connaît le Complexo ne se perd pas, les autres si.') },
 ];
 const mapById = (id) => MAPS.find((m) => m.id === id && m.ok) || MAPS[0];
 /* Carte chargée : entrée de MAPS et définition (null hors partie : le démarrage ne construit aucune carte) */

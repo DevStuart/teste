@@ -1,0 +1,335 @@
+# Bloco 02 (faltava): conexão / lobby / opções / modos / conta / termos
+en cours ⇒ em andamento
+non configuré ⇒ não configurado
+non sollicité ⇒ não solicitado
+Salon ouvert : {0} joueur(s) en direct, {1} par le relais. Serveur de mise en relation PeerJS : {2}. Relais de secours : {3}. ⇒ Sala aberta: {0} jogador(es) em conexão direta, {1} pelo relay. Servidor de sinalização PeerJS: {2}. Relay de reserva: {3}.
+non utilisé ⇒ não usado
+Aucun chemin réseau n'a été trouvé : WebRTC est probablement bloqué sur ce poste (réglage du navigateur, stratégie d'entreprise, VPN ou extension). ⇒ Nenhum caminho de rede foi encontrado: o WebRTC provavelmente está bloqueado neste aparelho (configuração do navegador, política da empresa, VPN ou extensão).
+Aucun accès UDP vers Internet depuis ce poste. Seuls des chemins locaux existent et ils n'ont pas abouti{0}. Les relais publics sont hors d'atteinte. ⇒ Sem acesso UDP à internet neste aparelho. Só existem caminhos locais e eles não deram certo{0}. Os relays públicos estão fora de alcance.
+(le navigateur masque les adresses locales et le réseau semble bloquer leur résolution entre PC) ⇒ (o navegador esconde endereços locais e a rede parece bloquear a resolução entre PCs)
+La connexion directe avec l'hôte a échoué et les relais publics de PeerJS sont injoignables (port UDP 3478 sans doute filtré par le pare-feu) ⇒ A conexão direta com o anfitrião falhou e os relays públicos do PeerJS estão inacessíveis (porta UDP 3478 provavelmente filtrada pelo firewall)
+, et aucun relais de secours n'est configuré pour ce jeu. ⇒ , e nenhum relay de reserva está configurado para este jogo.
+Un relais a été joint mais la connexion n'a pas abouti. Relais saturé ou trafic bloqué. ⇒ Um relay foi alcançado, mas a conexão não concluiu. Relay saturado ou tráfego bloqueado.
+Copier le rapport de connexion ⇒ Copiar o relatório de conexão
+Rapport copié ⇒ Relatório copiado
+Copie impossible ⇒ Não foi possível copiar
+Soldat ⇒ Soldado
+Création du salon... ⇒ Criando a sala...
+Salon ouvert : envoyez le lien à vos amis, puis lancez la partie. ⇒ Sala aberta: envie o link aos amigos e depois inicie a partida.
+Salon ouvert par le relais. Envoyez le lien à vos amis, puis lancez la partie. ⇒ Sala aberta pelo relay. Envie o link aos amigos e depois inicie a partida.
+Le relais de secours est injoignable. ⇒ O relay de reserva está inacessível.
+Le code d'un salon compte 5 caractères. ⇒ O código de uma sala tem 5 caracteres.
+Connexion au salon {0}... ⇒ Conectando à sala {0}...
+L'hôte a fermé le salon ou la connexion est perdue. ⇒ O anfitrião fechou a sala ou a conexão caiu.
+La connexion avec l'hôte a échoué. ⇒ A conexão com o anfitrião falhou.
+Connexion au salon {0} par le relais... ⇒ Conectando à sala {0} pelo relay...
+Connecté par le relais. Pour éviter l'attente, cochez "Passer directement par le relais". ⇒ Conectado pelo relay. Para pular a espera, marque "Passar direto pelo relay".
+Salon introuvable. Vérifiez le code, ou l'hôte a fermé le salon. ⇒ Sala não encontrada. Confira o código, ou o anfitrião fechou a sala.
+Ce salon est complet. ⇒ Esta sala está cheia.
+Ce navigateur ne permet pas le jeu en ligne. ⇒ Este navegador não permite jogo online.
+Serveur de mise en relation injoignable. Réessayez dans un instant. ⇒ Servidor de sinalização inacessível. Tente de novo daqui a pouco.
+Connexion impossible ({0}). ⇒ Conexão impossível ({0}).
+erreur inconnue ⇒ erro desconhecido
+Créez un salon et envoyez le lien à vos amis, ou entrez le code d'un salon. ⇒ Crie uma sala e envie o link aos amigos, ou digite o código de uma sala.
+Vous avez quitté le salon. ⇒ Você saiu da sala.
+{0} a changé de connexion{1}. ⇒ {0} mudou de conexão{1}.
+(relais) ⇒ (relay)
+{0} a rejoint le salon. ⇒ {0} entrou na sala.
+{0} a quitté le salon. ⇒ {0} saiu da sala.
+Chargement en cours : {0} ⇒ Carregando: {0}
+(départ sans eux dans {0} s) ⇒ (começando sem eles em {0} s)
+Partie annulée : la carte n'a pas pu être chargée. ⇒ Partida cancelada: o mapa não pôde ser carregado.
+Vous êtes dans le salon. En attente du lancement par l'hôte. ⇒ Você está na sala. Aguardando o anfitrião iniciar.
+L'hôte a annulé la partie. ⇒ O anfitrião cancelou a partida.
+Ce salon est complet (8 joueurs). ⇒ Esta sala está cheia (8 jogadores).
+Votre version du jeu diffère de celle de l'hôte. Rechargez la page. ⇒ Sua versão do jogo é diferente da do anfitrião. Recarregue a página.
+{0} a rejoint la partie ⇒ {0} entrou na partida
+{0} a quitté la partie ⇒ {0} saiu da partida
+Frappe aérienne alliée ({0}) ⇒ Ataque aéreo aliado ({0})
+Hélicoptère : vous êtes pris pour cible ! ⇒ Helicóptero: você está sendo alvejado!
+Impossible de joindre l'hôte. La connexion directe semble bloquée par le réseau. ⇒ Não foi possível alcançar o anfitrião. A conexão direta parece bloqueada pela rede.
+L'hôte ne répond plus. ⇒ O anfitrião não responde mais.
+vous ⇒ você
+hôte ⇒ anfitrião
+en partie ⇒ em partida
+carte prête ⇒ mapa pronto
+chargement ⇒ carregando
+via le relais ⇒ via relay
+Changer d'équipe ⇒ Trocar de equipe
+Déplacer ce joueur dans l'autre équipe ⇒ Mover este jogador para a outra equipe
+Personne ⇒ Ninguém
+Chargement de la partie... ⇒ Carregando a partida...
+Lancer la partie ⇒ Iniciar a partida
+Rejoindre la partie ⇒ Entrar na partida
+En attente de l'hôte ⇒ Aguardando o anfitrião
+Mode en ligne indisponible. La bibliothèque réseau n'a pas pu être chargée. Rechargez la page. ⇒ Modo online indisponível. A biblioteca de rede não pôde ser carregada. Recarregue a página.
+Invitation au salon {0}. Connexion dès la fin du chargement. ⇒ Convite para a sala {0}. Conectando ao fim do carregamento.
+relais injoignable ⇒ relay inacessível
+Séries ⇒ Sequências
+Petite ⇒ Pequena
+Grande ⇒ Grande
+Vous êtes dans le salon {0}. Lancer une partie ici le quitte. ⇒ Você está na sala {0}. Iniciar uma partida aqui sai dela.
+Désactivé ⇒ Desligado
+Activé ⇒ Ligado
+Réactions lentes et tirs imprécis, pour prendre ses marques. ⇒ Reações lentas e tiros imprecisos, para pegar o jeito.
+Un adversaire honnête, qui vise et réagit comme un joueur moyen. ⇒ Um adversário justo, que mira e reage como um jogador médio.
+Réactions vives et tirs précis. Ils sautent, glissent et contournent comme de vrais joueurs. ⇒ Reações rápidas e tiros precisos. Eles pulam, deslizam e flanqueiam como jogadores de verdade.
+Niveau {1} : {0} emplacement de classe personnalisée sur {2} ⇒ Nível {1}: {0} slot de classe personalizada de {2}
+Niveau {1} : {0} emplacements de classe personnalisée sur {2} ⇒ Nível {1}: {0} slots de classe personalizada de {2}
+, le suivant au niveau {0}. ⇒ , o próximo no nível {0}.
+, tous débloqués. ⇒ , todos desbloqueados.
+Personnalisées ⇒ Personalizadas
+Préconçues ⇒ Prontas
+Verrouillée ⇒ Bloqueada
++ Créer une classe ⇒ + Criar uma classe
+<span class="cb">En cours</span> ⇒ <span class="cb">Em uso</span>
+Emplacement personnalisé {0} ⇒ Slot personalizado {0}
+Niveau {0} requis ⇒ Nível {0} necessário
+Montez de niveau en jouant pour débloquer cet emplacement. Vous y composerez votre propre classe (armes, accessoires, camouflages) et vous pourrez la renommer. ⇒ Suba de nível jogando para desbloquear este slot. Nele você monta sua própria classe (armas, acessórios, camuflagens) e pode renomeá-la.
+Votre niveau : {0}{1} ⇒ Seu nível: {0}{1}
+(sur cet appareil, connectez-vous pour suivre le niveau de votre compte) ⇒ (neste aparelho, entre na conta para acompanhar o nível dela)
+Emplacement libre ⇒ Slot livre
+Composez votre classe. Arme principale, pistolet, accessoires posés sur un visuel 3D de l'arme, camouflages. Vous pourrez la renommer. ⇒ Monte sua classe. Arma principal, pistola, acessórios no visual 3D da arma, camuflagens. Você poderá renomeá-la.
+<div class="cp-btns"><button type="button" class="btn cp-edit" data-act="create">Créer cette classe</button></div> ⇒ <div class="cp-btns"><button type="button" class="btn cp-edit" data-act="create">Criar esta classe</button></div>
+<p class="hint">Composez vos classes personnalisées dans l'atelier, depuis le menu principal (Classes) ou au déploiement.</p> ⇒ <p class="hint">Monte suas classes personalizadas na oficina, pelo menu principal (Classes) ou no desembarque.</p>
+Supprimer la classe {0} ? ⇒ Apagar a classe {0}?
+Supprimer ⇒ Apagar
+Garder ⇒ Manter
+Modifier la classe ⇒ Editar a classe
+<p class="hint">Classe préconçue : elle ne se modifie pas. Créez la vôtre dans un emplacement personnalisé (Classes).</p> ⇒ <p class="hint">Classe pronta: não pode ser editada. Crie a sua em um slot personalizado (Classes).</p>
+niveau {0} ⇒ nível {0}
+Secondaire ⇒ Secundária
+Équipement ⇒ Equipamento
+{0} grenade à fragmentation ⇒ {0} granada de fragmentação
+{0} grenades à fragmentation ⇒ {0} granadas de fragmentação
+{0} coups ⇒ {0} tiros
+Équiper maintenant ⇒ Equipar agora
+Classe en cours : {0}. ⇒ Classe atual: {0}.
+Vous venez d'apparaître. La classe {0} peut être équipée tout de suite{1}. ⇒ Você acabou de aparecer. A classe {0} pode ser equipada agora{1}.
+La classe {0} sera équipée à votre prochaine réapparition. ⇒ A classe {0} será equipada na sua próxima reentrada.
+Classe {0} équipée ⇒ Classe {0} equipada
+Changer de langue recharge le jeu. Vous quittez le salon. Continuer ? ⇒ Mudar o idioma recarrega o jogo. Você sai da sala. Continuar?
+Jeu ⇒ Jogo
+Langue ⇒ Idioma
+Automatique ⇒ Automático
+Sensibilité ⇒ Sensibilidade
+Champ de vision ⇒ Campo de visão
+Inverser l'axe vertical ⇒ Inverter eixo vertical
+Écran tactile ⇒ Tela sensível ao toque
+Visée ⇒ Mira
+Manette ⇒ Controle
+Interface ⇒ Interface
+Image ⇒ Imagem
+Affichage et dépannage ⇒ Exibição e solução de problemas
+Touches du clavier ⇒ Teclas do teclado
+Souris et touches fixes ⇒ Mouse e teclas fixas
+Marqueurs d'alliés (au-dessus de leur tête) ⇒ Marcadores de aliados (acima da cabeça)
+Plein écran en partie (au lancement d'une partie, Échap reprend sans clic) ⇒ Tela cheia na partida (ao iniciar, Esc retoma sem clique)
+Audio ⇒ Áudio
+Volume général ⇒ Volume geral
+Musique des menus ⇒ Música dos menus
+Annonces vocales (séries, objectifs) ⇒ Anúncios de voz (sequências, objetivos)
+Vidéo ⇒ Vídeo
+Qualité ⇒ Qualidade
+Haute ⇒ Alta
+Moyenne ⇒ Média
+Basse ⇒ Baixa
+Occlusion ambiante ⇒ Oclusão ambiente
+Rayons du soleil ⇒ Raios de sol
+Herbe en relief sur les pelouses ⇒ Grama em relevo nos gramados
+Résolution dynamique ⇒ Resolução dinâmica
+Sans limite ⇒ Sem limite
+Moitié de l'écran ⇒ Metade da taxa de atualização
+Économie d'énergie (30 images par seconde, le jeu règle l'image selon l'appareil pour que la batterie dure plus longtemps) ⇒ Economia de energia (30 quadros por segundo; o jogo ajusta a imagem ao aparelho para a bateria durar mais)
+Images par seconde au plus ⇒ Limite de quadros por segundo
+Afficher les performances ⇒ Mostrar desempenho
+Plein écran ⇒ Tela cheia
+Commandes ⇒ Controles
+Souris ⇒ Mouse
+Pavé tactile ⇒ Trackpad
+Sensibilité du pavé tactile ⇒ Sensibilidade do trackpad
+Contrôles au pavé tactile (tir automatique, visée au double clic) ⇒ Controles no trackpad (tiro automático, mira com clique duplo)
+Tir automatique (quand le réticule est sur un ennemi, le clic ne tire plus) ⇒ Tiro automático (quando a mira está num inimigo, o clique não atira mais)
+Visée au double clic ou au toucher à deux doigts (un autre range l'arme) ⇒ Mira com clique duplo ou toque de dois dedos (outro abaixa a arma)
+Visée en bascule à la souris (un clic droit épaule, un autre range l'arme) ⇒ Mira alternada no mouse (um clique direito ombreia, outro abaixa a arma)
+Glisser pour viser, double clic ou toucher à deux doigts pour épauler. Le tir part tout seul quand le réticule est sur un ennemi ⇒ Arraste para olhar, clique duplo ou toque de dois dedos para ombrear. O tiro sai sozinho quando a mira está num inimigo
+Pavé tactile détecté. Tir automatique et double clic pour viser (Options, Jeu) ⇒ Trackpad detectado. Tiro automático e clique duplo para mirar (Opções, Jogo)
+Souris détectée. Le clic gauche tire de nouveau (Options, Jeu) ⇒ Mouse detectado. O clique esquerdo atira de novo (Opções, Jogo)
+Viser, clic gauche pour tirer, clic droit pour épauler ⇒ Mirar, clique esquerdo para atirar, clique direito para ombrear
+Recharger ⇒ Recarregar
+Changer d'arme ⇒ Trocar de arma
+Grenade (maintenir pour la garder en main) ⇒ Granada (segure para manter na mão)
+Couteau (maintenir pour le garder en main) ⇒ Faca (segure para manter na mão)
+Tableau des scores ⇒ Placar
+Échap ⇒ Esc
+Entrée ⇒ Enter
+Menu pause : classe, options, quitter ⇒ Menu de pausa: classe, opções, sair
+Lancer une partie solo vous fait quitter le salon ⇒ Iniciar uma partida solo faz você sair da sala
+Classe : ⇒ Classe:
+Match en ligne ⇒ Partida online
+Solo ⇒ Solo
+en ligne ⇒ online
+solo ⇒ solo
+Chargement de la carte ⇒ Carregando o mapa
+Le chargement de la carte a échoué ({0}). Rechargez la page ou passez la qualité en Basse. ⇒ Falha ao carregar o mapa ({0}). Recarregue a página ou ponha a qualidade em Baixa.
+Prêt à déployer ⇒ Pronto para desembarcar
+En attente des autres joueurs ⇒ Aguardando os outros jogadores
+Déployer ⇒ Desembarcar
+Déploiement automatique dans ⇒ Desembarque automático em
+{0} · premier à {1} ⇒ {0} · primeiro a {1}
+{0} · premier à {1} points ⇒ {0} · primeiro a {1} pontos
+(encore {0} s) ⇒ (ainda {0} s)
+La partie continue pendant la pause ⇒ A partida continua durante a pausa
+Partie en pause ⇒ Partida pausada
+Meilleur adversaire ⇒ Melhor adversário
+Temps restant ⇒ Tempo restante
+Votre partie ⇒ Sua partida
+Vous êtes {0} ⇒ Você é {0}
+Puis {0} à la prochaine réapparition ⇒ Depois {0} na próxima reentrada
+Nouveau ⇒ Novo
+Amélioré ⇒ Melhorado
+Corrigé ⇒ Corrigido
+Version actuelle : {0}. Les {1} dernières mises à jour. ⇒ Versão atual: {0}. As {1} últimas atualizações.
+Version actuelle : {0}. Dernières nouveautés. ⇒ Versão atual: {0}. Últimas novidades.
+Dernière ⇒ Mais recente
+Version {0} ⇒ Versão {0}
+Mise à jour {0} · {1} ⇒ Atualização {0} · {1}
+Nouvelle version du jeu disponible. ⇒ Nova versão do jogo disponível.
+Nouvelle version du jeu disponible. Elle se chargera en quittant le salon. ⇒ Nova versão do jogo disponível. Ela carrega ao sair da sala.
+Nouvelle version du jeu disponible. Elle se chargera à la fin de la partie. ⇒ Nova versão do jogo disponível. Ela carrega ao fim da partida.
+Aucun message. Appuyez sur T pour écrire. ⇒ Nenhuma mensagem. Pressione T para escrever.
+Match à mort par équipe ⇒ Mata-mata em equipe
+Par équipe ⇒ Em equipe
+6 contre 6 (vous et 5 alliés) ⇒ 6 contra 6 (você e 5 aliados)
+Limite d'éliminations ⇒ Limite de eliminações
+éliminations ⇒ eliminações
+Deux équipes de six. Le premier camp à la limite d'éliminations l'emporte. ⇒ Duas equipes de seis. O primeiro lado a bater o limite de eliminações vence.
+Match à mort ⇒ Mata-mata
+Chacun pour soi ⇒ Todos contra todos
+Match à mort, chacun pour soi ⇒ Mata-mata, todos contra todos
+Chacun pour soi, vous et 7 bots (8 joueurs) ⇒ Todos contra todos, você e 7 bots (8 jogadores)
+Personne n'est votre allié. Le premier à la limite d'éliminations l'emporte. ⇒ Ninguém é seu aliado. O primeiro a bater o limite de eliminações vence.
+Domination ⇒ Dominação
+Domination, trois points à tenir ⇒ Dominação, três pontos a segurar
+6 contre 6, trois points à tenir ⇒ 6 contra 6, três pontos a segurar
+Score à atteindre ⇒ Pontuação a alcançar
+Restez dans la zone d'un point pour le capturer. Chaque point tenu rapporte un point toutes les 4 secondes. ⇒ Fique na zona de um ponto para capturá-lo. Cada ponto controlado dá 1 ponto a cada 4 segundos.
+Rival ⇒ Rival
+Vos apparitions retrouvent votre base ⇒ Seus spawns voltam à sua base
+Front croisé : vos apparitions passent côté adverse ⇒ Frente cruzada: seus spawns passam para o lado adversário
+Point {0} capturé ⇒ Ponto {0} capturado
+Point {0} neutralisé par l'ennemi ⇒ Ponto {0} neutralizado pelo inimigo
+Point {0} neutralisé ⇒ Ponto {0} neutralizado
+Défense du point {0} ⇒ Defendendo o ponto {0}
+Attaque du point {0} ⇒ Atacando o ponto {0}
+Point {0} contesté ⇒ Ponto {0} contestado
+Capture du point {0} ⇒ Capturando o ponto {0}
+Modération : {0} compte signalé attend votre décision. ⇒ Moderação: {0} conta denunciada aguarda sua decisão.
+Modération : {0} comptes signalés attendent votre décision. ⇒ Moderação: {0} contas denunciadas aguardam sua decisão.
+Modération : aucun signalement en attente. ⇒ Moderação: nenhuma denúncia pendente.
+Ouvrir la modération ⇒ Abrir moderação
+Votre photo a été signalée par plusieurs joueurs. Elle est masquée aux autres en attendant la modération. ⇒ Sua foto foi denunciada por vários jogadores. Ela fica oculta dos outros até a moderação.
+Profil ⇒ Perfil
+Se connecter ⇒ Entrar
+Comptes indisponibles ici ⇒ Contas indisponíveis aqui
+Niveau, statistiques et multijoueur ⇒ Nível, estatísticas e multiplayer
+Profil de {0}, niveau {1} ⇒ Perfil de {0}, nível {1}
+Votre nom public est définitif ⇒ Seu nome público é definitivo
+Aucune adresse e-mail. Un nom d'utilisateur et un mot de passe suffisent. Votre nom d'utilisateur définitif est aussi votre nom public en jeu. Les autres joueurs connectés voient votre nom, votre niveau, votre patente, vos statistiques et votre photo. Évitez d'y mettre votre vrai nom. ⇒ Sem e-mail. Bastam um nome de usuário e uma senha. Seu nome de usuário definitivo também é seu nome público no jogo. Outros jogadores conectados veem seu nome, nível, patente, estatísticas e foto. Evite usar seu nome verdadeiro.
+Choisissez un nom public définitif et unique de 3 à 16 caractères (lettres sans accent, chiffres ou tiret bas). Le mot de passe doit contenir au moins 8 caractères. Aucune adresse e-mail n'est demandée. Un code de secours s'affichera. Notez-le pour retrouver le compte si vous oubliez le mot de passe. ⇒ Escolha um nome público definitivo e único de 3 a 16 caracteres (letras sem acento, números ou underline). A senha precisa ter pelo menos 8 caracteres. Nenhum e-mail é pedido. Um código de recuperação será mostrado. Anote-o para recuperar a conta se esquecer a senha.
+Votre nom public définitif : ⇒ Seu nome público definitivo:
+Il ne peut pas être modifié. ⇒ Ele não pode ser alterado.
+Patente : ⇒ Patente:
+Niveau {0} · {1} ⇒ Nível {0} · {1}
+Caporal ⇒ Cabo
+Sergent ⇒ Sargento
+Adjudant ⇒ Subtenente
+Lieutenant ⇒ Tenente
+Capitaine ⇒ Capitão
+Commandant ⇒ Major
+Colonel ⇒ Coronel
+Général ⇒ General
+Maréchal ⇒ Marechal
+Connectez-vous pour rejoindre le salon {0}. ⇒ Entre na conta para entrar na sala {0}.
+Connectez-vous pour jouer en ligne. ⇒ Entre na conta para jogar online.
+Serveur injoignable : réessayez dans un instant. ⇒ Servidor inacessível: tente de novo daqui a pouco.
+Compte et progression ⇒ Conta e progressão
+<p class="hint">Chargement du profil...</p> ⇒ <p class="hint">Carregando o perfil...</p>
+Comptes indisponibles ⇒ Contas indisponíveis
+<div class="card"><p class="hint">Les comptes ne sont pas joignables depuis cette page (page ouverte depuis un fichier, ou serveur injoignable). Vous pouvez jouer sans compte. La progression n'est pas enregistrée.</p><button class="btn" id="acRetry" type="button">Réessayer</button></div> ⇒ <div class="card"><p class="hint">As contas não são acessíveis nesta página (página aberta de um arquivo, ou servidor inacessível). Você pode jogar sem conta. A progressão não é salva.</p><button class="btn" id="acRetry" type="button">Tentar de novo</button></div>
+Une erreur est survenue. ⇒ Ocorreu um erro.
+J'ai 15 ans au moins et j'accepte les ⇒ Tenho pelo menos 15 anos e aceito os
+conditions d'utilisation ⇒ termos de uso
+politique de confidentialité ⇒ política de privacidade
+Pourquoi un compte ? ⇒ Por que uma conta?
+Votre niveau, votre expérience et vos statistiques vous suivent d'un appareil à l'autre. Le multijoueur demande un compte. Le Solo se joue sans, mais rien n'y est enregistré. ⇒ Seu nível, experiência e estatísticas acompanham você de um aparelho a outro. O multiplayer exige conta. O Solo joga sem, mas nada é salvo.
+Politique de confidentialité ⇒ Política de privacidade
+<div class="seg" id="acTabs" role="radiogroup" aria-label="Connexion ou création de compte"></div> ⇒ <div class="seg" id="acTabs" role="radiogroup" aria-label="Entrar ou criar conta"></div>
+Mot de passe oublié ⇒ Senha esquecida
+Retour ⇒ Voltar
+Nouveau mot de passe ⇒ Nova senha
+Enregistrer ⇒ Salvar
+Créer un compte ⇒ Criar uma conta
+Connexion ⇒ Entrar
+Nom d'utilisateur ⇒ Nome de usuário
+Mot de passe ⇒ Senha
+<button class="link" type="button" id="acForgot">Mot de passe oublié ?</button> ⇒ <button class="link" type="button" id="acForgot">Esqueceu a senha?</button>
+Créer le compte ⇒ Criar a conta
+Parties ⇒ Partidas
+Victoires ⇒ Vitórias
+Taux de victoire ⇒ Taxa de vitória
+Ratio É/M ⇒ Relação E/M
+À la tête ⇒ Tiros na cabeça
+Temps de jeu ⇒ Tempo de jogo
+Victoire ⇒ Vitória
+Défaite ⇒ Derrota
+Égalité ⇒ Empate
+Abandon ⇒ Desistência
+Niveau {0} ⇒ Nível {0}
+{0} · {1} XP en tout ⇒ {0} · {1} XP no total
+{0} / {1} XP avant le niveau {2} ⇒ {0} / {1} XP até o nível {2}
+Niveau maximal ⇒ Nível máximo
+Dernières parties ⇒ Últimas partidas
+<p class="hint">Aucune partie enregistrée. Jouez une partie pour gagner de l'XP.</p> ⇒ <p class="hint">Nenhuma partida registrada. Jogue uma partida para ganhar XP.</p>
+Résultat ⇒ Resultado
+É / M ⇒ E / M
+Date ⇒ Data
+Mot de passe actuel ⇒ Senha atual
+Compte ⇒ Conta
+Se déconnecter ⇒ Sair da conta
+Changer le mot de passe ⇒ Alterar a senha
+Nouveau mot de passe (8 caractères au moins) ⇒ Nova senha (pelo menos 8 caracteres)
+Mes données et suppression du compte ⇒ Meus dados e exclusão da conta
+Vous pouvez récupérer toutes vos données dans un fichier, ou supprimer le compte. ⇒ Você pode baixar todos os seus dados num arquivo, ou apagar a conta.
+Télécharger mes données ⇒ Baixar meus dados
+Supprimer efface le compte, la progression et l'historique, définitivement. Tapez votre nom d'utilisateur{0} pour confirmer. ⇒ Apagar exclui a conta, a progressão e o histórico de forma definitiva. Digite seu nome de usuário{0} para confirmar.
+et votre mot de passe ⇒ e sua senha
+Supprimer définitivement ⇒ Apagar definitivamente
+Erreur. ⇒ Erro.
+Export impossible : réessayez. ⇒ Exportação impossível: tente de novo.
+Compte supprimé. ⇒ Conta apagada.
+Niveau {0} ! ⇒ Nível {0}!
+{0} classe personnalisée débloquée ⇒ {0} classe personalizada desbloqueada
+{0} classes personnalisées débloquées ⇒ {0} classes personalizadas desbloqueadas
+Partie non enregistrée. <b>Connectez-vous</b> (Profil) pour gagner de l'XP du compte. ⇒ Partida não salva. <b>Entre na conta</b> (Perfil) para ganhar XP da conta.
+Progression gardée sur cet appareil ⇒ Progressão salva neste aparelho
+Partie solo : XP réduite de moitié ⇒ Partida solo: XP pela metade
+Signalements et modération ⇒ Denúncias e moderação
+Avant d'être enregistrée, chaque nouvelle photo est vérifiée automatiquement par un service d'intelligence artificielle (Claude, d'Anthropic), qui dit seulement si elle respecte les règles du jeu (ni nudité, ni violence, ni haine, ni drogue, ni texte injurieux) ; une photo refusée n'est pas gardée. Anthropic ne se sert pas de ces images pour entraîner ses modèles. ⇒ Antes de ser salva, cada foto nova é verificada automaticamente por um serviço de inteligência artificial (Claude, da Anthropic), que só diz se ela respeita as regras do jogo (sem nudez, violência, ódio, drogas ou texto ofensivo); uma foto recusada não é guardada. A Anthropic não usa essas imagens para treinar seus modelos.
+Base : intérêt légitime (protéger les joueurs, art. 6.1.f). ⇒ Base: interesse legítimo (proteger os jogadores, art. 6.1.f).
+: si vous signalez un joueur, votre compte, le compte signalé, la raison, votre message éventuel et la date sont lus par la modération ; si vous êtes signalé, elle voit ces éléments et votre profil (photo comprise, même masquée) pour décider, sans que l'auteur du signalement vous soit communiqué. Une photo signalée par trois joueurs est masquée aux autres en attendant la décision. Un signalement est effacé 90 jours après la décision. Pour faire respecter les règles du jeu et protéger les joueurs. ⇒ : se você denunciar um jogador, sua conta, a conta denunciada, o motivo, sua mensagem eventual e a data são lidos pela moderação; se você for denunciado, ela vê esses elementos e seu perfil (incluindo a foto, mesmo oculta) para decidir, sem revelar quem denunciou. Uma foto denunciada por três jogadores fica oculta dos outros até a decisão. Uma denúncia é apagada 90 dias após a decisão. Para fazer cumprir as regras do jogo e proteger os jogadores.
+Confidentialité ⇒ Privacidade
+Conditions d'utilisation ⇒ Termos de uso
+Mentions légales ⇒ Aviso legal
+Version du {0} ⇒ Versão de {0}
+1. Objet ⇒ 1. Objeto
+Riposte: Frontline est un jeu de tir en ligne gratuit, joué dans le navigateur. Ces conditions encadrent l'usage du jeu et du compte joueur. Jouer en Solo ne demande pas de compte ; le multijoueur et la progression, si. ⇒ Riposte: Frontline é um jogo de tiro online gratuito, jogado no navegador. Estes termos regem o uso do jogo e da conta do jogador. Jogar Solo não exige conta; multiplayer e progressão, sim.
+2. Compte ⇒ 2. Conta
+3. Comportement ⇒ 3. Conduta
+Sont interdits : tricher (modifier le jeu, falsifier des résultats ou de l'expérience, exploiter une faille), usurper une identité (y compris celle de l'équipe du jeu), choisir un nom d'utilisateur, un nom d'affichage ou une photo de profil injurieux, haineux, sexuels ou trompeurs, harceler d'autres joueurs, y compris dans la discussion d'un salon, et signaler un joueur à tort de façon répétée. Les mots grossiers ou haineux sont refusés dans les noms et masqués dans la discussion. Dans un salon, chacun peut masquer un joueur et l'hôte peut l'exclure ; tout joueur peut en signaler un autre depuis son profil. La modération peut retirer une photo, remettre un nom d'affichage à son nom d'utilisateur, retirer un joueur du classement, remettre une progression à zéro, suspendre ou supprimer un compte qui ne respecte pas ces règles. Dans Communauté, les messages suivent les mêmes règles, sans lien ni publicité. L'équipe peut masquer ou effacer un message qui ne les respecte pas. ⇒ É proibido: trapacear (modificar o jogo, falsificar resultados ou experiência, explorar falha), usurpar identidade (incluindo a da equipe do jogo), escolher nome de usuário, nome de exibição ou foto de perfil ofensivos, de ódio, sexuais ou enganosos, assediar outros jogadores, inclusive no chat da sala, e denunciar jogadores à toa de forma repetida. Palavras grosseiras ou de ódio são recusadas nos nomes e mascaradas no chat. Numa sala, qualquer um pode silenciar um jogador e o anfitrião pode expulsá-lo; qualquer jogador pode denunciar outro pelo perfil. A moderação pode remover uma foto, resetar o nome de exibição para o nome de usuário, tirar alguém do ranking, zerar progressão, suspender ou apagar uma conta que quebre estas regras. Na Comunidade, as mensagens seguem as mesmas regras, sem link nem propaganda. A equipe pode ocultar ou apagar uma mensagem que as viole.
+4. Progression ⇒ 4. Progressão
+Les niveaux, l'expérience et les statistiques sont des éléments de jeu, sans valeur monétaire ni droit acquis. Ils peuvent être ajustés (équilibrage du jeu) ou corrigés (triche, erreur). ⇒ Níveis, experiência e estatísticas são elementos de jogo, sem valor monetário nem direito adquirido. Podem ser ajustados (balanceamento) ou corrigidos (trapaça, erro).
+5. Disponibilité et responsabilité ⇒ 5. Disponibilidade e responsabilidade
+Le jeu est fourni "en l'état", gratuitement, sans garantie de disponibilité continue : il peut être interrompu, modifié ou arrêté, et les données de compte peuvent être perdues en cas d'incident. Dans la mesure permise par la loi, l'éditeur n'est pas responsable des dommages indirects liés à l'usage du jeu. ⇒ O jogo é fornecido "no estado", de graça, sem garantia de disponibilidade contínua: pode ser interrompido, modificado ou encerrado, e dados da conta podem se perder em caso de incidente. Na medida permitida pela lei, o editor não responde por danos indiretos ligados ao uso do jogo.
+6. Propriété ⇒ 6. Propriedade
+Le jeu, son code et ses contenus restent à leur éditeur. Les textures et éclairages employés sont sous licence CC0 (voir les crédits du menu principal). Vos données de compte restent les vôtres (voir la politique de confidentialité). ⇒ O jogo, seu código e conteúdos pertencem ao editor. Texturas e iluminação usadas estão sob licença CC0 (veja os créditos no menu principal). Seus dados de conta continuam seus (veja a política de privacidade).

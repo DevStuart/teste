@@ -1,0 +1,25 @@
+# Community 415
+
+> 1 nodes
+
+## Key Concepts
+
+- **06l-modeles-fusils.js** (0 connections) — `armas-para-editar/PARA_CLAUDE/1-materiais-e-helpers/06l-modeles-fusils.js`
+
+## Relationships
+
+- No strong cross-community connections detected
+
+## Source Files
+
+- `armas-para-editar/PARA_CLAUDE/1-materiais-e-helpers/06l-modeles-fusils.js`
+
+## Audit Trail
+
+- EXTRACTED: 0 (0%)
+- INFERRED: 0 (0%)
+- AMBIGUOUS: 0 (0%)
+
+---
+
+*Part of the engram knowledge wiki. See [[index]] to navigate.*

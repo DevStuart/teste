@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 """Contrôle des langues : python3 tools/dev/check_i18n.py
 - chaque texte passé à _t() / _tn() dans src/ et chaque texte de shell.html a une traduction dans i18n/en.txt ;
+- chaque texte affiché a aussi une traduction dans i18n/pt-BR.txt ;
 - chaque entrée de i18n/en.txt sert (sinon : à retirer) ;
 - les paramètres {0}, {1}... sont les mêmes des deux côtés ;
 - aucun texte français n'est resté en clair dans src/ (littéral ou texte d'un modèle HTML) hors de _t() ; les textes voulus en français
   (décor des cartes, rapport de connexion, journaux) sont listés dans i18n/ignore.txt ou se trouvent dans une ligne de journal.
 Sortie 0 si tout va bien, 1 sinon."""
-import glob,os,re,sys
+import glob,json,os,re,sys
 ROOT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..')
 sys.path.insert(0,os.path.join(ROOT,'tools')); sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import i18n,i18n_keys as K
 os.chdir(ROOT)
 errs=[]; warn=[]
 en,e=i18n.load_en(); errs+=e
+pt,pt_errs=i18n.load_pt(); errs+=pt_errs
 keys=K.all_keys(); shell=K.shell_keys()
 SHELL_SAME={'Riposte: Frontline','Khamsin','Place','CODE','Alpha','Bravo','UAV','Killcam','Solo'}  # noms propres ou textes remplacés par le jeu
 need={k:w for k,w in keys.items()}
@@ -26,6 +28,18 @@ PH=re.compile(r"\{\d+\}")
 for k,v in en.items():
     if sorted(PH.findall(k))!=sorted(PH.findall(v)): errs.append(f"paramètres différents : {k[:70]!r} / {v[:70]!r}")
     if re.search(r"\s$|^\s",k) or re.search(r"\s$|^\s",v): errs.append(f"espace en début ou fin : {k[:70]!r}")
+for k in need:
+    if k not in pt: errs.append(f"sem tradução para português (Brasil) : {k[:90]!r}")
+for k,v in pt.items():
+    if k not in need: errs.append(f"entrée inutile dans i18n/pt-BR.txt : {k[:90]!r}")
+    if sorted(PH.findall(k))!=sorted(PH.findall(v)): errs.append(f"paramètres portugais différents : {k[:70]!r} / {v[:70]!r}")
+# textes du journal des nouveautés affichés en jeu (les dix versions récentes)
+with open('changelog.json',encoding='utf-8') as f: changelog=json.load(f)
+for release in changelog[:10]:
+    if (release.get('title') or release.get('title_en')) and not str(release.get('title_pt') or '').strip():
+        errs.append(f"titre portugais (title_pt) manquant : {release['version']}")
+    for i,change in enumerate(release.get('changes',[]),1):
+        if not str(change.get('x_pt') or '').strip(): errs.append(f"texte portugais (x_pt) manquant : {release['version']} (changement {i})")
 # textes français restés en clair
 FRW=K.FRW
 ignore=[l.rstrip('\n') for l in open('i18n/ignore.txt',encoding='utf-8')] if os.path.exists('i18n/ignore.txt') else []
@@ -78,5 +92,5 @@ for f in sorted(glob.glob('api/_lib/*.js')+glob.glob('api/*.js')):
         if k not in api_en and k != 'Résumé de partie refusé : ': errs.append(f"message d'API sans traduction anglaise : {k[:80]!r}  ({f})")
 for w in warn: print('avertissement :',w)
 for x in errs: print('erreur :',x)
-print(f"{len(en)} entrées anglaises, {len(need)} textes à traduire, {len(errs)} erreur(s)")
+print(f"{len(en)} entrées anglaises, {len(pt)} traductions portugaises, {len(need)} textes à traduire, {len(errs)} erreur(s)")
 sys.exit(1 if errs else 0)

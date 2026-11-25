@@ -17,12 +17,10 @@ const AMIS = {
 /* ---------- Présence et invitations reçues ---------- */
 /* Compte connecté ou déconnecté (socChanged) : signal de présence, liste d'amis ; ou tout s'efface */
 function amisChanged() {
-  if (!ACCT.user) { Object.assign(AMIS, { list: null, received: [], out: [], err: '', note: '', inv: [], sent: {} }); amisInviteCard(); return; }
-  if (!AMIS.tick) {
-    AMIS.tick = setInterval(amisTick, 1000);
-    document.addEventListener('visibilitychange', () => { if (!document.hidden && ACCT.user) amisPing(); });
-  }
-  amisPing(); if (!AMIS.list) amisLoad();
+  if (AMIS.tick) clearInterval(AMIS.tick);
+  AMIS.tick = 0;
+  Object.assign(AMIS, { list: null, received: [], out: [], err: '', note: '', inv: [], sent: {} });
+  amisInviteCard();
 }
 function amisState() { return MATCH.state !== 'menu' ? 'partie' : netInLobby() ? 'salon' : 'menu'; }
 function amisInvitePageOpen() { const L = LM.scr.multi; return UI.screen === 'multi' && !!L && L.stack.length > 0 && L.stack[L.stack.length - 1].id === 'invite'; }
@@ -111,16 +109,7 @@ function amisToast(text) {
 /* Le salon (menu Multijoueur, Inviter des amis) : ses amis, connectés d'abord, à inviter d'un toucher ; puis le code et le lien */
 function amisInviteRows() {
   if (!ACCT.user) return [];
-  if (Date.now() - AMIS.at > 20000) amisLoad();
-  const rows = [{ k: 'sep', label: _t('Vos amis') }], list = (AMIS.list || []).slice().sort((a, b) => b.online - a.online);
-  if (!AMIS.list) rows.push({ k: 'note', text: AMIS.err || _t('Chargement...') });
-  else if (!list.length) rows.push({ k: 'note', text: _t('Ajoutez des amis dans le menu Amis pour les inviter ici.') });
-  for (const f of list) {
-    const sent = amisSentHere(f.username);
-    rows.push({ k: 'pick', key: 'ami:' + f.username, label: f.displayName, sub: sent ? _t('Invitation envoyée') : amisStatus(f), value: f.online ? (sent ? _t('Renvoyer') : _t('Inviter')) : '', disabled: !f.online, pick: () => amisSend(f.username) });
-  }
-  rows.push({ k: 'sep', label: _t('Code et lien') });
-  return rows;
+  return [{ k: 'sep', label: _t('Code et lien') }];
 }
 
 /* ---------- Écran Amis ---------- */
