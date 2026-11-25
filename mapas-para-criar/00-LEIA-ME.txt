@@ -1,0 +1,119 @@
+================================================================================
+COMO OS MAPAS SÃO FEITOS — Riposte: Frontline
+Pasta pronta pra você criar 1 mapa novo
+================================================================================
+
+RESUMO EM 1 FRASE
+-----------------
+Mapa = código JS que monta caixas/perfis/prefabs em metros + um objeto MAP_DEFS
+registrado no jogo. Não existe .fbx/.glb de mapa. Geometria nasce no load.
+
+--------------------------------------------------------------------------------
+ARQUITETURA (pastas desta pasta)
+--------------------------------------------------------------------------------
+0-infra/
+  02-map.js      → lista MAPS (menu), MAP_DEFS{}, COL, RAMPS, box(), boxC()
+  02a-kit.js     → atelier DECOR / Maker / Prefab / place()  (o “Blender” do jogo)
+  02z-load.js    → mapSetup, ambiance, spawns, skyPhoto, HDRI
+  02-relief.js   → solo em relevo (dunas etc.), opcional
+
+1-exemplo-pequeno-french-dream/   ← MELHOR pra copiar a estrutura
+  02yn-french-dream.js  → plano + MAP_DEFS.lotissement
+  02ym-pavillons-kit.js → materiais/atlas/prefabs só desta carta
+
+2-exemplo-medio-tephra/
+  02yh-tephra.js / 02yg-tephra-kit.js  → mapa médio bem comentado
+
+3-prefabs-compartilhados/
+  02f-props.js, 02d-archi.js, 02g-vehicles.js, 02k-dynprops.js
+  → caixas, lampadas, containers, carros… (lista em docs-assets.md)
+
+4-modelo-novo/
+  02yo-meu-mapa.js  → ESQUELETO mínimo pra você preencher
+
+docs-assets.md → tabela de todas as cartas + prefabs + textures
+
+--------------------------------------------------------------------------------
+FLUXO DE UMA CARTA
+--------------------------------------------------------------------------------
+1. Menu escolhe id (MAPS em 02-map.js)
+2. Loading chama mapSetup(id) → lê MAP_DEFS[id]
+3. Carrega textures foto listadas em textures: [...]
+4. Chama kit() / materials() se existirem
+5. Chama build() → você coloca o decor (DECOR.box, place, wall…)
+6. Sistema comum: funde malhas, bake de luz, navegação dos bots, splat do chão
+7. after() / ready() / update() opcionais
+
+Espelho norte-sul:
+  Alpha = +z (spawns que você lista)
+  Bravo = -z (espelho automático dos spawns)
+
+Tipos (type):
+  'close' → luta perto (French Dream, Meltem)
+  'mid'   → 3 corredores (Khamsin, Tephra, Val-Blanc)
+  'open'  → grande/aberto (Simoun, Stratus, Hortus)
+
+--------------------------------------------------------------------------------
+CHECKLIST — CRIAR SEU MAPA
+--------------------------------------------------------------------------------
+[ ] 1. Copiar 4-modelo-novo/02yo-meu-mapa.js → src/02yo-<nome>.js
+[ ] 2. Trocar id: meumapa → seu id (só a-z, sem espaço)
+[ ] 3. Em src/02-map.js, dentro de MAPS = [ ... ], adicionar:
+       { id: 'meumapa', name: 'Nome', tag: _t('Tag'), ok: true,
+         desc: _t('Descrição do menu.') },
+[ ] 4. Preencher bounds, spawns, poi, dom, zones, atmo, textures
+[ ] 5. Em build(): montar o nível (box, DECOR.place, etc.)
+[ ] 6. python build.py
+[ ] 7. Jogar solo e escolher o mapa
+[ ] 8. (depois) ilustração do menu: tools/dev/illustrations.js + art: { cam, look, fov }
+[ ] 9. (depois) ferramenta ?outil=zones pra afinar domination points
+
+Nome do arquivo importa: src/*.js entra em ORDEM ALFABÉTICA.
+  02yo-... fica depois dos mapas 02y* e antes de 02z-load.js → OK.
+
+--------------------------------------------------------------------------------
+API MÍNIMA QUE VOCÊ VAI USAR
+--------------------------------------------------------------------------------
+box(mat, x0, x1, y0, y1, z0, z1, { tint, collide, m })
+boxC(mat, cx, y0, cz, w, h, d, { rot, tint, collide })
+DECOR.place(PF.crate(), x, y, z, rotY)
+DECOR.col(x0, x1, y0, y1, z0, z1, 'concrete')   // só colisão
+wallOpen(...)   // muro com portas/janelas (ver mapas reais)
+glassWall(...)  // vidro: para soldado, não para bala
+rngOf(seed)     // RNG fixo → mesma carta em todo lobby
+
+Helpers de peça: Maker em 02a-kit.js (M.box, M.cyl, M.wall, M.quad…)
+Lista de prefabs: docs-assets.md
+
+--------------------------------------------------------------------------------
+DICAS DE LEVEL DESIGN (do próprio projeto)
+--------------------------------------------------------------------------------
+- Domination A perto Alpha, C perto Bravo, B no meio
+- Vários caminhos entre bases (evite 1 corredor único = choke)
+- coverZ = além disso, bots não usam cover (zona das bases)
+- landmarks: [x,y,z,'nome'] pra leitura da silhueta
+- Seeds fixas (rngOf) sempre
+- Textures: só nomes que existem em assets/tex/ (veja docs-assets.md)
+
+Ferramentas úteis (tools/dev/visual/):
+  leveldesign.js  → métricas de spawns/dom/rotas
+  plan.js         → plano
+  ?outil=zones    → no browser, afinar zonas/dom
+
+--------------------------------------------------------------------------------
+O QUE NÃO FAZER
+--------------------------------------------------------------------------------
+- Importar modelo 3D de mapa
+- Esquecer de registrar em MAPS (mapa some do menu)
+- id diferente entre MAPS e MAP_DEFS
+- bounds não-inteiros (quebra grade de nav)
+- Milhões de peçinhas sem fundir (performance)
+
+--------------------------------------------------------------------------------
+PRÓXIMO PASSO SUGERIDO
+--------------------------------------------------------------------------------
+1. Leia 1-exemplo-pequeno-french-dream/02yn-french-dream.js (cabeçalho + MAP_DEFS)
+2. Abra 4-modelo-novo/02yo-meu-mapa.js e desenhe SEU layout com box()
+3. Me diga o tema do mapa (favela, shopping, base militar…) que eu ajudo a
+   encaixar no src/ e no menu.
+================================================================================

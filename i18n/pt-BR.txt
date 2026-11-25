@@ -1,0 +1,67 @@
+# Dicionário português do Brasil do jogo : « texto francês ⇒ tradução » (ver src/00-i18n.js, README « Idiomas »).
+# As chaves são os textos passados a _t() no código e os textos de shell.html. « = » : idêntico em português.
+# Um controle : python3 tools/dev/check_i18n.py (chaves faltantes, não usadas, textos franceses não embrulhados).
+
+
+# 02-map.js
+Village de ruelles ⇒ Vila de ruela
+Un village écrasé de soleil où il ne se passe jamais rien. Sauf aujourd'hui. ⇒ Um vilarejo ao sol, onde nada acontece. A não ser hoje.
+Gare de montagne enneigée ⇒ Estação de montanha na neve
+Une gare de montagne sous la neige. Le prochain train a du retard depuis 1987. ⇒ Uma estação de montanha debaixo da neve. O próximo trem está atrasado desde 1987.
+Port de pêche et criée ⇒ Porto de pesca e mercado
+Un port breton au soleil couchant. Il fait beau, ce qui inquiète tout le monde. ⇒ Um porto bretão ao pôr do sol. O tempo está bom, o que preocupa todos.
+Jardin botanique et grande serre ⇒ Jardim botânico e grande estufa
+Un jardin botanique en pleine floraison. Prière de ne pas marcher sur les pelouses, même mort. ⇒ Um jardin botânico em plena floração. Por favor, não ande no gramado, mesmo morto.
+Île des Cyclades ⇒ Ilha dos Ciclades
+Un village blanc au bord de la mer Égée. Le vent y souffle depuis l'Antiquité, personne n'a pensé à l'éteindre. ⇒ Um vilarejo branco na costa do Egeu. O vento soprava desde a antiguidade e ninguém pensou em desligá-lo.
+Station volcanologique ⇒ Estação vulcânica
+Une station de recherche au pied d'un volcan en éruption. Le volcan avait prévenu. ⇒ Uma estação de pesquisa aos pés de um vulcão em erupção. O vulcão tinha avisado.
+Îles flottantes ⇒ Ilhas flutuantes
+Des îles suspendues au-dessus des nuages, reliées par des ponts de cordes. Personne ne les a jamais fait réviser. ⇒ Ilhas flutuantes acima das nuvens, ligadas por pontes de corda. Ninguém as inspecionou.
+Mer de dunes ⇒ Mar de areia
+Une oasis au milieu des dunes. Au-delà, il n'y a que du sable et ceux qui sont partis vérifier. ⇒ Uma oásis no meio das dunas. Além, só areia e quem foi verificar.
+Lotissement pavillonnaire ⇒ Bairro planejado
+Un lotissement où toutes les maisons se ressemblent. Le syndic décline toute responsabilité. ⇒ Um bairro planejado onde todas as casas se parecem. O sindicato não responde por nada.
+
+# 06c-models.js
+Drone en vol ⇒ Drone em voo
+Satellite en ligne ⇒ Satélite online
+IEM déclenchée ⇒ EME ativada
+
+# 06i-armes.js
+Mecha ⇒ Mecha
+Un mecha tombe sur la zone choisie et défend sa position. Montez à bord pour le piloter. Il finit par exploser, sortez avant. ⇒ Um mecha cai na zona escolhida e defende a posição. Suba para pilotar. Ele vai explodir, saia antes.
+Drone kamikaze ⇒ Drone suicida
+Drone ⇒ =
+Vous pilotez un drone explosif pendant 30 secondes. Il explose au contact ou quand vous tirez. Votre soldat reste sans défense. ⇒ Você pilota um drone explosivo por 30 segundos. Ele explode ao contato ou quando você atira. O seu soldado fica sem defesa.
+IEM ⇒ EME
+Brouille l'équipe adverse pendant 25 secondes. Plus de mini-carte ni de séries, son UAV et son satellite s'éteignent. ⇒ Engana a equipe adversária por 25 segundos. Sem minimapa nem ondas de ataque, e o seu UAV e satélite desligam.
+Satellite ⇒ =
+Pendant 30 secondes, la mini-carte montre les ennemis en direct et où ils regardent. Seule une IEM le coupe. ⇒ Por 30 segundos, o minimapa mostra os inimigos ao vivo e onde olham. Só uma EME corta.
+Pendant 30 secondes, la mini-carte montre les ennemis toutes les 3 secondes. ⇒ Por 30 segundos, o minimapa mostra os inimigos a cada 3 segundos.
+Deux chasseurs bombardent la zone choisie sur la carte. Un toit protège bien. ⇒ Dois caças bombardeados a zona escolhida no mapa. Um telhado dá boa proteção.
+Un hélicoptère tire sur les ennemis à découvert pendant 34 secondes. Il peut être abattu. ⇒ Um helicóptero atira nos inimigos em campo aberto por 34 segundos. Pode ser abatido.
+Fusils d'assaut ⇒ Rifles de assalto
+Pistolets-mitrailleurs ⇒ Submetralhadoras
+Fusils de précision ⇒ Rifles de precisão
+Fusils à pompe ⇒ Espingardas
+Pistolets ⇒ Pistolas
+Fusil d'assaut ⇒ Rifle de assalto
+La carabine de référence. Précise et maîtrisable à toutes les distances. ⇒ A carabina de referência. Precisa e dominável em todas as distâncias.
+Pistolet-mitrailleur ⇒ Submetralhadora
+Le pistolet-mitrailleur des unités d'intervention. Cadence élevée, recul doux, redoutable de près. ⇒ A submetralhadora das unidades de intervenção. Alta cadência, recuo suave, temida de perto.
+Fusil de précision ⇒ Rifle de precisão
+Fusil à verrou de l'armée britannique. Une balle au torse suffit, à n'importe quelle distance. ⇒ O rifle a percussão da polícia britânica. Uma bala no corpo basta, a qualquer distância.
+Fusil à pompe ⇒ Espingarda
+Semi-automatique de la marine. Huit chevrotines par coup, dévastateur en intérieur. ⇒ Semiautomática da marinha. Oito percussões por tiro, devastadora no interior.
+Pistolet ⇒ Pistola
+L'arme de poing réglementaire. Fiable et rapide à dégainer. ⇒ A arma de fogo regimental. Confiável e rápida de pegar.
+Le fusil le plus répandu au monde. Lourd de recul, mais chaque balle frappe fort. ⇒ O rifle mais usado do mundo. Recuo pesado, mas cada bala pesa.
+Fusil de bataille des forces spéciales. Cartouche lourde, trois balles au torse suffisent. ⇒ Rifle de assalto das forças especiais. Cartucho pesado, três tiros no torso bastam.
+Le "clairon" français. Un bullpup compact qui tire plus de mille coups par minute. ⇒ O "clarinho" francês. Um bullpup compacto que dispara mais de mil tiros por minuto.
+Ultra-compacte. Quarante coups, recul presque nul, très rapide à épauler. ⇒ Ultracompacta. Quarenta tiros, recuo quase nulo, muito rápida de empunhar.
+Le .45 ACP en rafales. Cadence posée et balles lourdes, trois suffisent de près. ⇒ O .45 ACP em rajadas. Cadência medida e balas pesadas, três bastam de perto.
+Dix cents coups par minute. Une tronçonneuse de couloir, mais le chargeur se vide vite. ⇒ Duzentos tiros por minuto. Uma motosserra de corredor, mas o carregador vence rápido.
+Fusil de tireur d'élite semi-automatique. Deux balles au torse, une seule à la tête. ⇒ Rifle semiautomático de atirador de elite. Duas tiros no torso, um só na cabeça.
+Fusil antimatériel de calibre .50. Toute touche au corps est fatale, mais il est lourd et lent à épauler. ⇒ Rifle antimaterial de 12,7 mm. Qualquer impacto no corpo é fatal, mas é pesado e lento de mirar.
+La pompe des policiers et des chasseurs. Gerbe serrée et portée plus longue, une pompe entre deux coups. ⇒ A pump dos pol... (continuar)

@@ -1,0 +1,19 @@
+Coloque aqui PNGs no formato:
+
+  m4-hanche.png
+  m4-ads.png
+  ak47-hanche.png
+  ak47-ads.png
+  ...
+
+Como tirar no jogo (mais fácil):
+  1. Abra http://localhost:8080/riposte-frontline.html
+  2. Solo → equipe a arma
+  3. Print da mão (sem mirar) e print mirando (ADS / botão direito)
+  4. Salve nesta pasta
+
+Ferramenta automática (avançado, precisa Chromium):
+  cd tools/dev
+  npm ci
+  set CHROMIUM=C:\caminho\para\chrome.exe
+  node visual/armes.js --dossier ../../armas-para-editar/PARA_CLAUDE/3-prints --armes m4,ak47,scarh,deagle --vues hanche,ads

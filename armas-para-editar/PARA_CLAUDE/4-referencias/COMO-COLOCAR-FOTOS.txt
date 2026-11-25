@@ -1,0 +1,18 @@
+Coloque fotos de perfil (lado esquerdo da arma) aqui.
+
+Sugestão de nomes:
+  ref-m4-perfil.jpg
+  ref-ak47-perfil.jpg
+  ref-scarh-perfil.jpg
+  ref-deagle-perfil.jpg
+  ref-m82-perfil.jpg
+  ...
+
+Ideal: foto ortográfica / perfil limpo, fundo simples, e anote o comprimento real
+da arma (mm) ou use o mesmo método do contour.js do repositório.
+
+Armas que JÁ têm calibração no código (menos urgência):
+  M4, MP5, L96, M1014, M9
+
+Armas que mais precisam de foto nova:
+  AK-47, SCAR-H, Deagle, M82, FAMAS, Vector

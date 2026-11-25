@@ -1,0 +1,113 @@
+================================================================================
+PREFABS / TEXTURES DISPONÍVEIS — Riposte: Frontline
+Copie este arquivo e mande pra IA que cria mapas.
+Uso: DECOR.place(PF.nome(...), x, y, z, rotY)
+     vehicle(PF.truck('army'), x, y, z, rotY, { tint:[r,g,b] })
+     car(x, z, rot, [r,g,b], burnt, 'suv')   // helper de 02s-sable.js
+================================================================================
+
+### CAIXAS / LIXO / MERCADO
+crate(s=1.1) | pallet | barrel | jerrycan | gasBottle | cardboard(w,h,d)
+trashBag | blocks | reel | tire | jar(s=1) | spiceSack | pot | counter
+stall(color[r,g,b]) | table | chair | cafeTable | fruitCrate | fruitBox
+fruitBall | bottle(h) | potShard
+
+### MILITAR / DEFESA
+tent | sandbag | sandbagFat | sandbagHalf | jersey(len) | container(open=false)
+generator | gateLeaf | iBeam(h) | truss(L) | column(h)
+
+### URBANO
+lampPost(lit?) | manhole | drain | pebbles(seed) | bollard | dumpster
+pole | acUnit | waterTank | dish | solarHeater | antenna | roofHut
+rack(L) | fountain | rugFloor | forklift | lantern | hangLamp(cool,len)
+
+### VEÍCULOS
+PF.car(model, o)     model: sedan | hatch | suv | mpv | cross | offroad
+                     o: { dust, wreck, rack }
+PF.truck(model, o)   model: army | cargo | box
+                     o: { load:'tarp', reefer, dust, wreck }
+PF.bicycle | PF.moped | PF.busWreck
+helpers: vehicle(pf, x,y,z,rot, {tint})
+         car(cx, cz, rot, color, burnt, model)
+
+### NATUREZA / DESERTO
+palm(h=7, seed=1) | bush(s) | grass(s) | bougainvillea(w,h)
+rubble(seed,r) | gravel(seed) | stone(seed) | chunk(seed)
+brick(seed,half?) | brickPile(seed) | shard(seed) | litter(seed) | weed(seed)
+boulder(seed, rx,ry,rz)
+
+### JARDIM / FLORESTA
+tree(kind, h, r, seed, o) | willow | palmG | treeFern | banana | bamboo
+fern | rosette | clump | liana | hanging | reeds | papyrus | lilies
+pine | topiary | gbench | urn | toro | gardenLamp | wheelbarrow
+
+### INVERNO
+spruce | snowBush | snowMound | woodpile | fence | sled | snowman
+skiOne | skiPole | skiRack | xmasTree | plankStack | hayBale
+snowball | snowHat | carrot | scarf | twig
+
+### TREM / ESTAÇÃO
+boxcar | tankcar | flatcar | snowplow | platformBench | stationClock
+luggageCart | railSignal | relayCabinet | sleeperStack | castColumn
+
+### PORTO
+trawler | canot | sailboat | barque | lifeRing | ropeCoil | fishBin*
+bitt | netPile | lobsterPot(s) | buoy | quayLadder | lifeRingStand
+quayCrane | portique | iceMachine | etal | cadran | conveyor | coldRoom
+icePallet
+
+### CICLADES (prefixo cy)
+cyOlive | cyCypress | cyTamarisk | cyFig | cyPlane | cyAgave | cyOpuntia
+cyBush | cyGrass | cyJasmine | cyPot | cyUmbrella | cyKaiki | cyCat
+
+### TEPHRA (prefixo tp) — só se o kit Tephra carregar
+tpHeli | tpBench | tpHood | tpConsole | tpRack | tpDrums | tpBunk
+tpGps | tpWeather | tpGas
+
+### STRATUS (prefixo st)
+stColumn | stBlock | stRock | stCrystals | stSpire | stMenhir | stStele
+stTrilithon | stTent | stCrateStack
+
+### SIMOUN (prefixo sm)
+smScree | smRock | smFire | smBedouin | smReeds | smAcacia | smPalmFar
+smCart | smSeats3 | smPilotSeat | smJetEngine
+
+### FRENCH DREAM (prefixo fd) — kit pavillons
+(ver 02ym-pavillons-kit.js: fdSofa, fdLamp, fdMupi, etc.)
+
+================================================================================
+TEXTURAS FOTO (usar em MAP_DEFS.textures e box('nome',...))
+================================================================================
+adobe ash ashlar asphalt bark barkw boards brick burlap canvas cardboard
+cobble concrete crate dirt drystone flagstone galets humus laine lawn linge
+paintwood palmbark pathgravel pavers pise plaster plaster2 reg rock
+rollshutter rooftiles rust sand shutter slate snow snowpack steel stone
+strata timber vase wood
+
+Materiais extras (não foto): dark paint glass glassLit panel hedge ground
+parpaing snowmat etc. (procedurais / por carta)
+
+================================================================================
+CÉUS (skyPhoto.key) — sem _lo
+================================================================================
+kloofendal_48d | kloofendal_misty_morning | kloppenheim_02 | quarry_01
+qwantani_dawn | qwantani_dusk_2 | sunflowers | wasteland_feu
+
+HDRI (atmo.hdri): park | sky | sunset
+
+================================================================================
+API RÁPIDA DE CONSTRUÇÃO
+================================================================================
+box(mat, x0,x1, y0,y1, z0,z1, { tint, collide, m, rot })
+boxC(mat, cx, y0, cz, w,h,d, { rot, tint, collide })
+DECOR.place(PF.xxx(), x, y, z, rotY, { tint, nocol, s })
+DECOR.col(x0,x1, y0,y1, z0,z1, 'concrete'|'metal'|'wood'|...)
+DECOR.dyn('jar'|'cardboard'|..., x,y,z, rot, opts)
+rngOf(seed) → R(), R.range(a,b), R.pick(arr), R.chance(p)
+type: 'close' | 'mid' | 'open'
+ring: { r, hard, t }   // zona BR (mata fora do círculo)
+void: { kill }         // ilhas flutuantes
+hdri / skyPhoto / atmo = Object.assign({}, ATMO_DEFAULT, {...})
+
+Espelho: Alpha = +z, Bravo = -z (spawns Bravo automáticos)
+================================================================================

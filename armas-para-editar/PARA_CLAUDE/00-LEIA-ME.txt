@@ -1,0 +1,115 @@
+================================================================================
+PACOTE PARA MELHORAR AS ARMAS — Riposte: Frontline (snapshot 5.6.0)
+================================================================================
+
+Responda em português se o dono pedir. Entregue patches/arquivos .js prontos
+para copiar em src/ (ou em armas-para-editar/). O jogo concatena src/*.js em
+ordem alfabética via `python build.py` → dist/riposte-frontline.html.
+
+--------------------------------------------------------------------------------
+1) ONDE ESTÃO OS MATERIAIS E HELPERS (pedido #1)
+--------------------------------------------------------------------------------
+Pasta: 1-materiais-e-helpers/
+
+  06-weapons.js     ← gunMaterials(), gunWear(), gunSurfPatch (shader de desgaste),
+                      part(), bx(), cz(), GM, viewmodel (VM), flash, shells
+  06c-models.js     ← rb(), cy(), rail(), curvedMag(), rgeo()  (helpers de peça)
+  06jb-formes.js    ← prof(), guard(), cone(), iron*, gripProf() (perfis extrudados)
+  06j-modeles.js    ← buildGunModel(), gunKey(), grips
+  06i-armes.js      ← WEAPONS (stats), FEEL, CLASSES
+  06cy-ressorts.js  ← molas / sensação do viewmodel
+  06p / 06q         ← acessórios e camos
+  06l…06oa         ← modelos 3D das outras armas (AK, SCAR, etc.)
+
+--------------------------------------------------------------------------------
+2) RENDERER / CENA / FP (pedido #2)
+--------------------------------------------------------------------------------
+Pasta: 2-renderer-cena/
+
+  01-core.js   ← WebGLRenderer, scene, vmScene, vmCamera, luzes do viewmodel
+                 (vmHemi/vmSun/vmFlash/vmLamp), EffectComposer (bloom, rays, SSAO,
+                 final grade), setEnvMap / HDRI / PMREM, shadow cascades
+  01a-gpu.js   ← qualidade, lean mode celular, perda de contexto
+  08-player.js ← jogador + vista 1ª pessoa (ADS, FOV, updateViewmodel chamado daqui)
+
+Arquitetura importante:
+  - Three.js r147, bundle único (NÃO usa import de three/addons no browser do jogo).
+  - HTML único: dist/riposte-frontline.html + dist/tex/ + dist/sfx/
+  - renderer.toneMapping = NoToneMapping (tomemapping no post FinalShader)
+  - renderer.outputEncoding = LinearEncoding
+  - scene.environment E vmScene.environment = mesmo envMap (HDRI da carta ou céu)
+  - Armas em 1ª pessoa = cena SEPARADA (vmScene) composta depois do mundo
+  - NÃO use: import('three/addons/...') — quebra o build. Já tentamos e removemos.
+
+Versão Three: 0.147.0 (também em tools/dev/package.json).
+
+--------------------------------------------------------------------------------
+3) PRINTS (pedido #3)
+--------------------------------------------------------------------------------
+Pasta: 3-prints/
+
+  Se estiver vazia: o dono tira prints no jogo local
+  http://localhost:8080/riposte-frontline.html
+  Ideal: 2 por arma — hanche (mão) + ADS (mira).
+
+  Ferramenta oficial do repo (se tiver Chromium + npm em tools/dev):
+    cd tools/dev && npm ci
+    node visual/armes.js --dossier ../../armas-para-editar/PARA_CLAUDE/3-prints \
+      --armes m4,ak47,scarh,mp5,l96,m1014,m9,deagle,m82 --vues hanche,ads
+
+--------------------------------------------------------------------------------
+4) FOTOS DE REFERÊNCIA (pedido #4)
+--------------------------------------------------------------------------------
+Pasta: 4-referencias/
+
+  Coloque aqui fotos de perfil (esquerda) das armas-alvo, com escala se possível.
+  Método do projeto: tools/dev/visual/contour.js
+  Exemplo M4 (comentário em 06k):
+    --mmpx 0.9 --ancre 483,197,-0.038,0.037
+
+  Já calibradas no código (comentários nos defineGun):
+    M4, MP5, L96, M1014, M9
+  Sem foto ainda (precisam referência):
+    AK-47, SCAR-H, FAMAS, MP7, UMP, Vector, SVD, M82, Rem870, AA-12, USP, Glock, Deagle
+
+--------------------------------------------------------------------------------
+5) O QUE JÁ FOI APLICADO NO JOGO (não refazer do zero)
+--------------------------------------------------------------------------------
+Pasta: 5-ja-aplicado/
+
+  06k-modeles-base.js  — detalhe extra em M4/MP5/L96/M1014/M9
+  06qa-visual.js       — polishGunMaterials (metalness/roughness/envMapIntensity)
+                         setupGunLook é NO-OP (envMap já vem do 01-core)
+  06qb-superficies.js  — normalMap + roughnessMap procedurais (canvas)
+                         encoding = LinearEncoding (r147, não NoColorSpace)
+
+--------------------------------------------------------------------------------
+6) PRIORIDADES E LIMITES DO DONO (pedido #5)
+--------------------------------------------------------------------------------
+Prioridade de armas (ordem):
+  1. M4A1, AK-47, SCAR-H     (fusis mais vistos)
+  2. Deagle, M9              (pistolas de perto)
+  3. L96, M82                (snipers / ADS)
+  4. MP5, Vector             (SMG)
+  5. resto
+
+Foco visual:
+  - PRINCIPAL: vista em 1ª pessoa (viewmodel / ADS)
+  - Secundário: armas dos soldados e no chão (LOD lo existe — não estoure polígonos)
+
+Desempenho:
+  - Jogo roda em desktop E celular
+  - Qualidade "Baixa" / Minimale e GPU lean cortam textura, HDRI, sombras
+  - Detalhe miúdo só vale no viewmodel de perto; peças minúsculas somem no LOD lo
+  - Evite: milhares de esferas/parafusos por arma, RoomEnvironment import, ACES global
+
+Formato de entrega preferido:
+  - Arquivos .js completos para substituir, OU diffs claros por arquivo
+  - Sem dependências npm novas no runtime do jogo
+  - Sem three/addons no browser
+  - Testar mentalmente: defineGun continua com info.mount / gripDef / trigDef válidos
+  - Peças devem se tocar (tools/dev/visual/flottants.js verifica blocos flutuantes)
+
+Se tiver pouco tempo: melhore materiais + envMapIntensity no fluxo real de
+gunMaterials/gunWear (06-weapons.js) e o viewmodel da M4/AK — isso dá o maior salto.
+================================================================================

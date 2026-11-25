@@ -1,0 +1,286 @@
+/* ==========================================================================
+   COMPLEXO : favela baiana densa — becos, vielas, lajes e casas empilhadas.
+   Combate próximo (type 'close'), labirinto vertical, muitas quinas pra se esconder.
+   Espelho norte-sul: Alpha +z, Bravo -z.
+   Id: complexo  |  Nome de menu: Complexo
+   ========================================================================== */
+
+const CX = {
+  // cores de fachada (Bahia: ocre, rosa, azul, verde-água, amarelo, terracota)
+  faces: [
+    [0.92, 0.78, 0.55], [0.88, 0.55, 0.48], [0.45, 0.62, 0.72],
+    [0.4, 0.7, 0.62], [0.95, 0.85, 0.35], [0.78, 0.42, 0.32],
+    [0.9, 0.9, 0.86], [0.55, 0.48, 0.42],
+  ],
+  roof: [0.42, 0.38, 0.35],
+  tin: [0.55, 0.52, 0.48],
+};
+
+function complexoLevel() {
+  const M = DECOR;
+  const R = rngOf(7713);
+
+  // chão: concreto irregular / terra batida
+  box('concrete', -28, 28, 0, 0.02, -36, 36, {
+    collide: false, ao: false, tint: [0.55, 0.52, 0.48],
+  });
+
+  // ----- núcleo: labirinto de casas (espelhado em z) -----
+  for (const s of [1, -1]) {
+    cxBlock(-22, s * 8, 8, 6, 3.2, R);   // bloco oeste baixo
+    cxBlock(-22, s * 20, 8, 7, 5.5, R);  // bloco oeste alto (2 andares)
+    cxBlock(-10, s * 6, 7, 5, 3.0, R);
+    cxBlock(-10, s * 16, 7, 6, 4.8, R);
+    cxBlock(-10, s * 26, 7, 5, 3.4, R);
+    cxBlock(4, s * 8, 8, 6, 3.6, R);
+    cxBlock(4, s * 18, 8, 7, 5.2, R);
+    cxBlock(4, s * 28, 6, 5, 3.2, R);
+    cxBlock(16, s * 10, 7, 6, 4.0, R);
+    cxBlock(16, s * 22, 7, 6, 5.8, R);
+
+    // lajes acessíveis (telhado praticável) nos blocos altos
+    cxLaje(-22, s * 20, 8, 7, 5.5);
+    cxLaje(4, s * 18, 8, 7, 5.2);
+    cxLaje(16, s * 22, 7, 6, 5.8);
+    cxLaje(-10, s * 16, 7, 6, 4.8);
+
+    // escadas externas pra laje
+    cxStairs(-18, s * 20, s, 5.5);
+    cxStairs(8, s * 18, s, 5.2);
+    cxStairs(18, s * 22, s, 5.8);
+  }
+
+  // ----- beco central (eixo norte-sul, ~3 m) -----
+  // (espaço livre entre x=-2 e x=2 — já fica pelo gap dos blocos)
+
+  // ----- vielas transversais com portões / muros baixos -----
+  for (const s of [1, -1]) {
+    // muro com passagem
+    box('concrete', -24, -14, 0, 2.2, s * 12.6, s * 13.2, { tint: [0.6, 0.58, 0.55] });
+    box('concrete', -8, 0, 0, 2.2, s * 12.6, s * 13.2, { tint: [0.6, 0.58, 0.55] });
+    box('concrete', 6, 14, 0, 2.2, s * 12.6, s * 13.2, { tint: [0.6, 0.58, 0.55] });
+  }
+
+  // ----- campo de futebol improvisado (centro-sul/norte suave) -----
+  box('concrete', -6, 6, 0, 0.03, -4, 4, {
+    collide: false, ao: false, tint: [0.35, 0.42, 0.32],
+  });
+  // traves
+  for (const z of [-3.5, 3.5]) {
+    M.save().color([0.85, 0.85, 0.82]).local(1);
+    M.boxB('steel', -1.5, -1.4, 0, 1.6, z - 0.05, z + 0.05);
+    M.boxB('steel', 1.4, 1.5, 0, 1.6, z - 0.05, z + 0.05);
+    M.boxB('steel', -1.5, 1.5, 1.55, 1.65, z - 0.05, z + 0.05);
+    M.restore();
+  }
+
+  // ----- bar / birosca no miolo -----
+  cxBar(0, 0, R);
+
+  // ----- cobertura solta: caixas, barris, carroças de prop -----
+  for (let i = 0; i < 28; i++) {
+    const x = R.range(-24, 24), z = R.range(-32, 32);
+    if (Math.abs(x) < 3 && Math.abs(z) < 5) continue;
+    if (R() < 0.5) {
+      M.place(PF.crate(R.range(0.85, 1.15)), x, 0, z, R() * TAU, {
+        tint: [0.5, 0.36, 0.22],
+      });
+    } else {
+      M.place(PF.barrel(), x, 0, z, R() * TAU, {
+        tint: R.pick([[0.55, 0.2, 0.12], [0.3, 0.35, 0.3], [0.4, 0.4, 0.38]]),
+      });
+    }
+  }
+
+  // tanques d’água nas lajes (silhueta típica)
+  for (const [x, z, y] of [
+    [-20, 20, 5.55], [-20, -20, 5.55], [6, 18, 5.25], [6, -18, 5.25],
+    [18, 22, 5.85], [18, -22, 5.85], [-8, 16, 4.85], [-8, -16, 4.85],
+  ]) {
+    M.place(PF.waterTank(), x, y, z, R() * TAU, { nocol: true });
+  }
+
+  // antenas / parabólicas em alguns tetos
+  for (const [x, z, y] of [[-18, 22, 5.55], [8, -20, 5.25], [20, 24, 5.85]]) {
+    M.place(PF.dish(), x, y, z, R() * Math.PI, { nocol: true });
+  }
+
+  // carro abandonado no beco
+  car(-1, 14, Math.PI / 2 + 0.1, [0.55, 0.15, 0.12], true, 'hatch');
+  car(2, -16, -Math.PI / 2 - 0.15, [0.25, 0.3, 0.35], true, 'hatch');
+
+  // ----- bases (fundos) : área mais aberta com 2–3 casas -----
+  for (const s of [1, -1]) {
+    cxBlock(-16, s * 32, 6, 5, 3.0, R);
+    cxBlock(0, s * 32, 7, 5, 3.2, R);
+    cxBlock(14, s * 32, 6, 5, 2.8, R);
+    // muro de fundo
+    box('concrete', -26, 26, 0, 2.4, s * 35.5, s * 36.0, { tint: [0.5, 0.48, 0.45] });
+  }
+
+  // perímetro lateral
+  box('concrete', -27.5, -27, 0, 2.6, -36, 36, { tint: [0.48, 0.46, 0.42] });
+  box('concrete', 27, 27.5, 0, 2.6, -36, 36, { tint: [0.48, 0.46, 0.42] });
+}
+
+/* Casa / bloco de favela: volume sólido (cover), fachada colorida, janelas escuras, telhado de zinco */
+function cxBlock(x0, z0, w, d, h, R) {
+  const tint = R.pick(CX.faces);
+  const x1 = x0 + w, z1 = z0 + d;
+  // volume (colisão + corpo)
+  box('plaster', x0, x1, 0, h, Math.min(z0, z1), Math.max(z0, z1), { tint });
+  // telhado de zinco levemente inclinado (visual)
+  const rh = 0.35;
+  box('steel', x0 - 0.1, x1 + 0.1, h, h + rh, Math.min(z0, z1) - 0.1, Math.max(z0, z1) + 0.1, {
+    tint: CX.tin, m: 'metal',
+  });
+  // janelas escuras (só decor)
+  const M = DECOR;
+  M.save().color([0.12, 0.12, 0.14]).world(1).cls = 1;
+  const zFront = z0 < z1 ? z0 : z1;
+  const zBack = z0 < z1 ? z1 : z0;
+  // face “frente”
+  if (w > 3) {
+    M.boxB('dark', x0 + 0.8, x0 + 1.8, 1.0, 2.1, zFront - 0.03, zFront + 0.03);
+    M.boxB('dark', x1 - 1.8, x1 - 0.8, 1.0, 2.1, zFront - 0.03, zFront + 0.03);
+  }
+  if (h > 4) {
+    M.boxB('dark', x0 + 1.0, x0 + 2.0, 3.2, 4.2, zFront - 0.03, zFront + 0.03);
+    M.boxB('dark', x1 - 2.0, x1 - 1.0, 3.2, 4.2, zFront - 0.03, zFront + 0.03);
+  }
+  // porta
+  M.boxB('dark', x0 + w * 0.4, x0 + w * 0.4 + 0.9, 0.05, 2.1, zFront - 0.04, zFront + 0.04);
+  M.restore();
+  // varal / detalhe no alto (linha)
+  if (h > 3.5 && R() < 0.6) {
+    M.save().color([0.85, 0.85, 0.8]).local(1).cls = 2;
+    M.tube('plastic', 0.01, [
+      [x0 + 0.3, h - 0.15, zFront - 0.3],
+      [x1 - 0.3, h - 0.15, zFront - 0.3],
+    ], 3);
+    M.restore();
+  }
+}
+
+/* Laje praticável: laje de concreto no topo + mureta baixa */
+function cxLaje(x0, z0, w, d, y) {
+  const x1 = x0 + w, z1 = z0 + d;
+  const za = Math.min(z0, z1), zb = Math.max(z0, z1);
+  box('concrete', x0 + 0.15, x1 - 0.15, y, y + 0.12, za + 0.15, zb - 0.15, {
+    tint: [0.62, 0.6, 0.56],
+  });
+  // mureta 0,7 m (cover de peito)
+  const t = 0.12, mh = 0.7;
+  box('concrete', x0, x1, y + 0.12, y + 0.12 + mh, za, za + t, { tint: [0.7, 0.68, 0.64] });
+  box('concrete', x0, x1, y + 0.12, y + 0.12 + mh, zb - t, zb, { tint: [0.7, 0.68, 0.64] });
+  box('concrete', x0, x0 + t, y + 0.12, y + 0.12 + mh, za, zb, { tint: [0.7, 0.68, 0.64] });
+  box('concrete', x1 - t, x1, y + 0.12, y + 0.12 + mh, za, zb, { tint: [0.7, 0.68, 0.64] });
+}
+
+/* Escada externa (rampa em degraus) até a laje */
+function cxStairs(x, z, s, h) {
+  // s = +1 sobe “para dentro” do mapa a partir do sul da casa, -1 espelhado
+  const steps = Math.max(4, Math.round(h / 0.28));
+  const len = 2.4;
+  ramp(x - 0.55, x + 0.55, s > 0 ? z - len : z, s > 0 ? z : z + len, 'z', 0, h, 'concrete', [0.55, 0.53, 0.5]);
+}
+
+/* Birosca / bar no centro */
+function cxBar(cx, cz, R) {
+  const M = DECOR;
+  box('plaster', cx - 3.5, cx + 3.5, 0, 2.6, cz - 2.5, cz + 2.5, {
+    tint: [0.35, 0.55, 0.5],
+  });
+  box('steel', cx - 3.7, cx + 3.7, 2.6, 2.85, cz - 2.7, cz + 2.7, {
+    tint: CX.tin, m: 'metal',
+  });
+  // balcão
+  box('wood', cx - 3.2, cx + 3.2, 1.0, 1.15, cz + 2.5, cz + 2.85, {
+    tint: [0.45, 0.32, 0.2],
+  });
+  // mesas / cadeiras (props)
+  M.dyn('cafeTable', cx - 1.5, 0, cz + 4.2, 0);
+  M.dyn('chair', cx - 1.5, 0, cz + 5.0, Math.PI, { tint: [0.7, 0.7, 0.68] });
+  M.dyn('cafeTable', cx + 1.5, 0, cz + 4.2, 0.2);
+  M.dyn('chair', cx + 1.5, 0, cz + 5.0, Math.PI + 0.1, { tint: [0.7, 0.7, 0.68] });
+  // caixas de bebida
+  M.place(PF.crate(0.9), cx + 4.2, 0, cz, 0.3, { tint: [0.2, 0.35, 0.55] });
+  M.place(PF.crate(0.9), cx + 4.2, 0.9, cz, -0.2, { tint: [0.2, 0.35, 0.55] });
+}
+
+/* ---------- definição ---------- */
+MAP_DEFS.complexo = {
+  type: 'close', // combate próximo: becos, lajes, quinas
+  bounds: { x0: -28, x1: 28, z0: -36, z1: 36 }, // ~56 x 72 m — denso, não precisa ser enorme
+  textures: [
+    'plaster', 'concrete', 'steel', 'wood', 'crate', 'paintwood',
+    'canvas', 'asphalt', 'timber', 'stone',
+  ],
+  splat: { x0: -40, z0: -48, w: 80, d: 96, ppm: 4 },
+  far: 220,
+  art: { cam: [0, 9, 30], look: [0, 2, 0], fov: 58 },
+  landmarks: [
+    [0, 4, 0, 'birosca'],
+    [-18, 8, 20, 'laje oeste'],
+    [18, 8, -22, 'laje leste'],
+  ],
+  build() { complexoLevel(); },
+  // spawns Alpha (+z) nos fundos / beira do complexo
+  spawns: [
+    [-18, 30], [-10, 32], [-2, 30], [6, 32], [14, 30],
+    [-22, 28], [-14, 28], [0, 28], [10, 28], [20, 28],
+    [-8, 34], [8, 34],
+  ],
+  poi: [
+    // L oeste, M miolo/beco, E leste
+    [-18, 0, 8, 'L'], [-18, 0, -8, 'L'], [-20, 5.5, 20, 'L', 1], [-20, 5.5, -20, 'L', 1],
+    [0, 0, 0, 'M'], [0, 0, 14, 'M'], [0, 0, -14, 'M'], [-1, 0, 8, 'M'],
+    [18, 0, 10, 'E'], [18, 0, -10, 'E'], [18, 5.8, 22, 'E', 1], [18, 5.8, -22, 'E', 1],
+    [6, 5.2, 18, 'E', 1], [6, 5.2, -18, 'E', 1],
+  ],
+  dom: [[0, 22], [0, 0], [0, -22]], // A fundos norte, B birosca, C fundos sul
+  mecha: [[0, 0], [-16, 16], [16, -16]],
+  lane: (x) => (x < -6 ? 'L' : x > 6 ? 'E' : 'M'),
+  sniper: [18, 5.9, 22], // laje leste norte
+  coverZ: 28,
+  heli: [22, 30],
+  cam: 32,
+  surface: (p) => {
+    if (Math.abs(p.x) < 6 && Math.abs(p.z) < 4) return 'concrete'; // campinho
+    return 'concrete';
+  },
+  zones: [
+    [_t('Base Alpha'), -28, 28, 26, 36],
+    [_t('Base Bravo'), -28, 28, -36, -26],
+    [_t('Beco Central'), -3, 3, -28, 28],
+    [_t('Birosca'), -5, 5, -5, 6],
+    [_t('Lajes Oeste'), -26, -14, 12, 28],
+    [_t('Lajes Oeste'), -26, -14, -28, -12],
+    [_t('Lajes Leste'), 12, 26, 14, 28],
+    [_t('Lajes Leste'), 12, 26, -28, -14],
+    [_t('Vielas'), -28, 28, -12, 12],
+  ],
+  atmo: ATMO_CX,
+};
+
+/* Fim de tarde baiano: sol baixo quente, céu dourado, ar úmido */
+const ATMO_CX = Object.assign({}, ATMO_DEFAULT, {
+  sun: [0.55, 0.45, -0.5], sunColor: 0xffc878, sunI: 1.7, vmSun: 0xffc878,
+  fog: [0.78, 0.72, 0.62], fogD: 0.009, fogH: [14, 0], fogSun: 0.4,
+  hemi: [0xf0d8b0, 0x6a5848, 0.8], vmHemi: [0xf0d8b0, 0x6a5848],
+  sky: {
+    zen: [0.4, 0.55, 0.8], mid: [0.65, 0.7, 0.85], hor: [0.98, 0.78, 0.5],
+    gnd: [0.45, 0.4, 0.35], glow: [1.0, 0.85, 0.55], halo: [1.0, 0.9, 0.7],
+    disk: [13, 11, 9], cloudLo: [0.65, 0.66, 0.7], cloudHi: [1.05, 1.0, 0.95],
+    cloud: [0.7, 0.88, 0.5],
+  },
+  envGround: 0x6a5a48, hdri: 'sunset',
+  bounce: [1.05, 0.98, 0.9], dust: [0.8, 0.7, 0.55], motes: [1.0, 0.92, 0.8],
+  grade: { lo: [1.0, 0.97, 0.92], hi: [1.06, 1.0, 0.92], exp: 1.02, sat: 1.05, con: 1.06 },
+  rays: [1.0, 0.88, 0.65], bloom: [0.42, 0.55, 0.88], aoFloor: 0.38,
+  raysThr: 1.9, raysCap: 6.5, winLit: 0.2, wind: [120, 0.08],
+});
+
+
+{ id: 'complexo', name: 'Complexo', tag: _t('Favela baiana'), ok: true,
+  desc: _t('Becos, lajes e birosca. Quem conhece o Complexo não se perde — os outros sim.') },
